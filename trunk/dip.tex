@@ -1,0 +1,73 @@
+%\documentclass[11pt,final]{fithesis}
+\documentclass[11pt,draft,oneside]{fithesis}
+\usepackage[plainpages=false, pdfpagelabels]{hyperref}
+\usepackage[T1]{fontenc}  %aby boli pekne pismena
+\usepackage[slovak]{babel}  %slovensky balik
+\usepackage{longtable}     % pre vecsie tabulky
+\usepackage{graphicx}
+%\usepackage{a4wide}
+\usepackage{lettrine}  %velke uvodne pismeno
+
+\thesistitle{model nieco :D}
+\thesissubtitle{Diplomová práca}
+\thesisstudent{bc. Miroslav Ligas}
+\thesiswoman{false}
+\thesisfaculty{fi}
+\thesislang{sk}
+\thesisyear{jaro 2009}
+\thesisadvisor{Mgr. Tomá¹ Ludík}
+
+
+\begin{document}
+\FrontMatter
+\ThesisTitlePage
+
+\begin{ThesisDeclaration}
+\DeclarationText
+\AdvisorName
+\end{ThesisDeclaration}
+
+\begin{ThesisThanks}
+Dakujem za v¹etko èo pre mòa urobili ...
+\end{ThesisThanks}
+......
+
+\MainMatter
+\tableofcontents
+\chapter{Úvod}
+\label{chap:uvod}
+\input{uvod}
+\chapter{Prístupy vyvoja softvéru}
+\label{chap:metodmod}
+\input{metodiky}
+\chapter{Unified Process}
+\label{chap:up}
+\input{up}
+\chapter{Bussines Process Modeling ???}
+\label{chap:bpm}
+\input{bpm}
+\chapter{Definícia a ¹pecifikácia po¾iadavkov}
+\label{chap:defaspecifikaciapoziadavkov}
+\input{poziadavky}
+\chapter{Prípadová ¹túdia v UP}
+\label{chap:PsUP}
+\input{PSUP}
+\chapter{Prípadová ¹túdia v BPM}
+\label{chap:PsBPM}
+\input{PSBPM}
+\chapter{Záver}
+\label{chap:zaver}
+\input{zaver}
+\bibliographystyle{plain}  % bibliografický styl 
+\begin{thebibliography}{6}
+
+%\bibitem{AEL}
+%Microsoft MSDN Library (2007): \textit{About Event Logging}.
+%On-line text: $<$http://msdn2.microsoft.com/en-us/library/aa363632.aspx$>$
+
+\end{thebibliography}
+
+\appendix 
+\chapter{Príloha A}
+%fsafas
+\end{document}
