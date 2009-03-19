@@ -1,79 +1,81 @@
-\section{Å pecifikÃ¡cia poÅ¾iadavkov}
+\section{©pecifikácia po¾iadavkov}
 
-ÃšÄelom systÃ©mu je zabezpeÄiÅ¥ virtuÃ¡lnu konferenciu. WebovÃ¡ aplikÃ¡cia musÃ­ maÅ¥ prvky redakÄnÃ©ho systÃ©mu, ktorÃ© umoÅ¾nia administrÃ¡torovi upravovaÅ¥, pridÃ¡vaÅ¥ a odoberaÅ¥ jej obsah. \\ \\
+Úèelom systému je zabezpeèi» virtuálnu konferenciu. Webová aplikácia musí ma» prvky redakèného systému, ktoré umo¾nia administrátorovi upravova», pridáva» a odobera» jej obsah. \\ \\
 
-ÃšÄelom aplikÃ¡cie bude zbieranie a sprostredkovÃ¡vanie ÄlÃ¡nkov vo forme virtuÃ¡lneho Äasopisu. AplikÃ¡cia bude zobrazovaÅ¥ na webovÃ© rozhranie prehÄ¾ad zÃ¡kladnÃ½ch informÃ¡ciÃ­ o kaÅ¾dom ÄlÃ¡nku a to:
+Úèelom aplikácie bude zbieranie a sprostredkovávanie èlánkov vo forme virtuálneho èasopisu. Aplikácia bude zobrazova» na webové rozhranie prehµad základnıch informácií o ka¾dom èlánku a to:
 \begin{center}
 \begin{itemize}
 \item autora 
-\item inÅ¡titÃºciu
-\item nÃ¡zov
-\item kÄ¾ÃºÄovÃ© slovÃ¡
-\item anotÃ¡ciu
-\item odkaz na plnÃ½ text v PDF formÃ¡te
+\item in¹titúciu
+\item názov
+\item kµúèové slová
+\item anotáciu
+\item odkaz na plnı text v PDF formáte
 \end{itemize}
 \end{center}
 
-AplikÃ¡cia bude obsahovaÅ¥ vyhÄ¾adÃ¡vanie v informÃ¡ciÃ¡ch uloÅ¾enÃ½ch v databÃ¡ze. VyhÄ¾adÃ¡vanie bude moÅ¾nÃ© podÄ¾a zÃ¡kladnÃ½ch informÃ¡cii okrem anotÃ¡cie taktieÅ¾ sa nebude vyhÄ¾adÃ¡vaÅ¥ v samotnom texte ÄlÃ¡nkov.\\ \\
+Aplikácia bude obsahova» vyhµadávanie v informáciách ulo¾enıch v databáze. Vyhµadávanie bude mo¾né podµa základnıch informácii okrem anotácie taktie¾ sa nebude vyhµadáva» v samotnom texte èlánkov.\\ \\
 
-Ku kaÅ¾dÃ©mu ÄlÃ¡nku bude diskusia kde budu mÃ´cÅ¥ uÅ¾Ã­vatelia vyjadriÅ¥ svoj nÃ¡zor k ÄlÃ¡nku a budÃº maÅ¥ moÅ¾nosÅ¥ reagovaÅ¥ na komentÃ¡re inÃ½ch uÅ¾Ã­vateÄ¾ov. Diskusia bude rozvrstvenÃ¡ podla logickej nÃ¡vÃ¤znosti komentÃ¡rov.\\ \\
+Ku ka¾dému èlánku bude diskusia kde budu môc» u¾ívatelia vyjadri» svoj názor k èlánku a budú ma» mo¾nos» reagova» na komentáre inıch u¾ívateµov. Diskusia bude rozvrstvená podla logickej náväznosti komentárov.\\ \\
 
-AplikÃ¡cia bude rozliÅ¡ovaÅ¥ uÅ¾Ã­vateÄ¾ov, ktorÃ­ k nej budu pristupovaÅ¥. KaÅ¾dÃ½ uÅ¾Ã­vateÄ¾, ktorÃ½ sa neprihlÃ¡si bude maÅ¥ prÃ¡vomoci neregistrovanÃ©ho uÅ¾Ã­vateÄ¾a. Na registrÃ¡ciu bude k dispozÃ­cii formulÃ¡r na vytvÃ¡ranie novÃ­ch registorvanÃ­ch uÅ¾Ã­vateÄ¾ov.\\ 
+Aplikácia bude rozli¹ova» u¾ívateµov, ktorí k nej budu pristupova». Ka¾dı u¾ívateµ, ktorı sa neprihlási bude ma» právomoci neregistrovaného u¾ívateµa. Na registráciu bude k dispozícii formulár na vytváranie novích registorvaních u¾ívateµov.\\ 
 
-AdministrÃ¡torskÃ½ ÃºÄet bude pridelenÃ½ uÅ¾Ã­vateÄ¾ovi pri inicializaÄnom spustenÃ­ webovej aplikÃ¡cie. PrÃ­padnÃ© ÄalÅ¡ie administrÃ¡torskÃ© ÃºÄty musÃ­ vytvÃ¡raÅ¥ uÅ¾ existujÃºci administrÃ¡tor.\\
-SystÃ©m rozoznÃ¡va nasledovne uÅ¾Ã­vateÄ¾skÃ© skupiny:
+Administrátorskı úèet bude pridelenı u¾ívateµovi pri inicializaènom spustení webovej aplikácie. Prípadné ïal¹ie administrátorské úèty musí vytvára» u¾ existujúci administrátor.\\
+Systém rozoznáva nasledovne u¾ívateµské skupiny:
 \begin{itemize}
- \item[\textbf{AdministrÃ¡tor}] - AdministrÃ¡tor bude maÅ¥ moÅ¾nosÅ¥ manipulovaÅ¥ s obsahom strÃ¡nok, spravovaÅ¥ uÅ¾Ã­vateÄ¾ov a mÃ¡ na starosti prvotnÃº konfigurÃ¡ciu. V sprÃ¡ve uÅ¾Ã­vateÄ¾ov bude potvrdzovaÅ¥ novÃ© Å¾iadosti o registrÃ¡ciu, bude mÃ´cÅ¥ pozmeÅˆovaÅ¥ Ãºdaje o uÅ¾Ã­vateÄ¾ovi, meniÅ¥ ich role a blokovaÅ¥ ÃºÄty.
-\item[\textbf{NeregistrovanÃ½ uÅ¾Ã­vateÄ¾}] - Bude maÅ¥ moÅ¾nosÅ¥ prehliadaÅ¥ zoznam uloÅ¾enÃ½ch ÄlÃ¡nkov, mÃ´Å¾e v nich vyhÄ¾adÃ¡vaÅ¥ ale nemÃ¡ prÃ­stup k plnÃ½m textom ÄlÃ¡nkov.
-\item[\textbf{RegistrovanÃ½ uÅ¾Ã­vateÄ¾}] - Bude maÅ¥ vÅ¡etky prÃ¡va neregistrovanÃ©ho uÅ¾Ã­vateÄ¾a a naviac aj prÃ­stup k plnÃ½m textom ÄlÃ¡nkov z roÄnÃ­ka, pre ktorÃ½ zaplatil ÄlenskÃ½ poplatok. TaktieÅ¾ bude mÃ´cÅ¥ za zÃ¡kladnÃ½ ÄlenskÃ½ poplatok vloÅ¾iÅ¥ jeden ÄlÃ¡nok. Bude si mÃ´cÅ¥ upravovaÅ¥ informÃ¡cie v profile a meniÅ¥ pristupovÃ© heslo.
-\item[\textbf{RedakÄnÃ¡ rada}] - Bude maÅ¥ moÅ¾nosÅ¥ stopnÃºÅ¥ uverejnenie prÃ­spevku s odÃ´vodnenÃ­m jeho pozastavenia.
-\item[\textbf{Recenzenti}] - BudÃº maÅ¥ prÃ­stup k textom ÄlÃ¡nkov v upraviteÄ¾nej podobe a k odovzdanÃ½m ÄlÃ¡nkom majÃº moÅ¾nosÅ¥ pridÃ¡vaÅ¥ recenzovanÃº verziu.
+ \item[\textbf{Administrátor}] - Administrátor bude ma» mo¾nos» manipulova» s obsahom stránok, spravova» u¾ívateµov a má na starosti prvotnú konfiguráciu. V správe u¾ívateµov bude potvrdzova» nové ¾iadosti o registráciu, bude môc» pozmeòova» údaje o u¾ívateµovi, meni» ich role a blokova» úèty.
+\item[\textbf{Neregistrovanı u¾ívateµ}] - Bude ma» mo¾nos» prehliada» zoznam ulo¾enıch èlánkov, mô¾e v nich vyhµadáva» ale nemá prístup k plnım textom èlánkov.
+\item[\textbf{Registrovanı u¾ívateµ}] - Bude ma» v¹etky práva neregistrovaného u¾ívateµa a naviac aj prístup k plnım textom èlánkov z roèníka, pre ktorı zaplatil èlenskı poplatok. Taktie¾ bude môc» za základnı èlenskı poplatok vlo¾i» jeden èlánok. Bude si môc» upravova» informácie v profile a meni» pristupové heslo.
+\item[\textbf{Redakèná rada}] - Bude ma» mo¾nos» stopnú» uverejnenie príspevku s odôvodnením jeho pozastavenia.
+\item[\textbf{Recenzenti}] - Budú ma» prístup k textom èlánkov v upraviteµnej podobe a k odovzdanım èlánkom majú mo¾nos» pridáva» recenzovanú verziu.
 \end{itemize}
 
-AplikÃ¡cia bude obsahovaÅ¥ radu notifikÃ¡cii. Pri zaloÅ¾enÃ­ novÃ©ho ÃºÄtu bude zaslanÃ¡ informÃ¡cia administrÃ¡torovi so Å¾iadosÅ¥ou o jeho potvrdenie po overenÃ­ zaplatenia ÄlenskÃ©ho poplatku.\\
-Pri kaÅ¾dom vloÅ¾enÃ­ novÃ©ho ÄlÃ¡nku registrovanÃ½m uÅ¾Ã­vateÄ¾om budÃº vybranÃ½ a oboznÃ¡menÃ½ o tomto ÄlÃ¡nku recenzenti, ktorÃ½ch Ãºlohou bude ÄlÃ¡nok recenzovaÅ¥.\\
-RegistrovanÃ½ uÅ¾Ã­vatelia si mÃ´Å¾u povoliÅ¥ oznÃ¡menie o novÃ½ch zverejnenÃ½ch ÄlÃ¡nkoch cez mail a pre vÅ¡etkÃ½ch uÅ¾Ã­vateÄ¾ov bude k dispozÃ­cii RSS zdroj. \\
-Po dovÅ•Å¡enÃ­ limitu na zostavenie ÄÃ­sla Äasopisu bude o tom informovanÃ¡ redakÄnÃ¡ rada a administrÃ¡tor. \\ \\
+Aplikácia bude obsahova» radu notifikácii. Pri zalo¾ení nového úètu bude zaslaná informácia administrátorovi so ¾iados»ou o jeho potvrdenie po overení zaplatenia èlenského poplatku.\\
+Pri ka¾dom vlo¾ení nového èlánku registrovanım u¾ívateµom budú vybranı a oboznámenı o tomto èlánku recenzenti, ktorıch úlohou bude èlánok recenzova».\\
+Registrovanı u¾ívatelia si mô¾u povoli» oznámenie o novıch zverejnenıch èlánkoch cez mail a pre v¹etkıch u¾ívateµov bude k dispozícii RSS zdroj. \\
+Po dovà¹ení limitu na zostavenie èísla èasopisu bude o tom informovaná redakèná rada a administrátor. \\ \\
 
-Pravidelne bude spÃºÅ¡Å¥anÃ© zÃ¡lohovanie databÃ¡zy, ako aj uloÅ¾enÃ½ch plnÃ½ch textov ÄlÃ¡nkov, ktorÃ© budÃº slÃºÅ¾iÅ¥ na obnovenie dÃ¡t v prÃ­pade poruchy. KompletnÃ© zÃ¡lohy budÃº ukladanÃ© na predurÄenÃ© uloÅ¾isko. \\ \\
+Pravidelne bude spú¹»ané zálohovanie databázy, ako aj ulo¾enıch plnıch textov èlánkov, ktoré budú slú¾i» na obnovenie dát v prípade poruchy. Kompletné zálohy budú ukladané na predurèené ulo¾isko. \\ \\
 
-RedakÄnÃ© prvky systÃ©mu umoÅ¾nia administrÃ¡torovi upravovaÅ¥ a dopÄºÅˆaÅ¥ webovÃ© rozhranie systÃ©mu. Bude maÅ¥ moÅ¾nosÅ¥ meniÅ¥ logo portÃ¡lu, texty na strÃ¡nkach, pridÃ¡vaÅ¥ a zneplatÅˆovaÅ¥ novÃ© strÃ¡nky. \\
-VÅ¡etky zmeny rozloÅ¾enia strÃ¡nok sa budÃº prejavovaÅ¥ v Å¡truktÃºre menu strÃ¡nky, ktorÃ© bude najviac 2 ÃºrovÅˆovÃ©. StrÃ¡nky budu mÃ´cÅ¥ byÅ¥ doplÅˆovanÃ© do ktorejkoÄ¾vek Ãºrovne menu.\\ \\
+Redakèné prvky systému umo¾nia administrátorovi upravova» a dopåòa» webové rozhranie systému. Bude ma» mo¾nos» meni» logo portálu, texty na stránkach, pridáva» a zneplatòova» nové stránky. \\
+V¹etky zmeny rozlo¾enia stránok sa budú prejavova» v ¹truktúre menu stránky, ktoré bude najviac 2 úrovòové. Stránky budu môc» by» doplòované do ktorejkoµvek úrovne menu.\\ \\
 
-WebovÃ© rozhranie bude umoÅ¾ÅˆovaÅ¥ zmenu vzhÄ¾adu pomocou dodÃ¡vanÃ½ch tÃ©m. AplikÃ¡cia bude vyhotovenÃ¡ s jednou Å¡tandardnou tÃ©mou a s tÃ©mou pre postihnutÃ½ch. \\
-TÃ©ma sa bude pre registrovanÃ½ch uÅ¾Ã­vateÄ¾ov ukladaÅ¥ do ich profilu.\\ \\
+Webové rozhranie bude umo¾òova» zmenu vzhµadu pomocou dodávanıch tém. Aplikácia bude vyhotovená s jednou ¹tandardnou témou a s témou pre postihnutıch. \\
+Téma sa bude pre registrovanıch u¾ívateµov uklada» do ich profilu.\\ \\
 
-NevyhnutnÃ¡ konfigurÃ¡cia hotovej distribÃºcie prebehne pri jeho prvom spustenÃ­. Vytvori sa tu administrÃ¡torskÃ© konto a vÅ¡etky nevyhnutnÃ© nastavenia aplikÃ¡cie. \\
-CelÃ½ nasledujÃºci beh systÃ©mu bude automaticky a vÅ¡etky prÃ­padne zmeny nastavenia a obsahu sa budu diaÅ¥ cez webovÃ© rozhranie administrÃ¡tora. \\ \\
+Nevyhnutná konfigurácia hotovej distribúcie prebehne pri jeho prvom spustení. Vytvori sa tu administrátorské konto a v¹etky nevyhnutné nastavenia aplikácie. \\
+Celı nasledujúci beh systému bude automaticky a v¹etky prípadne zmeny nastavenia a obsahu sa budu dia» cez webové rozhranie administrátora. \\ \\
 
-WebovÃ© rozhranie bude prehÄ¾adne a funkcionÃ¡lne, zamerane na rÃ½chle dosiahnutie poÅ¾adovanÃ½ch informÃ¡ciÃ­. KaÅ¾dÃ¡ strÃ¡nka musÃ­ obsahovaÅ¥ tieto prvky:
+Webové rozhranie bude prehµadne a funkcionálne, zamerane na rıchle dosiahnutie po¾adovanıch informácií. Ka¾dá stránka musí obsahova» tieto prvky:
 \begin{center}
 \begin{itemize}
-\item logo a zÃ¡kladne Ãºdaje o organizÃ¡cii zriaÄujÃºcej virtuÃ¡lnu konferenciu
-\item menu strÃ¡nok webovÃ©ho rozhrania
-\item ak je uÅ¾Ã­vateÄ¾ neprihlÃ¡senÃ½ -- moÅ¾nosÅ¥ prihlÃ¡siÅ¥ sa do systÃ©mu
-\item ak je uÅ¾Ã­vateÄ¾ prihlÃ¡senÃ½ -- meno uÅ¾Ã­vateÄ¾a a voÄ¾bu na odhlÃ¡senie sa
-\end{itemize}
-\end{center}
-
-InformÃ¡cie o uloÅ¾enÃ½ch ÄlÃ¡nkoch sa budu zobrazovaÅ¥ do prehÄ¾adnÃ©ho vÃ½pisu obsahujÃºceho zÃ¡kladnÃ© informÃ¡cie. ZÃ¡znamy sa budÃº zobrazovaÅ¥ pre aktuÃ¡lny rok. StarÅ¡ie roÄnÃ­ky budÃº uloÅ¾enÃ© v archÃ­ve. \\
-ZÃ¡znamy pre aktuÃ¡lny roÄnÃ­k budu chronologicky usporiadanÃ© od najnovÅ¡Ã­ch po najstarÅ¡ie. ArchÃ­v bude usporiadanÃ½ podÄ¾a rokov a bude rovnako zoradenÃ½ ako aktuÃ¡lny roÄnÃ­k. Parameter zoraÄovanie bude mÃ´cÅ¥ uÅ¾Ã­vateÄ¾ pozmeniÅ¥ na meno, inÅ¡titÃºciu, nÃ¡zov a dÃ¡tum. TaktieÅ¾ bude moÅ¾nosÅ¥ zmeniÅ¥ vzostupnosÅ¥ alebo zostupnosÅ¥ usporiadania.\\
-V prÃ­pade, Å¾e zÃ¡znamov bude viac ako limit zobrazenia na jednu strÃ¡nku, zoznam sa stane viac stranovÃ½m. UÅ¾Ã­vateÄ¾ si bude mÃ´cÅ¥ zvoliÅ¥ koÄ¾ko zÃ¡znamov chce na jedne krÃ¡t zobraziÅ¥.\\ \\
-
-Rozhranie vyhÄ¾adÃ¡vania bude Äo najjednoduchÅ¡ie. Bude poskytovaÅ¥ voÄ¾by na urÄenie kategÃ³rie, v ktorej sa bude vyhÄ¾adÃ¡vaÅ¥:
-\begin{center}
-\begin{itemize}
-\item meno, inÅ¡titÃºcia, nÃ¡zov
-\item kÄ¾ÃºÄovÃ© slovÃ¡
-\item roÄnÃ­k 
+\item logo a základne údaje o organizácii zriaïujúcej virtuálnu konferenciu
+\item menu stránok webového rozhrania
+\item ak je u¾ívateµ neprihlásenı -- mo¾nos» prihlási» sa do systému
+\item ak je u¾ívateµ prihlásenı -- meno u¾ívateµa a voµbu na odhlásenie sa
 \end{itemize}
 \end{center}
 
+Informácie o ulo¾enıch èlánkoch sa budu zobrazova» do prehµadného vıpisu obsahujúceho základné informácie. Záznamy sa budú zobrazova» pre aktuálny rok. Star¹ie roèníky budú ulo¾ené v archíve. \\
+Záznamy pre aktuálny roèník budu chronologicky usporiadané od najnov¹ích po najstar¹ie. Archív bude usporiadanı podµa rokov a bude rovnako zoradenı ako aktuálny roèník. Parameter zoraïovanie bude môc» u¾ívateµ pozmeni» na meno, in¹titúciu, názov a dátum. Taktie¾ bude mo¾nos» zmeni» vzostupnos» alebo zostupnos» usporiadania.\\
+V prípade, ¾e záznamov bude viac ako limit zobrazenia na jednu stránku, zoznam sa stane viac stranovım. U¾ívateµ si bude môc» zvoli» koµko záznamov chce na jedne krát zobrazi».\\ \\
+
+Rozhranie vyhµadávania bude èo najjednoduch¹ie. Bude poskytova» voµby na urèenie kategórie, v ktorej sa bude vyhµadáva»:
 \begin{center}
-\includegraphics[width=\linewidth]{VyrtualnaKonferencia.png}
+\begin{itemize}
+\item meno, in¹titúcia, názov
+\item kµúèové slová
+\item roèník 
+\end{itemize}
+\end{center}
+\begin{center}
+\includegraphics[width=\linewidth]{pic/VyrtualnaKonferencia.png}
  % Use_Case_Diagram1.png: 742x436 pixel, 72dpi, 26.18x15.38 cm, bb=0 0 742 436
-\textit{Use case diagram virtuÃ¡lnej konferencie.}
+\textit{Use case diagram virtuálnej konferencie.}
 \end{center}
 
+\section{Identifikácia procesov}
+\section{Prechod k UML diagramom}
+\section{Prepojenie komponent}
 
 
