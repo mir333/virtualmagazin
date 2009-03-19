@@ -3,7 +3,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.0
-lastDocument=dip.tex
+lastDocument=uvod.tex
 masterDocument=
 name=Diplomka
 pkg_extIsRegExp=false
@@ -15,24 +15,6 @@ src_extensions=.tex .ltx .latex .dtx .ins
 MakeIndex=
 QuickBuild=PDFLaTeX+ViewPDF
 
-[item:PSBPM.tex]
-archive=true
-column=1
-encoding=ISO 8859-2
-highlight=LaTeX
-line=1
-open=true
-order=2
-
-[item:PSUP.tex]
-archive=true
-column=1
-encoding=ISO 8859-2
-highlight=LaTeX
-line=1
-open=false
-order=-1
-
 [item:Use_Case_Diagram1.png]
 archive=true
 column=0
@@ -42,22 +24,22 @@ line=0
 open=false
 order=-1
 
-[item:bpm.tex]
+[item:aplikacia.tex]
 archive=true
-column=12
-encoding=ISO 8859-2
+column=0
+encoding=UTF-8
 highlight=LaTeX
-line=13
-open=false
-order=-1
+line=76
+open=true
+order=0
 
 [item:dip.tex]
 archive=true
-column=13
+column=47
 encoding=ISO 8859-2
 highlight=LaTeX
-line=56
-open=true
+line=10
+open=false
 order=0
 
 [item:diplomka.kilepr]
@@ -69,28 +51,28 @@ line=0
 open=false
 order=-1
 
+[item:metoda.tex]
+archive=true
+column=0
+encoding=ISO 8859-2
+highlight=LaTeX
+line=0
+open=true
+order=1
+
 [item:metodiky.tex]
 archive=true
 column=29
 encoding=ISO 8859-2
 highlight=LaTeX
 line=16
-open=false
-order=1
-
-[item:poziadavky.tex]
-archive=true
-column=135
-encoding=ISO 8859-2
-highlight=LaTeX
-line=4
-open=false
+open=true
 order=2
 
-[item:up.tex]
+[item:nastroje.tex]
 archive=true
-column=16
-encoding=UTF-8
+column=0
+encoding=ISO 8859-2
 highlight=LaTeX
 line=0
 open=false
@@ -98,18 +80,18 @@ order=-1
 
 [item:uvod.tex]
 archive=true
+column=4
+encoding=UTF-8
+highlight=LaTeX
+line=0
+open=true
+order=3
+
+[item:zaver.tex]
+archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
 line=0
 open=true
-order=1
-
-[item:zaver.tex]
-archive=true
-column=18
-encoding=UTF-8
-highlight=LaTeX
-line=7
-open=false
-order=3
+order=4
