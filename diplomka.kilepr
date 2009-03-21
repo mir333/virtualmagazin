@@ -62,10 +62,10 @@ order=2
 
 [item:nastroje.tex]
 archive=true
-column=18
+column=8
 encoding=ISO 8859-2
 highlight=LaTeX
-line=2
+line=63
 open=true
 order=3
 
