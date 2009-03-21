@@ -6,31 +6,68 @@ BPMN definuje Business Process Diagram (BPD), ktorý graficky znázoròuje postupno
 BPD diagramy sú tvorené z jednoduchých elementov, ktoré umo¾òujú µahké tvorenie diagramov, ktoré sú intuitívne pochopiteµné väè¹ine podnikových analytikov. Tvary elementov boli navrhnuté s ohµadom na u¾ pou¾ívané nástroje v procesnom modelovaní. Napríklad aktivity sa znázoròujú pomocou ¹tvoruholníka a rozhodnutia sú znaèené diamantom. Pri vývoji BPMN bol kladený doraz aby bolo mo¾né pomocou neho zachyti» aj komplexné firemné procesy. Pre lep¹ie zvládnutie týchto protichodných po¾iadavkov bolo navrhnutých malé mno¾stvo kategórii, ktoré napomáhajú k µahkej orientácii v základných typoch. V rámci ka¾dej zo základných kategórii je mo¾né modifikova» definované elementy roz¹irujúcimi informáciami. Roz¹írenia v¹ak nesmú naru¹ova» základné charakteristiky elementov, èím by zni¾ovali ich zrozumiteµnos». \\
 Základne kategórie elementov sú:
 \begin{itemize}
- \item Flow Objects 
- \item Connecting Objects 
- \item Swimlanes 
- \item Artifacts 
+ \item Tokové objekty (Flow Objects) 
+ \item Spojovací objekty (Connecting Objects)
+ \item Plavecké dráhy  (Swimlanes)
+ \item Artefakty (Artifacts)
 \end{itemize}
 
-\subsection{Flow Objects }
-\begin{center}\includegraphics{pic/activity.png}\end{center}
+\subsection{Tokové objekty}
+Tokové objekty sú základné objekty BPD udávajú správanie firemného procesu. Definované sú tri Flow Objects: \\
+
+\textbf{Udalos» (Event)}
 \begin{center}\includegraphics{pic/event.png}\end{center}
+Udalos» je reprezentovaná krú¾kom a vyjadruje nieèo èo sa stalo poèas chodu firemného procesu. Tieto udalosti ovplyvòujú tok procesu a obyèajne majú príèinu (spú¹»aè) alebo dôsledok (výsledok). Uprostred kruhu je priestor pre zobrazenie spresòujúcich spú¹»aèov alebo výsledkov. Definované sú ¹ typy udalostí. Na zaèiatku toku sa umiestòujú ¹tartovacie (Start) v priebehu  pou¾ívame medziµahlé (Intermediate) a tok ukonèújeme koncovými (End) udalostami. V takomto poradí sú aj zobrazene na obrázku. \\
+
+\textbf{Aktivita (Activity)}
+\begin{center}\includegraphics{pic/activity.png}\end{center}
+Aktivita je spoloèný pojem pre èinnos» ktorá prebieha vo firme. Aktivita mô¾e by» atomická alebo nie je atomická. Typy aktivít sú proces (Process), podproces (Sub-Process) a úloha (Task). Podproces a úloha sa znaèia ¹tvorcom so zaoblenými rohmi, prièom podproces je odlí¹ený malým plusovým znamienkom v spodnej èasti. Proces je obsiahnutý vo vnútri poolu. \\
+
+\textbf{Brána (Gateway)}
 \begin{center}\includegraphics{pic/gateway.png}\end{center}
+Bránou sa zabezpeèuje rozdelenie a zlúèenie sekvenèného toku. Reprezentuje ho diamant, v ktorého strede sú zobrazene spresòujúce symboly. Tie ¹pecifikujú o aký typ vetvenia sa jedna. Na výber mame z rozhodovacieho alebo paralelného delenia. K týmto deleniam sú definovane odpovedajúce zluèovania.  \\
 
-\subsubsection{Artifacts}
-\begin{center}\includegraphics{pic/data.png}\end{center}
-\begin{center}\includegraphics{pic/group.png}\end{center}
-\begin{center}\includegraphics{pic/annotation.png}\end{center}
+\subsection{Spojovací objekty (Connecting Objects)}
+Tokové objekty sa spájajú a vytvárajú základnú kostru firemného procesu. Spojovací objekty zabezpeèujú toto prepojenie a taktie¾ umo¾òujú pripájanie artefaktov. \\
 
-\subsection{Swimlanes}
-\begin{center}\includegraphics{pic/pool.png}\end{center}
-\begin{center}\includegraphics{pic/line.png}\end{center}
-\begin{center}\includegraphics{pic/typs.png}\end{center}
-
-\subsection{Connecting Objects }
+\textbf{Sekvenèní tok (Sequence Flow)}
 \begin{center}\includegraphics{pic/seqflow.png}\end{center}
+Sekvenèní tok reprezentuje nepreru¹ovaná èiara s vyplnenou ¹ípkou. Vyznaèuje poradie v akom sú aktivity vykonávané v procese.\\
+
+\textbf{Tok sprav (Message Flow)}
 \begin{center}\includegraphics{pic/msgflow.png}\end{center}
+Tok sprav reprezentuje preru¹ovaná èiara s prázdnou ¹ípkou. Pou¾ívajú sa na znázornenie interakcie medzi dvomi separátnymi úèastníkmi procesu, ktorý sú schopný príma» a odosiela» správy.\\
+
+\textbf{Asociácia (Association)}
 \begin{center}\includegraphics{pic/association.png}\end{center}
+Na znázornenie asociácie sa pou¾íva preru¹ovaná èiara. Pomocou nej priraïujeme k tokovým objektom textové popisky alebo iné objekty ktoré nepatria do skupiny tokových objektov. Pridaním ¹ípky k preru¹ovanej èiare mô¾eme urèi» smer priradenia.\\
+
+\subsection{Plavecké dráhy  (Swimlanes)}
+Plavecké dráhy sa pou¾ívajú ako prostriedok pre organizáciu aktivít. Opticky sa pomocou nich oddeµujú zodpovednosti roli alebo usporiadanie èinnosti v procese..\\
+
+\textbf{Pool}
+\begin{center}\includegraphics{pic/pool.png}\end{center}
+Pool ohranièuje proces a graficky vymedzuje jeho hranice. V rámci jedného poolu sa nachádza len jedne proces. Interakcia medzi poolmi prebieha pomocou správ, èím modelujeme interakciu medzi dvoma separátnymi procesmi. \\
+
+\textbf{Dráha (Lane)}
+\begin{center}\includegraphics{pic/data.png}\end{center}
+Dráha delí pool na men¹ie èasti po celej jeho då¾ke. Slú¾ia na usporiadanie a kategorizáciu aktivít. Mô¾u napríklad znázoròova» role, oddelenia alebo funkcie organizácie. Komunikácia medzi jednotlivými dráhami prebieha pomocou správ. \\
+
+\subsection{Artefakty (Artifacts)}
+
+\textbf{Datový objekt (Data Object)}
+\begin{center}\includegraphics{pic/data.png}\end{center}
+gdfgfd\\
+
+\textbf{ (Skupina (Group)}
+\begin{center}\includegraphics{pic/group.png}\end{center}
+gdfgfd\\
+
+\textbf{Poznámka (Annotation)}
+\begin{center}\includegraphics{pic/annotation.png}\end{center}
+gdfgd\\
+
+\begin{center}\includegraphics{pic/typs.png}\end{center}
 
 
 \section{Unified Modeling Language}
