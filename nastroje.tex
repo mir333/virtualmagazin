@@ -21,7 +21,7 @@ Udalos» je reprezentovaná krú¾kom a vyjadruje nieèo èo sa stalo poèas chodu fire
 Pre ka¾dú udalos» mô¾eme do krú¾ku umiestni» symbol upresòujúceho spú¹»aèa alebo výsledku. V BPMN je definovaných desa» podtypov udalostí. Nie v¹etky podtypy sa v¹ak mô¾u pou¾íva s ka¾dým typom udalostí. Na obrázku [Obr. \ref{fig:evtyp}] sú znázornené v¹etky podtypy.\\ 
 Medziµahlé udalosti mô¾eme naviaza» na aktivity èím urèíme ich alternatívne ukonèenia. Napríklad vypr¹anie èasu pre ukonèenie aktivity, výskyt chyby poèas behu a iné. \\  
 
-\begin{figure}[h]
+\begin{figure}[ht]
  \centering
  \includegraphics{pic/eventtypes.png}
  \caption{Zoznam podtypov udalostí.}
@@ -58,7 +58,7 @@ Plavecké dráhy sa pou¾ívajú ako prostriedok pre organizáciu aktivít. Opticky sa 
 \begin{center}\includegraphics{pic/pool.png}\end{center}
 Pool ohranièuje proces a graficky vymedzuje jeho hranice. V rámci jedného poolu sa nachádza len jedne proces. Interakcia medzi poolmi prebieha pomocou správ. Poolý sa v diagrame pou¾ívajú pre zachytenie dvoch separátnych firemných entít alebo úèastníkov. Proces ka¾dého úèastníka je uzavretý v jeho poole èím je stanovené jeho jasné ohranièenie. Zachytený proces nemô¾e interagova» z okolitými procesmi pomocou sekvenèných tokov. Pre interakciu medy dvomi poolmi je urèený mechanizmus toku správ. Správy nesmú by» pou¾ité v rámci jedného poolu. [Obr. \ref{fig:polex}] \\
 
-\begin{figure}[h]
+\begin{figure}[ht]
  \centering
  \includegraphics[width=\linewidth]{pic/poolex.png}
  \caption{Príklad vyu¾itia poolu.}
@@ -69,7 +69,7 @@ Pool ohranièuje proces a graficky vymedzuje jeho hranice. V rámci jedného poolu 
 \begin{center}\includegraphics{pic/lane.png}\end{center}
 Dráha delí pool na men¹ie èasti po celej jeho då¾ke. Slú¾ia na usporiadanie a kategorizáciu aktivít. Mô¾u napríklad znázoròova» role, oddelenia alebo funkcie organizácie. Komunikácia medzi jednotlivými dráhami prebieha pomocou sekvenèných tokov. Toky správ sa nesmú pou¾íva» na komunikáciu medzi tokovými objektmi v dráhach jedného poolu. [Obr. \ref{fig:lanex}]\\
 
-\begin{figure}[h]
+\begin{figure}[ht]
  \centering
  \includegraphics[width=\linewidth]{pic/laneex.png}
  \caption{Príklad vyu¾itia dráhy.}
@@ -91,20 +91,26 @@ Skupina je znázoròovaná preru¹ovaným obdå¾nikom a pou¾íva sa pre dokumentaèné a 
 \begin{center}\includegraphics{pic/annotation.png}\end{center}
 Anotácia slú¾i na zachytenie dodatoènej textovej informácie pre èitateµa diagramu. K objektu je pripojená pomocou asociácie. \\
 
-
 \subsection{Výu¾itie BPMN}
 Pomocou BPMN sme schopný modelova» procesy na rôznych úrovniach. Od detailného popisu jednotlivých èiastoèných procesov ku globálnej orchestrácii firemných procesov, ktoré sa javia ako èierna skrinka. BPMN tým oslovuje rôznorodé publikum, ktorému predáva ¹iroké spektrum informácii na rozlièných úrovniach detailu. Podla miery záberu moderovaných procesov sa BPD delia na dve základné skupiny.
-\begin{itemize}
- \item Kooperatívne medzi-firemné procesy 
- \item Interné firemné procesy
-\end{itemize}
+\begin{description}
+ \item[Kooperatívne medzi-firemné procesy] Kooperatívny typ diagramu zachytáva medzi-firemne procesy. Jeho hlavným cieµom je znázornenie vz»ahov medzi dvomi a viacerými procesmi. Dôraz je kladený na modelovanie vzájomnej komunikácie. Obrázok \ref{fig:polex} je príkladom kooperatívneho medzi-firemneho procesu. 
+ \item[Interné firemné procesy] Interné procesy firmy sú zachytene v hierarchii diagramov. Najvy¹¹ia úroveò zachytáva hlavný firemný proces, ktorý je skr podprocesy podrobne popísaný. Najni¾¹ia úroveò podrobne modeluje v¹etky èinnosti, ktoré prebiehajú v procese. Príkladom procesu vysokej úrovne je obrázok \ref{fig:hlproc}. Diagram sa skladá z podprocesov, ktoré reprezentujú ni¾¹ie úrovne. Rozkreslením niektorého z podprocesov dostávame podrobný diagram jeho fungovania. Takýto diagram je znázornení na obrázku \ref{fig:subproc}. 
+\end{description}
 
-\subsection{Kooperatívne medzi-firemné procesy}
+\begin{figure}[hb]
+ \centering
+ \includegraphics[width=\linewidth]{pic/seqflow.png}
+ \caption{Interný proces vysokej úrovne.}
+ \label{fig:hlproc}
+\end{figure}
 
-\subsection{Interné firemné procesy}
-
-\subsection{Výhody modelovania pomocou BPMN}
-
+\begin{figure}[hb]
+ \centering
+ \includegraphics[width=\linewidth]{pic/seqflow.png}
+ \caption{Interný proces vysokej úrovne.}
+ \label{fig:subproc}
+\end{figure}
 \section{Unified Modeling Language}
 
 \section{BPEL???}
