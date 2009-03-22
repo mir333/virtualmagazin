@@ -1,4 +1,3 @@
-
 \section{Business Process Modeling Notation}
 V roku 2004 bol Business Process Management Initiative (BPMI) vydaný ¹tandard BPMN 1.0. Cieµom tohoto ¹tandardu je poskytnú» µahko pochopiteµnú notáciu pre v¹etkých u¾ívateµov podieµajúcich sa na tvorení, implementácii, spravovaní a monitorovaní firemných procesov. Súèas»ou BPMN je aj interný model, ktorý umo¾òuje prevod na spustiteµný BPEL4WS kód. Vypåòa sa tým medzera medzi firemným procesným návrhom a implementáciou. \\
 BPMN definuje Business Process Diagram (BPD), ktorý graficky znázoròuje postupnosti firemných procesov. Objekty zachytené v grafe reprezentujú aktivity a orientované hrany naznaèujú poradie ich vykonania. 
@@ -18,7 +17,16 @@ Tokové objekty sú základné objekty BPD udávajú správanie firemného procesu. Defi
 
 \textbf{Udalos» (Event)}
 \begin{center}\includegraphics{pic/event.png}\end{center}
-Udalos» je reprezentovaná krú¾kom a vyjadruje nieèo èo sa stalo poèas chodu firemného procesu. Tieto udalosti ovplyvòujú tok procesu a obyèajne majú príèinu (spú¹»aè) alebo dôsledok (výsledok). Uprostred kruhu je priestor pre zobrazenie spresòujúcich spú¹»aèov alebo výsledkov. Definované sú ¹ typy udalostí. Na zaèiatku toku sa umiestòujú ¹tartovacie (Start) v priebehu  pou¾ívame medziµahlé (Intermediate) a tok ukonèújeme koncovými (End) udalostami. V takomto poradí sú aj zobrazene na obrázku. \\
+Udalos» je reprezentovaná krú¾kom a vyjadruje nieèo èo sa stalo poèas chodu firemného procesu. Tieto udalosti ovplyvòujú tok procesu a obyèajne majú príèinu (spú¹»aè) alebo dôsledok (výsledok). Definované sú tri typy udalostí. Na zaèiatku toku sa umiestòujú ¹tartovacie (Start) v priebehu pou¾ívame medziµahlé (Intermediate) a tok ukonèujeme koncovými (End) udalos»ami.\\ 
+Pre ka¾dú udalos» mô¾eme do krú¾ku umiestni» symbol upresòujúceho spú¹»aèa alebo výsledku. V BPMN je definovaných desa» podtypov udalostí. Nie v¹etky podtypy sa v¹ak mô¾u pou¾íva s ka¾dým typom udalostí. Na obrázku [Obr. \ref{fig:evtyp}] sú znázornené v¹etky podtypy.\\ 
+Medziµahlé udalosti mô¾eme naviaza» na aktivity èím urèíme ich alternatívne ukonèenia. Napríklad vypr¹anie èasu pre ukonèenie aktivity, výskyt chyby poèas behu a iné. \\  
+
+\begin{figure}[h]
+ \centering
+ \includegraphics{pic/eventtypes.png}
+ \caption{Zoznam podtypov udalostí.}
+ \label{fig:evtyp}
+\end{figure}
 
 \textbf{Aktivita (Activity)}
 \begin{center}\includegraphics{pic/activity.png}\end{center}
@@ -37,39 +45,51 @@ Sekvenèní tok reprezentuje nepreru¹ovaná èiara s vyplnenou ¹ípkou. Vyznaèuje por
 
 \textbf{Tok sprav (Message Flow)}
 \begin{center}\includegraphics{pic/msgflow.png}\end{center}
-Tok sprav reprezentuje preru¹ovaná èiara s prázdnou ¹ípkou. Pou¾ívajú sa na znázornenie interakcie medzi dvomi separátnymi úèastníkmi procesu, ktorý sú schopný príma» a odosiela» správy.\\
+Tok sprav reprezentuje preru¹ovaná èiara s prázdnou ¹ípkou. Pou¾ívajú sa na znázornenie interakcie medzi dvomi separátnymi úèastníkmi procesu, ktorý sú schopný príma» a odosiela» správy. Tok správ mô¾e by» podmienený. Graficky sa podmienená správa oznaèí umiestnením diamantu na zaèiatok èiary a podmienka je zaznamenaná v názve toku. Pri pou¾ívaní podmienených správ je dôle¾ité aby aspoò jedna podmienka bola splnená aby proces mohol pokraèova». Pre zaistenie pokraèovania toku sa mô¾e pou¾i» implicitný tok, ktorý sa znaèí pre¹krtnutím na zaèiatku èiary. Uplatòuje sa ak v¹etky ostatne podmienené spravy sa vyhodnotia záporne. \\
 
 \textbf{Asociácia (Association)}
 \begin{center}\includegraphics{pic/association.png}\end{center}
 Na znázornenie asociácie sa pou¾íva preru¹ovaná èiara. Pomocou nej priraïujeme k tokovým objektom textové popisky alebo iné objekty ktoré nepatria do skupiny tokových objektov. Pridaním ¹ípky k preru¹ovanej èiare mô¾eme urèi» smer priradenia.\\
 
 \subsection{Plavecké dráhy  (Swimlanes)}
-Plavecké dráhy sa pou¾ívajú ako prostriedok pre organizáciu aktivít. Opticky sa pomocou nich oddeµujú zodpovednosti roli alebo usporiadanie èinnosti v procese..\\
+Plavecké dráhy sa pou¾ívajú ako prostriedok pre organizáciu aktivít. Opticky sa pomocou nich oddeµujú zodpovednosti roli alebo usporiadanie èinnosti v procese.\\
 
 \textbf{Pool}
 \begin{center}\includegraphics{pic/pool.png}\end{center}
-Pool ohranièuje proces a graficky vymedzuje jeho hranice. V rámci jedného poolu sa nachádza len jedne proces. Interakcia medzi poolmi prebieha pomocou správ, èím modelujeme interakciu medzi dvoma separátnymi procesmi. \\
+Pool ohranièuje proces a graficky vymedzuje jeho hranice. V rámci jedného poolu sa nachádza len jedne proces. Interakcia medzi poolmi prebieha pomocou správ. Poolý sa v diagrame pou¾ívajú pre zachytenie dvoch separátnych firemných entít alebo úèastníkov. Proces ka¾dého úèastníka je uzavretý v jeho poole èím je stanovené jeho jasné ohranièenie. Zachytený proces nemô¾e interagova» z okolitými procesmi pomocou sekvenèných tokov. Pre interakciu medy dvomi poolmi je urèený mechanizmus toku správ. Správy nesmú by» pou¾ité v rámci jedného poolu. [Obr. \ref{fig:polex}] \\
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=\linewidth]{pic/poolex.png}
+ \caption{Príklad vyu¾itia poolu.}
+ \label{fig:polex}
+\end{figure}
 
 \textbf{Dráha (Lane)}
 \begin{center}\includegraphics{pic/lane.png}\end{center}
-Dráha delí pool na men¹ie èasti po celej jeho då¾ke. Slú¾ia na usporiadanie a kategorizáciu aktivít. Mô¾u napríklad znázoròova» role, oddelenia alebo funkcie organizácie. Komunikácia medzi jednotlivými dráhami prebieha pomocou správ. \\
+Dráha delí pool na men¹ie èasti po celej jeho då¾ke. Slú¾ia na usporiadanie a kategorizáciu aktivít. Mô¾u napríklad znázoròova» role, oddelenia alebo funkcie organizácie. Komunikácia medzi jednotlivými dráhami prebieha pomocou sekvenèných tokov. Toky správ sa nesmú pou¾íva» na komunikáciu medzi tokovými objektmi v dráhach jedného poolu. [Obr. \ref{fig:lanex}]\\
+
+\begin{figure}[h]
+ \centering
+ \includegraphics[width=\linewidth]{pic/laneex.png}
+ \caption{Príklad vyu¾itia dráhy.}
+ \label{fig:lanex}
+\end{figure}
 
 \subsection{Artefakty (Artifacts)}
-Artefakty neovplyvòujú tok procesu ale ponúkajú spresòujúce informácie o elementoch procesu. U¾ívateµ si mô¾e sám doplni» sadu artefaktov pre uµahèenie a sprehµadnenie diagramov. V BPMN sú preddefinované len tri typy artefaktov.\\
+Artefakty neovplyvòujú základnú ¹truktúru procesu budovanú z aktivít, brán a sekvenèných tokov. Ponúkajú v¹ak spresòujúce informácie o elementoch procesu. U¾ívateµ si mô¾e sám doplni» sadu artefaktov pre uµahèenie a sprehµadnenie diagramov. V BPMN sú preddefinované len tri typy artefaktov.\\
 
 \textbf{Dátový objekt (Data Object)}
 \begin{center}\includegraphics{pic/data.png}\end{center}
 Dátový objekt slú¾i na zobrazenie toku dat v procese. Pomocou neho modelujeme aké dáta sú po¾adované a aké dáta systém produkujeme. Dátový objekt je k aktivitám pripájaný pomocou asociácie. Graficky je reprezentovaný obdå¾nikom s ohnutým rohom.  \\
 
-\textbf{Skupina (Group)}
+\textbf{ Skupina (Group)}
 \begin{center}\includegraphics{pic/group.png}\end{center}
 Skupina je znázoròovaná preru¹ovaným obdå¾nikom a pou¾íva sa pre dokumentaèné a analytické úèeli. Nejak neovplyvòuje tok procesu. \\
 
 \textbf{Poznámka  (Annotation)}
 \begin{center}\includegraphics{pic/annotation.png}\end{center}
 Anotácia slú¾i na zachytenie dodatoènej textovej informácie pre èitateµa diagramu. K objektu je pripojená pomocou asociácie. \\
-
-\begin{center}\includegraphics{pic/typs.png}\end{center}
 
 \section{Unified Modeling Language}
 
