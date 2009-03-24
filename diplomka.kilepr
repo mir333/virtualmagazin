@@ -3,7 +3,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.0
-lastDocument=nastroje.tex
+lastDocument=uvod.tex
 masterDocument=
 name=Diplomka
 pkg_extIsRegExp=false
@@ -26,10 +26,10 @@ order=0
 
 [item:dip.tex]
 archive=true
-column=6
+column=0
 encoding=ISO 8859-2
 highlight=LaTeX
-line=32
+line=20
 open=true
 order=4
 
@@ -56,16 +56,16 @@ archive=true
 column=0
 encoding=ISO 8859-2
 highlight=LaTeX
-line=14
+line=11
 open=true
 order=2
 
 [item:nastroje.tex]
 archive=true
-column=35
+column=0
 encoding=ISO 8859-2
 highlight=LaTeX
-line=62
+line=52
 open=true
 order=3
 
@@ -141,14 +141,23 @@ line=0
 open=false
 order=-1
 
+[item:pic/usecaseex.png]
+archive=true
+column=6750318
+encoding=
+highlight=
+line=0
+open=false
+order=-1
+
 [item:uvod.tex]
 archive=true
 column=0
-encoding=UTF-8
+encoding=ISO 8859-2
 highlight=LaTeX
-line=0
-open=false
-order=3
+line=8
+open=true
+order=5
 
 [item:zaver.tex]
 archive=true
