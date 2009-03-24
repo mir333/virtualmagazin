@@ -111,8 +111,36 @@ Pomocou BPMN sme schopný modelova» procesy na rôznych úrovniach. Od detailného p
  \caption{Interný proces vysokej úrovne.}
  \label{fig:subproc}
 \end{figure}
+
 \section{Unified Modeling Language}
 
-\section{BPEL???}
+Unified Modeling Language (UML) je v súèasnej dobe najroz¹írenej¹ích modelovacích nástrojov. Jeho uplatnenie je ¹iroké a nie je pou¾ívaný len v oblasti vývoja softvéru. Pre jeho veµké roz¹írenie a predpokladanú zrejmos» notácie sa nim táto práca nebude podrobne zaobera». Zmienené budú len niektoré diagramy, ktoré v práci vyu¾ijeme. \\
 
-\section{SOA???}
+\subsection{Diagram prípadov u¾itia}
+Diagram prípadov u¾itia (Use Case Diagram) slú¾i na zachytenie základných funkèných po¾iadavkov, ktoré ma systém splòova». Diagram sa skladá z troch základných èastí:
+\begin{description}
+ \item[Hranice systému] Vymedzujú modelovanú oblas».
+ \item[Aktér] Predstavuje entitu (rola, systém, èas) mimo systém, ktorá so systémom spolupracuje. 
+ \item[Prípad u¾itia] Zachytáva ucelenú funkènú jednotku systému.
+\end{description}
+
+Pomocou týchto èastí modelujeme interakciu okolitého sveta s modelovaným systémom. Diagram nesmie obsahova» interakciu medzi aktérmi a ani medzi prípadmi u¾itia. Súèas»ou diagramu je aj detailná dokumentácia jednotlivých prípadov u¾itia. Na obrázku \ref{fig:UCex} je jednoduchý príklad diagramu.
+
+\begin{figure}[hb]
+ \centering
+ \includegraphics[width=240px]{pic/usecaseex.png}
+ \caption{Príklad na diagram prípadu u¾itia.}
+ \label{fig:UCex}
+\end{figure}
+
+\subsection{Diagram tried}
+Diagram tried graficky zachytáva statickú ¹truktúru systému. Jeho stavebnými prvkami sú triedy a asociácie. Triedy obsahujú atribúty a operácie a mô¾u sa hierarchicky radi» pomocou generalizácie a ¹pecializácie. Asociácii slú¾ia na modelovanie vzájomných vz»ahov medzi tried. Mô¾eme urèi» ich smer a kardinalita. Na obrázku \ref{fig:classex} je príklad diagramu tried.\\
+
+\begin{figure}[hb]
+ \centering
+ \includegraphics[width=220px]{pic/classex.png}
+ \caption{Príklad na diagram tried.}
+ \label{fig:classex}
+\end{figure}
+	
+%\subsection{Sekvenèný diagram}}
