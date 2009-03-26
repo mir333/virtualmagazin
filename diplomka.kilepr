@@ -17,19 +17,19 @@ QuickBuild=PDFLaTeX+ViewPDF
 
 [item:aplikacia.tex]
 archive=true
-column=34
+column=0
 encoding=ISO 8859-2
 highlight=LaTeX
-line=71
+line=42
 open=true
 order=0
 
 [item:dip.tex]
 archive=true
-column=9
+column=6
 encoding=ISO 8859-2
 highlight=LaTeX
-line=36
+line=21
 open=true
 order=4
 
@@ -53,19 +53,19 @@ order=1
 
 [item:metodiky.tex]
 archive=true
-column=20
+column=424
 encoding=ISO 8859-2
 highlight=LaTeX
-line=9
+line=23
 open=true
 order=2
 
 [item:nastroje.tex]
 archive=true
-column=0
+column=17
 encoding=ISO 8859-2
 highlight=LaTeX
-line=52
+line=144
 open=true
 order=3
 
