@@ -4,12 +4,32 @@ Pri vyu¾ití objektovo orientovanej analýzy sa v najväè¹ej miere pou¾ívajú dva mo
 
 \section{Vodopád}
 \label{sec:vod}
-Vodopád patrí medzi najtradiènej¹ie modely vývoja. Rozdeµuje projekt na základe vykonávaných aktivít na analýzu, návrh, implementovanie a testovanie. Tieto etapy sa zoradia za seba a postupne sa zaènú vykonáva». Ïal¹ia aktivita mô¾e zaèa» a¾ keï skonèí predchádzajúca. Pri výskyte chyby sa projekt vracia spä» do etapy, v krtej chyba vznikla a musí by» opravená. Po opravení chyby sa proces spú¹»a od toho miesta kde chyba nastala.\\
+Vodopád patrí medzi najtradiènej¹ie modely vývoja. Historicky je to prvá ucelené metodika pre vývoj softvéru. Definuje jasné postupy pri zvládaní projektu poèas celého jeho ¾ivotného cyklu. Rozdeµuje projekt na základe vykonávaných aktivít na:
+
+\begin{itemize}
+\item Definovanie problému
+\item Analýzu a ¹pecifikáciu po¾iadavkov
+\item Návrh
+\item Implementovanie 
+\item Testovanie a integrovanie
+\item Údr¾ba 
+\end{itemize}
+
+Tieto etapy sa zoradia za seba a postupne sa zaènú sekvenène vykonáva». Ïal¹ia aktivita mô¾e zaèa» a¾ keï skonèí predchádzajúca. Pri výskyte chyby sa projekt vracia spä» do etapy, v krtej chyba vznikla a musí by» opravená. Po opravení chyby sa proces spú¹»a od toho miesta kde chyba nastala.\\
+
+Výhodou aj nevýhodou vodopádu je jeho jednoduchos» a µahká pochopiteµnos». Umo¾òuje µahkú kontrolu postupu práce pomocou sledovania výstupov jednotlivých etáp vývoja. V súèasnej dobe v¹ak u¾ nedoká¾e pokry» väè¹ie projekty pre ich zlo¾itos». 
 
 Pri práci podla modelu vodopád sa rýchlo narazí na viaceré úskalia. Jedným z nich je správne odhadnutie èasu prechodu z jednej etapy projektu do nasledujúcej. Problémom mô¾e by» aj to ¾e vodopád neumo¾òuje prekrývania sa etáp. Najväè¹ím problémom v¹ak je neskoré odhalenie chyby v analýze alebo návrhu, ktoré sa prejaví a¾ pri testovaní. Takáto chyba vracia projekt na jeho úplný zaèiatok a mô¾e µahko vies» k jeho neúspechu. Na tieto »a¾kosti naväzuje nakoniec problematický odhad ceny projektu.
 
 \section{Iteratívny/inkrementálny vývoj}
 \label{sec:InIt}
+Iteratívny / inkrementálny vývoj sa sna¾í o zní¾enie rizika zlyhania projektu. Celý projekt je rozdelený na èasti podla budúcej funkcionality systému. Pre ka¾dú èast sa vykoná analýza, návrh, implementácia a testovanie. Výsledný systém sa vybuduje z podèastí. Rozdelením projektu umo¾níme skor¹iu detekciu chýb a hlavne nemusíme prerába» celý systém ale len èast, v ktorej sa chyba vyskytla. 
+
+Pri vyu¾ití tohoto modelu vznikajú problémy s integráciou. Vzniká ré¾ia, ktorá musí zabezpeèova» funkcionalitu neúplného systému ak napríklad vytvorenie protéz. Tvorí sa priestor na vznik nových chýb pri integrácii èastí systému. Okrem technických problém sa komplikuje aj èasový návrh práce na projekte, lebo nie ka¾dá iterácia zaberá rovnaký èas. Úvodné iterácia sa predl¾ujú z analytických dôvodov aby bol nastávajúci systém dobre pochopený. Závereèné iterácie zas v sebe zahròujú sprievodné èinnosti projektu ako za¹kolenie u¾ívateµov.\\
+
+Pomocou inkrementálneho vývoja je systém tvorený z nezávislých funkèných èastí, ktorá sú osobitne vytvárane za pomoci vodopádu alebo iteratívneho vývoja. Celkový systém dostávame spojením jednotlivých èastí do jedného celku. Inkrementálny vývoj je zalo¾ený na filozofii pridávania k existujúcim èastiam systému.\\
+
+Pri  iteratívnom vývoji sa postupuje cestou zdokonaµovania, roz¹irovania a opravovania u¾ existujúceho systému. Nemalá èas» kódu je ïal¹ími iteráciami pripisovaná prípadne umazaná a nahradená. Preferuje sa prepísanie zlého kódu namiesto jeho obchádzania. Tento postup sa v drvivej väè¹ine prípadov spája s inkrementálnym vývojom a veµmi dobre spolu fungujú.
 
 \section{Agilné metodiky}
 \label{sec:agil}
