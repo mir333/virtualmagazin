@@ -15,7 +15,15 @@ Vodopád patrí medzi najtradiènej¹ie modely vývoja. Historicky je to prvá ucelené
 \item Údr¾ba 
 \end{itemize}
 
-Tieto etapy sa zoradia za seba a postupne sa zaènú sekvenène vykonáva». Ïal¹ia aktivita mô¾e zaèa» a¾ keï skonèí predchádzajúca. Pri výskyte chyby sa projekt vracia spä» do etapy, v krtej chyba vznikla a musí by» opravená. Po opravení chyby sa proces spú¹»a od toho miesta kde chyba nastala.\\
+Tieto etapy sa zoradia za seba a postupne sa zaènú sekvenène vykonáva». Ïal¹ia aktivita mô¾e zaèa» a¾ keï skonèí predchádzajúca. Pri výskyte chyby sa projekt vracia spä» do etapy, v krtej chyba vznikla a musí by» opravená. Po opravení chyby sa proces spú¹»a od toho miesta kde chyba nastala. \ref{fig:vod}\\
+
+\begin{figure}
+ \centering
+ \includegraphics[width=\linewidth]{pic/vodopad.png}
+ % vodopad.png: 726x540 pixel, 72dpi, 25.61x19.05 cm, bb=0 0 726 540
+ \caption{Schéma ¾ivotného cyklu Vodopád.}
+ \label{fig:vod}
+\end{figure}
 
 Výhodou aj nevýhodou vodopádu je jeho jednoduchos» a µahká pochopiteµnos». Umo¾òuje µahkú kontrolu postupu práce pomocou sledovania výstupov jednotlivých etáp vývoja. V súèasnej dobe v¹ak u¾ nedoká¾e pokry» väè¹ie projekty pre ich zlo¾itos». 
 
@@ -23,7 +31,7 @@ Pri práci podla modelu vodopád sa rýchlo narazí na viaceré úskalia. Jedným z nic
 
 Spôsob akým vodopád funguje priná¹a e¹te jednu veµkú nevýhodu. Poèas celej doby trvania vývoja nemá zákazník ¾iadnu mo¾nos» zisti» èi dodaný systém bude odpoveda» jeho predstavám a zasahova» do jeho vývoja. Nemá mo¾nos» získa» funkèné podèasti systému, s ktorými mô¾e u¾ pracova», ale musí èaka» a¾ na ukonèenie vývoja. Po ukonèení projektu µahko nastane situácia, pri ktorej je zákazník prekvapený z výsledku ktorý obdr¾í. 
 
-\section{Iteratívny/inkrementálny vývoj}
+\section{Iteratívny / inkrementálny vývoj}
 \label{sec:InIt}
 Iteratívny / inkrementálny vývoj sa sna¾í o zní¾enie rizika zlyhania projektu. Celý projekt je rozdelený na èasti podla budúcej funkcionality systému. Pre ka¾dú èast sa vykoná analýza, návrh, implementácia a testovanie. Výsledný systém sa vybuduje z podèastí. Rozdelením projektu umo¾níme skor¹iu detekciu chýb a hlavne nemusíme prerába» celý systém ale len èast, v ktorej sa chyba vyskytla. 
 
@@ -37,13 +45,52 @@ Pri  iteratívnom vývoji sa postupuje cestou zdokonaµovania, roz¹irovania a oprav
 \label{sec:agil}
 
 Súèasný svet sa veµmi rýchlo mení. Pri vývoji softvéru sa preto kladie veµký doraz na rýchlos» a flexibilitu. Aplikácie sa poèas vývoja musia prispôsobova» meniacim sa podmienkam a by» èo najskôr k dispozícii zákazníkovi.
+
+Z obrázku \ref{fig:agilvsklas} vidíme, ¾e klasické metódy vývoja zakladajú na fixnej funkcionalite, ktorá je daná ¹pecifikáciou po¾iadavkov. Funkcionalita je hlavným merítkom úspe¹nosti projektu. V prípade nesplnenie po¾iadavkov projekt zlyháva. Èas a prostriedky sa pre daný projekt odvíjajú od funkcionality. Èasto sa preto stáva, ¾e dochádza k posúvaniu termínov odovzdania a navy¹ovanie zdrojov na zvládnutie projektu.
+
+Agilné metódy sa k problému stavajú presne naopak. Za fixné pova¾ujú zdroje a èas potrebný na zvládnutie projektu. Zákazníkovi dodáva nie v¾dy úplnú, ale pre neho najpodstatnej¹iu funkcionalitu v¾dy v èase, keï ju potrebuje. Programy vyvíjané agilnými metódami sú µahko roz¹íritelne a preto nie je problém s dodaním zvy¹ných èastí systému. Ïal¹ím dôsledkom nefixnej funkcionality je mo¾nos» menenia po¾iadavkov zákazníka poèas vývoja. Vyvíjaný produkt tým lep¹ie spåòa zákazníkove potreby.
+
+\begin{figure}
+ \centering
+ \includegraphics[width=\linewidth]{pic/agilvsklasik.png}
+ % agilvsklasik.png: 1288x582 pixel, 96dpi, 34.08x15.40 cm, bb=0 0 966 437
+ \caption{Porovnanie klasického a agilného prístupu.}
+ \label{fig:agilvsklas}
+\end{figure}
+
+
 Medzi agilná metódy vývoja patria viaceré metodiky. V¹etky majú spoloèný základ vo èastých kontrolách a úpravách, vysoko kvalifikovaných samo-organizovaných týmoch a zainteresovanosti zákazníka v procese. Filozofia agilných metód je zachytená v ich manifeste:
-\begin{description}
-\item[Osoby a interakcia majú prednos» pred procesmi a nástrojmi] Tento bod vyjadruje zameranie metódy na èloveka a jeho schopnosti a skúsenosti. Uprednostòujú sa malé efektívne týmy, ktoré pri spoloèných stretnutiach rie¹ia stanovený problém a rozdeµujú si èinnosti.
-\item[Fungujúci softvér ma prednos» pred obsiahlou dokumentáciou] Dôraz je kladený na fungujúce èasti softvéru, ktoré mô¾u by» predvedené a predané zákazníkovi. Dokumentovanie je a¾ na druhom mieste. Softvér je èasto modifikovaný, prípadne urèité èasti kódu sú úplne odstraòované. Podrobná dokumentácia by zbytoène zaberali veµa èasu, lebo by musela by» stále prerábaná, prípadne by sa veµké èasti dokumentovali zbytoène.
-\item[Spolupráca so zákazníkom je uprednostnená pred vyjednávaním zmluv]
-\item[Reagovanie na zmenu má prednos» pred nasledovaním plánu]
- \end{description}
+\begin{itemize}
+ \item Osoby a interakcia majú prednos» pred procesmi a nástrojmi
+ \item Fungujúci softvér ma prednos» pred obsiahlou dokumentáciou
+ \item Spolupráca so zákazníkom je uprednostnená pred vyjednávaním zmluv
+ \item Reagovanie na zmenu má prednos» pred nasledovaním plánu\\
+\end{itemize}
+\textbf{Osoby a interakcia majú prednos» pred procesmi a nástrojmi}
+
+Tento bod vyjadruje zameranie metódy na èloveka a jeho schopnosti a skúsenosti. Uprednostòovaný je malý efektívny tým, ktorého èlenovia medzi sebou intenzívne komunikujú pri rie¹ení problémov. Preferované je rie¹enie problémov pomocou komunikácie tvárou v tvár, ktorá je rýchlej¹ia a efektívnej¹ia ako iné formy komunikácie. Je preto dobré aby bol cely tým situovaný fyzicky na jedno miesto. Umo¾òuje to lep¹iu spoluprácu na projekte a tým aj rýchlej¹ie produkovanie kódu. Programovanie èasto prebieha v skupinkách, ktorej èlenovia sa striedajú pri kódovaní daného úseku programu. 
+
+Mana¾éri a vývojári sú v týme na rovnakej úrovni. Pri rozhodnutiach, ktoré sa týkajú technických rie¹ení, majú hlavné slovo vývojári. Mana¾éri majú za úlohu odstraòova» problémy netechnického rázu, ktoré by mohli projekt ohrozi». Obidve skupiny  navzájom intenzívne komunikujú pre dosiahnutie najlep¹ích výsledkov.\\\\
+\textbf{Fungujúci softvér ma prednos» pred obsiahlou dokumentáciou}
+
+Klasické postupy stavajú dokumentáciu na základe ¹pecifikácie po¾iadavkov. Sna¾ia sa tak zachyti» funkcionalitu budovaného systému. Výsledkom vývojového procesu je systém, ktorý zákazník na zaèiatku procesu definoval. Mana¾ment sa týmto postupom sa sna¾í minimalizova» mo¾nos» zlyhania projektu. Klasický prístup má v¹ak dva výrazné nedostatky. Poèíta s presnou predstavou zákazníka o nastávajúcom systéme, ktorú obyèajne zákazník nemá, a nereaguje na zmeny v po¾iadavkách. Od definovania po¾iadavkov po odovzdanie systému uplynie veµa èasu. Svet v¹ak nestojí a taktie¾ ani po¾iadavky zákazníka na systém nestagnujú. Výsledkom klasických postupov  je preto èasto systém, ktorý presne spåòa ¹pecifikáciu po¾iadavkov ale nespåòa aktuálne potreby zákazníka.
+
+Agilné metodiky sa sna¾ia tejto nepru¾nosti vyhnú». Nemajú jasne stanovené po¾iadavky na systém na zaèiatku vývoja,  preto nie je mo¾né zostavi» klasickú dokumentáciu. ©etrí sa tým èas potrebný na vývoj. Za kµúèovú èas» dokumentácie je pova¾ovaný vlasý kód. Agilne metodiky priniesli koncept jednoduchosti ? neprodukova» viac ako je treba a nesna¾i» sa tvori» dokumenty, ktoré zachytávajú budúcnos». ©etrí sa tým veµa úsilia, ktoré by bolo potrebné na vyhµadávanie v rozsiahlych dokumentáciách a  udr¾ovanie týchto dokumentov v aktuálnom stave.
+ 
+Za hlavný návrh systému je pova¾ovaný budovaný zdrojový kód. Tento prístup umo¾òuje rýchly presun do fázy programovania, ktorá priamo zachytáva po¾iadavky zákazníka. Preskakuje sa tým modelovanie rôznych abstraktných modelov, èím sa ¹etrí èas. Vzniká tu v¹ak riziko, ¾e zákazník musí by» pripravený na pracovania so systémom poèas jeho vyvíja.\\\\
+\textbf{Spolupráca so zákazníkom je uprednostnená pred vyjednávaním zmluv}
+
+Agilné metódy sú zalo¾ené na flexibilite a ich sila spoèíva v mo¾nosti rýchleho sa prispôsobenia meniacim sa po¾iadavkam. Pri vývoji sa intenzívne komunikuje so zákazníkom a funkcionalita sa vytvára a upravuje podµa jeho predstáv. Zákazník sa stáva èlenom vývojového, spolupracuje na odsúhlasovaní rozhodnutí a ovplyvòuje vývoj.
+
+Klasické metódy zjednávania kontraktu sa opierajú o ¹pecifikáciu budúceho systému. Podµa nej sa vypoèíta fixná cena projektu. Pre agilné metódy tento postup nie je aplikovateµný, lebo koneèná funkcionalita budúceho systému sa zaène rysova» a¾ poèas samotného vývoja. Agilné metódy musia by» preto podporené novým druhom kontraktu, ktorý nie je zalo¾ený na fixnej cene dodávky. 
+
+Vniká tu potreba pre nový obchodný vz»ah, ktorý je zalo¾ený na úzkej spolupráci zákazníka s dodávateµom. Zákazník má veµkú moc v ovplyvòovaní celého vývoja a nesie aj veµkú èas» zodpovednosti za úspech projektu.\\\\
+\textbf{Reagovanie na zmenu má prednos» pred nasledovaním plánu}
+
+V súèasnom rýchlo sa meniacom svete je »a¾ké pou¾íva» prediktívne metodiky alebo definova» stabilnú ¹pecifikáciu po¾iadavkov. Klasické postupy sa pomocou plánovania sna¾ia zamedzi» zlyhaniu projektu a tým ¹etri» náklady na projekt. Ich výsledok v¹ak nemusí splni» momentálne oèakávania zákazníka.
+
+Agilne metódy volia iný prístup. Zmenám sa nedá vyhnú» a preto sa proti ním nesna¾ia bojova». Vzniká tu snaha o minimalizáciu nákladov na prevádzanie potrebných zmien poèas vývoja. Vývoj striktne nenasleduje stanovený plán. Na zaèiatku je identifikovaná poèiatoèná funkcionalita, ktorá je poèas vývoja prispôsobovaná. Jednotlivým funkèným èastiam je pridelená priorita, podµa ktorej sa pri vývoji postupuje. Zákazník ma mo¾nos» ovplyvòova» prioritu jednotlivých funkcii. Vy¾iada» doplnenie novej funkcionality systému, modifikovanie u¾ existujúcich èastí a vymazanie nevhodnej funkcionality
+
 \section{Unified Process}
 \label{sec:up}
 

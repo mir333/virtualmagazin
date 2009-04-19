@@ -21,7 +21,7 @@ column=0
 encoding=ISO 8859-2
 highlight=LaTeX
 line=42
-open=true
+open=false
 order=0
 
 [item:dip.tex]
@@ -30,7 +30,7 @@ column=6
 encoding=ISO 8859-2
 highlight=LaTeX
 line=21
-open=true
+open=false
 order=4
 
 [item:diplomka.kilepr]
@@ -48,16 +48,16 @@ column=0
 encoding=ISO 8859-2
 highlight=LaTeX
 line=0
-open=true
+open=false
 order=1
 
 [item:metodiky.tex]
 archive=true
-column=424
+column=0
 encoding=ISO 8859-2
 highlight=LaTeX
-line=23
-open=true
+line=41
+open=false
 order=2
 
 [item:nastroje.tex]
@@ -66,7 +66,7 @@ column=17
 encoding=ISO 8859-2
 highlight=LaTeX
 line=144
-open=true
+open=false
 order=3
 
 [item:pic/VyrtualnaKonferencia.png]
@@ -156,7 +156,7 @@ column=0
 encoding=ISO 8859-2
 highlight=LaTeX
 line=8
-open=true
+open=false
 order=5
 
 [item:zaver.tex]
