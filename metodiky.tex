@@ -57,7 +57,7 @@ Agilné metódy sa k problému stavajú presne naopak. Za fixné pova¾ujú zdroje a èa
  \label{fig:agilvsklas}
 \end{figure}
 
-
+\subsection{Manifest agilného programovania}
 Medzi agilná metódy vývoja patria viaceré metodiky. V¹etky majú spoloèný základ vo èastých kontrolách a úpravách, vysoko kvalifikovaných samo-organizovaných týmoch a zainteresovanosti zákazníka v procese. Filozofia agilných metód je zachytená v ich manifeste:
 \begin{itemize}
  \item Osoby a interakcia majú prednos» pred procesmi a nástrojmi
@@ -103,6 +103,7 @@ Ako hlavný prvok premostenia firemných potrieb a IT je vhodne vyu¾i» modelov fir
 
 Analyzovaním procesov mô¾eme dospie» k tomu, ¾e po¾adovaná funkcionalita u¾ existuje a mô¾e by» znovu pou¾itá a sú prípadne do programovane len malé èasti na prepojenie u¾ existujúcich modulov. V prípade ¾e sa nedá znovu pou¾i» ¾iadna èast systému, budeme vyvíja» od zaèiatku.\\
 
+\subsection{BDD model èinností}
 Vzniká snaha na uzavretie priepasti medzi firemnými potrebami a IT rie¹eniami. Toto prepojenie v¹ak musí zosta» pru¾né a prístupné pri vytváraní IT rie¹ení. Tieto trendy viedli k zavedeniu servisne-orientovanej architektúry (Service-Oriented Architecture SOA). 
 
 SOA poskytuje rámec (framework) spolu s princípmi a smernicami na vytváranie znovu pou¾iteµných, zluèiteµných a nastaviteµných servisov (services), ktoré sú platformovo nezávislé. Vyu¾itie SOA vy¾aduje BDD prístup, ktorý spracúva firemné ciele a po¾iadavky z hora na dol do návrhov, vývoja a testovania. Získavame tým prostredie, v ktorom sa aplikácie tvoria zo znovu pou¾iteµných servisov alebo z nových servisov, ktoré sú vyvíjané podla aktuálnych firemných potrieb. Tým sa zabezpeèuje potrebná flexibilita v IT.
@@ -123,10 +124,11 @@ Po ukonèení modelovania firemných procesov nastupuje fáza zbierania po¾iadavkov 
 
 Následne za uvedením servisu do prevádzky zaèína fáza monitorovania. Zbierajú sa v nej informácie o behu servisu v skutoènom èase, spracovávaných dátach a hláseniach. Sledovanie je doplnenie o ¹irokú paletu meraní podla vopred definovaných metrík a výkonnostných parametrov. Fáza monitorovania je podstatná pre urèenie funkènosti a správnosti vytvoreného servisu. Správne vytvorený servis musí spåòa» v¹etky po¾adované parametre.
 
-Na záver nastupuje analyzovanie nazbieraných dát z predchádzajúcej fázy. Dáta sú predané na analýzu architektom, návrhárom a vývojárom. V¹etci zúèastnení pri vývoji vyhodnotia zozbierané údaje a na ich základe navrhnú vylep¹enia systému. Niekedy sa taktie¾ zmeny mô¾u prejavi» aj na firemnej úrovni zmenou firemných pravidiel a externých rozhraní. Zmenami sa proces opä» posúva do fázy modelovania, èím sa postup èinností uzatvára a zaèína nové kolo vývoja. Ustavièným vylep¹ovaním existujúceho systému umo¾òuje tento mechanizmus rýchle prispôsobenie sa meniacim sa podmienkam.\\
+Na záver nastupuje analyzovanie nazbieraných dát z predchádzajúcej fázy. Dáta sú predané na analýzu architektom, návrhárom a vývojárom. V¹etci zúèastnení pri vývoji vyhodnotia zozbierané údaje a na ich základe navrhnú vylep¹enia systému. Niekedy sa taktie¾ zmeny mô¾u prejavi» aj na firemnej úrovni zmenou firemných pravidiel a externých rozhraní. Zmenami sa proces opä» posúva do fázy modelovania, èím sa postup èinností uzatvára a zaèína nové kolo vývoja. Ustavièným vylep¹ovaním existujúceho systému umo¾òuje tento mechanizmus rýchle prispôsobenie sa meniacim sa podmienkam.
 
-V nasledujúcej èasti sa budeme podrobnej¹ie venova» vývojovému ¾ivotnému cyklu.\\\\
-\textbf{Analýza firemných po¾iadavkov}
+V nasledujúcej èasti sa budeme podrobnej¹ie venova» vývojovému ¾ivotnému cyklu.
+
+\subsection{Analýza firemných po¾iadavkov}
 
 Prvým a veµmi podstatným krokom pri vývoji softvéru je pochopenie firemných po¾iadaviek. Získavame ich pomocou komunikácie so zainteresovanými osobami a pozorovaním u¾ existujúceho systému. Je veµmi dôle¾ité komunikova» so v¹etkými vrstvami pracovníkov vo firme aj s najzaneprázdnenými mana¾érmi a vedúcimi. Výsledky treba zachyti» a zdokumentova». Dokumenty by mali obsahova» minimálne:
 
@@ -137,28 +139,41 @@ Prvým a veµmi podstatným krokom pri vývoji softvéru je pochopenie firemných po¾i
 \item Problémy s existujúcim firemnými procesmi.
 \end{itemize}
 
-Taktie¾ je veµmi dôle¾ité pochopi» prostredie a organizaènú ¹truktúru firmy. Rozèleni» firmu na funkèné celky, ktorým je jasne pridelená firemná funkcionalita vy¹¹ej úrovne. Tieto poznatky treba zachyti» a sformalizova» do firemnej doménovej matice (business domain matrix).\\\\
-\textbf{Modelovanie firemných procesov}
+Taktie¾ je veµmi dôle¾ité pochopi» prostredie a organizaènú ¹truktúru firmy. Rozèleni» firmu na funkèné celky, ktorým je jasne pridelená firemná funkcionalita vy¹¹ej úrovne. Tieto poznatky treba zachyti» a sformalizova» do firemnej doménovej matice (business domain matrix).\\
+
+\subsection{Modelovanie firemných procesov}
 
 Modelovanie firemných procesov (Business process modeling ? BPM) je technika na vizuálne zachytenie firemných procesov pomocou postupnosti aktivít a rozhodovacích uzlov. Úèelom BPM je vytvori» modely, ktoré in¾inierske skupiny mô¾u pou¾i» na implementovanie servisov. Stanovuje sa ideálny firemný proces, ktorý sa sna¾íme dosiahnu».
 
-Ka¾dá organizácia alebo jej pod èas» má vymedzenú firemnú funkcionalitu, ktorú podporuje alebo poskytuje. Pomocou BPM modelujeme tieto funkcionality. Ka¾dá úloha je pridelená roli ktorá odpovedá nejakej entite alebo skupine entít. Rola mô¾e by» pridelená viacerým entitám a jedna entita mô¾e vystupova» vo viacerých roliach.\\\\
-\textbf{Modelovanie prípadov u¾itia}
+Ka¾dá organizácia alebo jej pod èas» má vymedzenú firemnú funkcionalitu, ktorú podporuje alebo poskytuje. Pomocou BPM modelujeme tieto funkcionality. Ka¾dá úloha je pridelená roli ktorá odpovedá nejakej entite alebo skupine entít. Rola mô¾e by» pridelená viacerým entitám a jedna entita mô¾e vystupova» vo viacerých roliach.
 
-fd\\\\
-\textbf{Modelovanie servisov -- SOA}
+Firemný proces po analýze mô¾e by» reprezentovaný postupnos»ou aktivít a úloh. Úloha je najmen¹ia celistvá jednotka funkcionality, ktorá ma pre u¾ívateµa význam. Zlo¾itej¹ie procesy sa podrobnej¹ie modelujú v podprocesoch, z ktorých sa skladá hlavný proces. Príklady procesov sú uvedené na obrázkoch \ref{fig:hlproc} a  \ref{fig:subproc}.
 
-das\\\\
-\textbf{Systémový návrh a vývoj}
+Obyèajne celistvý úsek procesu odpovedá istej funkènej jednotke firmy, niekedy je v¹ak zapotreby priradi» funkènú jednotku organizácie procesu. Získavame tým hlboké pochopenie rozlo¾enia zodpovedností a úloh vo firme, ktoré neskor zu¾itkujeme pri návrhu a vývoji softvérového projektu.
+
+Navrhnuté modely sa dajú testova» prípadne sú do nich zavedené monitorovacie parametre aby bolo uµahèené meranie výkonu a funkènosti procesov. Vykonávame nad nimi simulácie, skrz ktoré získavame informácie pre vylep¹enie modelov.
+
+Modelovaním BPM získavame sadu modelov, ktoré slú¾ia ako hlavný vstup do nasledujúcej fázy. Plne popisujú v¹etky funkèné èasti firmy a procesy v nich prebiehajúce. Poskytujú tým náhµad na vz»ahy medzi jednotlivými sekciami firmy. Na základe týchto znalostí sa µahko vytvorí dátový model budúceho systému.
+
+\subsection{Modelovanie prípadov u¾itia}
+adsda
+
+\subsection{Modelovanie servisov -- SOA}
+adsdas
+
+\subsection{Systémový návrh a vývoj}
 
 dfnikam nejdem valika mi slubila dokonali vecer :)
-\textbf{Monitorovanie}
 
-fd\\\\
-\textbf{Analýza zozbieraných dát a adaptovanie}
+\subsection{Monitorovanie}
+dasdas
 
-dasd\\\\
-\textbf{Definované role}
+\subsection{Analýza zozbieraných dát a adaptovanie}
+dasdasd
+
+\subsection{Definované role}
+adsada
+
 %\section{Unified Process}
 %\label{sec:up}
 %\section{Model Driven Architecture}
