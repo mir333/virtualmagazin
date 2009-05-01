@@ -102,9 +102,63 @@ Pre dosiahnutie potrebného prepojenia firemných potrieb a IT sa mô¾eme odrazi» o
 Ako hlavný prvok premostenia firemných potrieb a IT je vhodne vyu¾i» modelov firemných procesov (Business proces models BPMs). Je preto dôle¾ité aby IT odborníci boli schopný tieto diagramy èíta» a pochopi».
 
 Analyzovaním procesov mô¾eme dospie» k tomu, ¾e po¾adovaná funkcionalita u¾ existuje a mô¾e by» znovu pou¾itá a sú prípadne do programovane len malé èasti na prepojenie u¾ existujúcich modulov. V prípade ¾e sa nedá znovu pou¾i» ¾iadna èast systému, budeme vyvíja» od zaèiatku.\\
-.
 
+Vzniká snaha na uzavretie priepasti medzi firemnými potrebami a IT rie¹eniami. Toto prepojenie v¹ak musí zosta» pru¾né a prístupné pri vytváraní IT rie¹ení. Tieto trendy viedli k zavedeniu servisne-orientovanej architektúry (Service-Oriented Architecture SOA). 
 
+SOA poskytuje rámec (framework) spolu s princípmi a smernicami na vytváranie znovu pou¾iteµných, zluèiteµných a nastaviteµných servisov (services), ktoré sú platformovo nezávislé. Vyu¾itie SOA vy¾aduje BDD prístup, ktorý spracúva firemné ciele a po¾iadavky z hora na dol do návrhov, vývoja a testovania. Získavame tým prostredie, v ktorom sa aplikácie tvoria zo znovu pou¾iteµných servisov alebo z nových servisov, ktoré sú vyvíjané podla aktuálnych firemných potrieb. Tým sa zabezpeèuje potrebná flexibilita v IT.
+
+Nasledujúci obrázok \ref{fig:BDDmod} znázoròuje vysoko-úrovòový náhµad na typickú postupnos» èinností v BDD metodike.
+
+\begin{figure}[ht]
+ \centering
+ \includegraphics[width=300px]{pic/BDDmodel.png}
+ % BDDmodel.png: 1214x622 pixel, 72dpi, 42.83x21.94 cm, bb=0 0 1214 622
+ \caption{BDD model èinností.}
+ \label{fig:BDDmod}
+\end{figure}
+
+Prvým korkom vo vývoji nového IT rie¹enia je navrhnutie firemného procesu. Odporúèa sa zaèa» modelovaním kµúèových firemných procesov. Výsledkom modelovania je predanie firemných po¾iadaviek na systém IT rie¹iteµskému tímu. Navrhnutým firemným procesom musí by» zo strany firemných návrhárov urèená dôle¾itos», ktorá je vypoèítaná pomocou rôznych metrík ako napríklad ROI a KPI.
+
+Po ukonèení modelovania firemných procesov nastupuje fáza zbierania po¾iadavkov na systém. Modely vzniknuté v predchádzajúcej fáze sú hlavným vstupom. Identifikujú sa v nich prípady u¾itia (use case), od ktorých sa odvíja návrh servisu. Stále sa pritom berie ohµad na firemné procesy, ktoré zachytávajú vzájomné prepojenie jednotlivých prípadov u¾itia. Po tom ako je servis implementovaný, pokraèuje sa ïal¹ou fázou a to nasadením. Servis je nasadený na aplikaèný server, kde je verejne prístupný a je mo¾né ho vyhµada».
+
+Následne za uvedením servisu do prevádzky zaèína fáza monitorovania. Zbierajú sa v nej informácie o behu servisu v skutoènom èase, spracovávaných dátach a hláseniach. Sledovanie je doplnenie o ¹irokú paletu meraní podla vopred definovaných metrík a výkonnostných parametrov. Fáza monitorovania je podstatná pre urèenie funkènosti a správnosti vytvoreného servisu. Správne vytvorený servis musí spåòa» v¹etky po¾adované parametre.
+
+Na záver nastupuje analyzovanie nazbieraných dát z predchádzajúcej fázy. Dáta sú predané na analýzu architektom, návrhárom a vývojárom. V¹etci zúèastnení pri vývoji vyhodnotia zozbierané údaje a na ich základe navrhnú vylep¹enia systému. Niekedy sa taktie¾ zmeny mô¾u prejavi» aj na firemnej úrovni zmenou firemných pravidiel a externých rozhraní. Zmenami sa proces opä» posúva do fázy modelovania, èím sa postup èinností uzatvára a zaèína nové kolo vývoja. Ustavièným vylep¹ovaním existujúceho systému umo¾òuje tento mechanizmus rýchle prispôsobenie sa meniacim sa podmienkam.\\
+
+V nasledujúcej èasti sa budeme podrobnej¹ie venova» vývojovému ¾ivotnému cyklu.\\\\
+\textbf{Analýza firemných po¾iadavkov}
+
+Prvým a veµmi podstatným krokom pri vývoji softvéru je pochopenie firemných po¾iadaviek. Získavame ich pomocou komunikácie so zainteresovanými osobami a pozorovaním u¾ existujúceho systému. Je veµmi dôle¾ité komunikova» so v¹etkými vrstvami pracovníkov vo firme aj s najzaneprázdnenými mana¾érmi a vedúcimi. Výsledky treba zachyti» a zdokumentova». Dokumenty by mali obsahova» minimálne:
+
+\begin{itemize}
+\item Firemnú víziu.
+\item Firemné ciele (krátkodobé a dlhodobé), ktorými uskutoèòujeme víziu spoloènosti.
+\item Firemné po¾iadavky vysokej úrovne, ktoré napomáhajú dosiahnu» ciele.
+\item Problémy s existujúcim firemnými procesmi.
+\end{itemize}
+
+Taktie¾ je veµmi dôle¾ité pochopi» prostredie a organizaènú ¹truktúru firmy. Rozèleni» firmu na funkèné celky, ktorým je jasne pridelená firemná funkcionalita vy¹¹ej úrovne. Tieto poznatky treba zachyti» a sformalizova» do firemnej doménovej matice (business domain matrix).\\\\
+\textbf{Modelovanie firemných procesov}
+
+Modelovanie firemných procesov (Business process modeling ? BPM) je technika na vizuálne zachytenie firemných procesov pomocou postupnosti aktivít a rozhodovacích uzlov. Úèelom BPM je vytvori» modely, ktoré in¾inierske skupiny mô¾u pou¾i» na implementovanie servisov. Stanovuje sa ideálny firemný proces, ktorý sa sna¾íme dosiahnu».
+
+Ka¾dá organizácia alebo jej pod èas» má vymedzenú firemnú funkcionalitu, ktorú podporuje alebo poskytuje. Pomocou BPM modelujeme tieto funkcionality. Ka¾dá úloha je pridelená roli ktorá odpovedá nejakej entite alebo skupine entít. Rola mô¾e by» pridelená viacerým entitám a jedna entita mô¾e vystupova» vo viacerých roliach.\\\\
+\textbf{Modelovanie prípadov u¾itia}
+
+fd\\\\
+\textbf{Modelovanie servisov -- SOA}
+
+das\\\\
+\textbf{Systémový návrh a vývoj}
+
+dfnikam nejdem valika mi slubila dokonali vecer :)
+\textbf{Monitorovanie}
+
+fd\\\\
+\textbf{Analýza zozbieraných dát a adaptovanie}
+
+dasd\\\\
+\textbf{Definované role}
 %\section{Unified Process}
 %\label{sec:up}
 %\section{Model Driven Architecture}
