@@ -156,14 +156,72 @@ Navrhnuté modely sa dajú testova» prípadne sú do nich zavedené monitorovacie par
 Modelovaním BPM získavame sadu modelov, ktoré slú¾ia ako hlavný vstup do nasledujúcej fázy. Plne popisujú v¹etky funkèné èasti firmy a procesy v nich prebiehajúce. Poskytujú tým náhµad na vz»ahy medzi jednotlivými sekciami firmy. Na základe týchto znalostí sa µahko vytvorí dátový model budúceho systému.
 
 \subsection{Modelovanie prípadov u¾itia}
-adsda
+Pri modelovaní prípadov u¾itia vyu¾ívame firemne procesy, pomocou ktorých vytvárame jednotlivé prípady u¾itia. Role z firemných procesov sú prevedené na aktorov a prípady u¾itia získame prevedeným jednotlivých firemných procesov prípadne podprocesov. Vlastný prevod modelov poskytuje znaènú mieru flexibility.
+
+Pre prevod nie je jasne definovaný formálny postup, ale je mo¾né naznaèi» pou¾iteµný mechanizmus pre prevádzanie BPMs na modely prípadov u¾itia.
+
+Nie je vhodné mapova» jednu aktivitu èi úlohu v procese na jedne prípad u¾itia. Prípady u¾itia by pri takomto postupe znázoròovali len jednu interakciu preto¾e úloha odpovedá jednej interakcii. Podla definície jazyka UML je ale prípad u¾itia úplná postupnos» interakcii. Znamená to, ¾e jedne prípad u¾itia by mal zahàòa» v¹etky interakcie, ktoré privedú systém do takého stavu, aby mohla by» vykonávaná operácia znovu spustená. Vyplýva z toho, ¾e zachytávanie jednotlivých interakcii v prípadoch u¾itia ne je vhodne.
+
+Podobne mapovanie celého firemného procesu na prípad u¾itia by bolo znaène zlo¾ité a neprehµadné. Vyskytovalo by sa tu veµké mno¾stvo rolí a vznikal by veµký poèet alternatívnych ciest.\\
+
+Jedným spôsobom ako sa k tomuto problému mô¾eme postavi», je zavedenie krokov. Jeden krok si definujeme ako postupnos» úloh, ktoré mô¾u by» vykonané bez preru¹enia tou istou rolou. Napríklad ulo¾enie ?ulo¾ rezerváciu? mô¾e by» prípad u¾itia ale ?ulo¾ rezerváciu a za¹li dovolenkový leták?  nemô¾e by» prípadom u¾itia, lebo uplynie istý èas od momentu ako je rezervácia ulo¾ená a momentu, keï je mo¾né vytvori», prispôsobi» a zasla» dovolenkový leták u¾ívateµovi. Na firemné procesy sa ale mô¾eme pozera» aj ako na postupnos» krokov, prièom ka¾dý krok je prípad u¾itia s po¾adovaným výstupom a správaním. 
+
+Ako náhle sem schopný identifikova» prípad u¾itia, popí¹eme jeho hlavné kroky skrz aktivity, ktoré v òom prebiehajú. Takýmto spôsobom získavame popis prípadu u¾itia pomocou postupnosti krokov.\\
+
+V¹etky identifikované prípady u¾itia majú význam, lebo vznikli identifikovaním krokov vo firemnom procese. Ka¾dý prípad u¾itia odpovedá aspoò jednému firemnému procesu, èi u¾ celému alebo jeho pod èasti, a je ich mo¾né spoji» aspoò s jedným firemným procesom. Sú identifikované v¹etky prípady u¾itia, lebo ka¾dému kroku vo firemných procesoch je pridelený odpovedajúci prípad u¾itia s popisom hlavných krokov. 
+
+Ak sa nám úspe¹ne podarí vykona» v¹etky tieto prevody, zvy¹ujeme tým pravdepodobnos» úspechu IT projektu.
 
 \subsection{Modelovanie servisov -- SOA}
-adsdas
+Ak chce spoloènos» vyu¾íva» servisne orientovanú architektúru (SOA) tak si musí vytvori» portfólio servisu, ktoré spoloènos» poskytuje. Buï pre interné alebo externé pou¾itie. Pri dosahovaní SOA mô¾e spoloènos» dosiahnu» rôzne úrovne. Väè¹ina spoloènosti zavádza webové slu¾by, ale sú v¹ak omnoho vy¹¹ie úrovne implementovania SOA v spoloènosti. Urèenie úrovne na ktorej sa firma nachádza v rámci presadzovania SOA je zlo¾itý proces sám o sebe. Na to aby  spoloènos» dosiahla skutoène SOA je potrebné pochopi», prija» a nasledova» metodiku.\\
+
+Proces vývoja informaèného systému pre firmu do ktorého vyu¾ijeme SOA architektúru bude pokraèova» spracovaním výsledkov firemnej analýzy , na identifikovanie a navrhnutie servisov. Zaèneme stava» na výsledkoch minulej fázy a to na firemnej vízií a cieµoch organizácie. Na automatizáciu firemných procesov musíme dodr¾a» prioritné kritéria. Pri ich urèení úzko spolupracuje IT a firemní mana¾ment. Musia prehodnoti» kµúèové problémy firmy ako napríklad:
+
+\begin{itemize}
+\item Urèenie primárnych procesných slabostí a úzkych miest
+\item Problematické body vytknuté zákazníkom 
+\item Procesy, ktoré musia by» ¹kálovateµné z nárastom objemu transakcií 
+\end{itemize}
+
+Na základe takýchto analýz mô¾e by» stanovený plán v akom poradí budú procesy vyvíjané. Procesy sú vlastnené funkènými èas»ami firmy. Pár týchto jednotiek mô¾e by» na zaèiatku vybraných aby sa na ne IT sústredilo a získal sa tým krátkodobý okam¾itý prospech. Akýkoµvek servis, ktorý mô¾e by» identifikovateµný musí podporova» ciele firmy, ktoré sa sna¾í z èasti alebo úplne vyrie¹i». Týmto si pomô¾eme pri uprednostòovaním funkèných èastí firmy pre IT vývoj. Pre veµmi dôle¾ité zlo¾ky firmy budú následne identifikované a definované servisy. Problémy s existujúcimi firemnými procesmi mô¾u by» pou¾ité ako hlavné ciele zavádzania servisov.  V ka¾dom prípade pri urèovaní priority zamerania IT musíme ma» na pamäti firemné potreby.\\
+
+Ka¾dý firemný proces ako aj prípady u¾itia, ktoré boli identifikované v predchádzajúcich fázach vývoja systému mô¾u by» pripísané na zoznam kandidátskych servisov. V¹ak nie v¹etky kandidátske servisy aj realizované. Zmyslom SOA je zostavi» portfólio servisov, ktoré budú znovu pou¾iteµné v èo najviac firemných procesoch. Implementácia týchto servisov musí by» taktie¾ dobré premyslená aby sa jednotlivo implementované èasti dali vyu¾i» v rôznych implementáciách servisov.
+
+\begin{figure}[ht]
+ \centering
+ \includegraphics[width=300px]{pic/BDDmodel.png}
+ % BDDmodel.png: 451x469 pixel, 90dpi, 12.73x13.24 cm, bb=0 0 361 375
+ \caption{Úrovne servisne-orientovanej architektúry}
+ \label{fig:SOAL}
+\end{figure}
+
+Obrázok \ref{fig:SOAL} nám poskytuje náhµad na rôzne úrovne S0A. Zobrazuje kroky firemného procesu, ktoré sú prevedené na jeden servis alebo na skupinu viacerých servisov. Taktie¾ zobrazuje ako mô¾e by» servis implementovaný komponentami. Tieto komponenty mô¾u by» pozostatky bývalého systému, komerène dostupné rie¹enia alebo úplne z nuly vyvíjané komponenty. \\
+
+Po zostavení listiny kandidátov na servisy sa sna¾íme dopracova» ku koneènej podobe servisného portfólia a vypracova» servisný model pre firmu. Základné èinnosti, ktoré musia by» vykonané na dosiahnutie servisného modelu sú:
+
+\begin{itemize}
+\item Analýza z hora dole cez procesné modely. 
+\item Analýza u¾ existujúceho systému a aplikácií. 
+\item Vytvorenie prvotného servisného modelu pre kandidátske servisy.
+\item Jasné stanovenie popisov vlastnosti a kvality servisov. 
+\item Zviazanie ka¾dého servisu s firemným cieµom a zabezpeèenie aby sa servis podielal aspoò na jednom firemnom procese. 
+\end{itemize}
+
 
 \subsection{Systémový návrh a vývoj}
+Poèas vývojovej fázy tím pracuje s poèiatoèným prípadom u¾itia a servisným modelom. Zanára sa do modelu a ¹pecifikuje funkcionalitu pre ka¾dý prípad u¾itia. \\\\
+\textbf{Systémový návrh}
 
-dfnikam nejdem valika mi slubila dokonali vecer :)
+Na vytvorenie modelu systémových komponent vyu¾ijeme popis funkcionality jednotlivých prípadov u¾itia. Model komponent popisuje rozhranie komponent, ktoré ponúkajú a zachytáva taktie¾ vz»ahy medzi jednotlivými komponentami v celom systéme. Delenie systému na komponenty odpovedá navrhnutým servisom v servisnom modeli. V modeli mô¾u by» zahrnuté aj komponenty, ktoré priamo neimplementujú servis, ale poskytujú len podpornú funkcionalitu. Komponenty, ktoré nemajú rozhrania sa nedajú externé vyu¾íva», tak sa vyu¾ívajú len na vnútornú komunikáciu. Pre dôle¾ité prípady u¾itia sú vytvárané sekvenèné diagramy skrz rozhrania komponentov. Týmto je systém navrhnutý aby komponenty z modelu komponent medzi sebou dobre komunikovali skrz rozhranie. 
+
+V tejto fáze sa taktie¾ identifikujú a dokumentujú nefunkèné po¾iadavky na systém. Nevyu¾ívajú sa len vytvorenie SLA pre servisy ale sú taktie¾ vyu¾ité ako vstupy do operaèného systémového modelu. Tento model okrem iného popisuje infra¹truktúrové komponenty ako middleweare, zasielanie správ, správa súborov a ïal¹ie. Taktie¾ popisuje ako sú komponenty distribuované po sieti a ako sú nasadené na hardvéry. 
+
+Pred samotnou implementáciou modelovaných procesov musia by» najskôr definované implementácie servisov, ich popisy a spôsob vyvolania. Nie v¹etky kroky procesov sa v¹ak implementujú ako priame vyvolania servisov. Jedným z hlavných dôvod preèo sa komponenty vyvolávajú priamo cez ich rozhranie je zvý¹enie výkonu systému odstránením nadbytoènej ré¾ie vykonávania. Sú aj iné dôvody, preèo je vhodné zvoli» hybridný prístup pri implementácii procesov. Pri návrhu je preto dôle¾ité uvedomi» si tieto potreby a zaznamena» ich pre ïal¹í vývoj. 
+
+Po ukonèení makro-návrhu na modelovaním diagramu komponent a operaèného modelu pristúpime k mikro-návrhu, ktorý zahàòa modelovanie diagramov tried a sekvenèných diagramov pre ka¾dú komponentu systému. Pri návrhu postupujeme iteratívne a vyu¾ívame overené návrhové vzory. Dodávame tým návrhu na robustnosti a spoµahlivosti.\\\\
+\textbf{Systémový vývoj}
+
+fsdfs
 
 \subsection{Monitorovanie}
 dasdas

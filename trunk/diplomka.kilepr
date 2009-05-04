@@ -31,7 +31,7 @@ encoding=ISO 8859-2
 highlight=LaTeX
 line=21
 open=false
-order=4
+order=0
 
 [item:diplomka.kilepr]
 archive=true
@@ -53,10 +53,10 @@ order=1
 
 [item:metodiky.tex]
 archive=true
-column=0
+column=5
 encoding=ISO 8859-2
 highlight=LaTeX
-line=41
+line=223
 open=false
 order=2
 
@@ -67,7 +67,16 @@ encoding=ISO 8859-2
 highlight=LaTeX
 line=144
 open=false
-order=3
+order=1
+
+[item:pic/BDDmodel.png]
+archive=true
+column=7143536
+encoding=
+highlight=
+line=0
+open=false
+order=-1
 
 [item:pic/VyrtualnaKonferencia.png]
 archive=true
