@@ -219,9 +219,17 @@ V tejto fáze sa taktie¾ identifikujú a dokumentujú nefunkèné po¾iadavky na systé
 Pred samotnou implementáciou modelovaných procesov musia by» najskôr definované implementácie servisov, ich popisy a spôsob vyvolania. Nie v¹etky kroky procesov sa v¹ak implementujú ako priame vyvolania servisov. Jedným z hlavných dôvod preèo sa komponenty vyvolávajú priamo cez ich rozhranie je zvý¹enie výkonu systému odstránením nadbytoènej ré¾ie vykonávania. Sú aj iné dôvody, preèo je vhodné zvoli» hybridný prístup pri implementácii procesov. Pri návrhu je preto dôle¾ité uvedomi» si tieto potreby a zaznamena» ich pre ïal¹í vývoj. 
 
 Po ukonèení makro-návrhu na modelovaním diagramu komponent a operaèného modelu pristúpime k mikro-návrhu, ktorý zahàòa modelovanie diagramov tried a sekvenèných diagramov pre ka¾dú komponentu systému. Pri návrhu postupujeme iteratívne a vyu¾ívame overené návrhové vzory. Dodávame tým návrhu na robustnosti a spoµahlivosti.\\\\
-\textbf{Systémový vývoj}
+\textbf{Systémový vývoj} 
 
-fsdfs
+Poèas vývoja sa prevádzajú modely z návrhovej èasti do praktickej nahraditeµnej podoby. Vyberá sa technológia (nap. Java? 2 Platform, Enterprise Edition), programovací jazyk (nap. Java) a vývojové prostredie, v ktorom bude systém naprogramovaný. Firemné procesy sa prevádzajú do spustiteµnej formy vyu¾itím Business Process Execution Language (BPEL) a slú¾ia ako východiskový bod pre implementáciu procesov do programovacieho jazyka. Pre definície procesov je taktie¾ vybraná technológia. Vyvinuté servisy sú medzi sebou previazané pomocou nástroja na koordinovanie procesov, ktorý poskytuje mo¾nos» previaza» servisy skrz rozhrania ktoré poskytujú podµa navrhnutých firemných procesov.
+
+Dôle¾itým aspektom takéhoto prístupu ¾e jeden servis mô¾e by» pou¾itý vo viacerých procesoch èo je hlavným prínosom BDD prístupu. Firemné procesy vznikajú preskladaním servisov podµa potreby. Tento prístup poskytuje veµkú flexibilitu, lebo nevyhovujúce procesy sú vytvorené z nových lep¹ích servisov a vyvinuté servisy sa zas pou¾ívajú v iných procesoch. Nové procesy nie sú tvorené úplne od nuly ale mô¾u byt tvorené u¾ z existujúcich servisov. Minimalizuje sa tým èas a náklady na roz¹irovanie a úpravy systému, a IT mô¾e µah¹ie a rýchlej¹ie reagova» na potreby firmy.
+
+Paralelne s vývojom je budovaná aj infra¹truktúra pre budúci systém. Vyu¾íva sa pri tom operaèný model systému. Súèasne po dokonèení vývoja musí by» pripravený aj hardvér aby mohlo nasta» nasadenie systému.
+
+\subsection{Nasadenie}
+
+
 
 \subsection{Monitorovanie}
 dasdas
