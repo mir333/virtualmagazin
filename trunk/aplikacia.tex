@@ -1,9 +1,9 @@
 \section{©pecifikácia po¾iadavkov}
 
-Úèelom systému je zabezpeèi» virtuálnu konferenciu. Webová aplikácia musí ma» prvky redakèného systému, ktoré umo¾nia administrátorovi upravova», pridáva» a odobera» jej obsah. \\ \\
+Úèelom systému je zabezpeèi» virtuálnu konferenciu. Webová aplikácia musí ma» prvky redakèného systému, ktoré umo¾nia administrátorovi upravova», pridáva» a odobera» jej obsah. \\ 
 
 Úèelom aplikácie bude zbieranie a sprostredkovávanie èlánkov vo forme virtuálneho èasopisu. Aplikácia bude zobrazova» na webové rozhranie prehµad základných informácií o ka¾dom èlánku a to:
-\begin{center}
+
 \begin{itemize}
 \item autora 
 \item in¹titúciu
@@ -12,70 +12,82 @@
 \item anotáciu
 \item odkaz na plný text v PDF formáte
 \end{itemize}
-\end{center}
 
-Aplikácia bude obsahova» vyhµadávanie v informáciách ulo¾ených v databáze. Vyhµadávanie bude mo¾né podµa základných informácii okrem anotácie taktie¾ sa nebude vyhµadáva» v samotnom texte èlánkov.\\ \\
+Aplikácia bude obsahova» vyhµadávanie v informáciách ulo¾ených v databáze. Vyhµadávanie bude mo¾né podµa základných informácii okrem anotácie taktie¾ sa nebude vyhµadáva» v samotnom texte èlánkov.\\ 
 
-Ku ka¾dému èlánku bude diskusia kde budu môc» u¾ívatelia vyjadri» svoj názor k èlánku a budú ma» mo¾nos» reagova» na komentáre iných u¾ívateµov. Diskusia bude rozvrstvená podla logickej náväznosti komentárov.\\ \\
+Ku ka¾dému èlánku bude diskusia kde budu môc» u¾ívatelia vyjadri» svoj názor k èlánku a budú ma» mo¾nos» reagova» na komentáre iných u¾ívateµov. Diskusia bude rozvrstvená podla logickej náväznosti komentárov.\\
 
 Aplikácia bude rozli¹ova» u¾ívateµov, ktorí k nej budu pristupova». Ka¾dý u¾ívateµ, ktorý sa neprihlási bude ma» právomoci neregistrovaného u¾ívateµa. Na registráciu bude k dispozícii formulár na vytváranie novích registorvaních u¾ívateµov.\\ 
 
-Administrátorský úèet bude pridelený u¾ívateµovi pri inicializaènom spustení webovej aplikácie. Prípadné ïal¹ie administrátorské úèty musí vytvára» u¾ existujúci administrátor.\\
+Administrátorský úèet bude pridelený u¾ívateµovi pri inicializaènom spustení webovej aplikácie. Prípadné ïal¹ie administrátorské úèty musí vytvára» u¾ existujúci administrátor.\\\\
 Systém rozoznáva nasledovne u¾ívateµské skupiny:
-\begin{itemize}
- \item[\textbf{Administrátor}] - Administrátor bude ma» mo¾nos» manipulova» s obsahom stránok, spravova» u¾ívateµov a má na starosti prvotnú konfiguráciu. V správe u¾ívateµov bude potvrdzova» nové ¾iadosti o registráciu, bude môc» pozmeòova» údaje o u¾ívateµovi, meni» ich role a blokova» úèty.
-\item[\textbf{Neregistrovaný u¾ívateµ}] - Bude ma» mo¾nos» prehliada» zoznam ulo¾ených èlánkov, mô¾e v nich vyhµadáva» ale nemá prístup k plným textom èlánkov.
+
+\begin{description}
+ \item[Administrátor] - Administrátor bude ma» mo¾nos» manipulova» s obsahom stránok, spravova» u¾ívateµov a má na starosti prvotnú konfiguráciu. V správe u¾ívateµov bude potvrdzova» nové ¾iadosti o registráciu, bude môc» pozmeòova» údaje o u¾ívateµovi, meni» ich role a blokova» úèty.
+\item[Neregistrovaný u¾ívateµ] - Bude ma» mo¾nos» prehliada» zoznam ulo¾ených èlánkov, mô¾e v nich vyhµadáva» ale nemá prístup k plným textom èlánkov.
 \item[\textbf{Registrovaný u¾ívateµ}] - Bude ma» v¹etky práva neregistrovaného u¾ívateµa a naviac aj prístup k plným textom èlánkov z roèníka, pre ktorý zaplatil èlenský poplatok. Taktie¾ bude môc» za základný èlenský poplatok vlo¾i» jeden èlánok. Bude si môc» upravova» informácie v profile a meni» pristupové heslo.
-\item[\textbf{Redakèná rada}] - Bude ma» mo¾nos» stopnú» uverejnenie príspevku s odôvodnením jeho pozastavenia.
-\item[\textbf{Recenzenti}] - Budú ma» prístup k textom èlánkov v upraviteµnej podobe a k odovzdaným èlánkom majú mo¾nos» pridáva» recenzovanú verziu.
-\end{itemize}
+\item[Redakèná rada] - Bude ma» mo¾nos» stopnú» uverejnenie príspevku s odôvodnením jeho pozastavenia.
+\item[Recenzenti] - Budú ma» prístup k textom èlánkov v upraviteµnej podobe a k odovzdaným èlánkom majú mo¾nos» pridáva» recenzovanú verziu.
+\end{description}
 
-Aplikácia bude obsahova» radu notifikácii. Pri zalo¾ení nového úètu bude zaslaná informácia administrátorovi so ¾iados»ou o jeho potvrdenie po overení zaplatenia èlenského poplatku.\\
-Pri ka¾dom vlo¾ení nového èlánku registrovaným u¾ívateµom budú vybraný a oboznámený o tomto èlánku recenzenti, ktorých úlohou bude èlánok recenzova».\\
-Registrovaný u¾ívatelia si mô¾u povoli» oznámenie o nových zverejnených èlánkoch cez mail a pre v¹etkých u¾ívateµov bude k dispozícii RSS zdroj. \\
-Po dovà¹ení limitu na zostavenie èísla èasopisu bude o tom informovaná redakèná rada a administrátor. \\ \\
+Aplikácia bude obsahova» radu notifikácii. Pri zalo¾ení nového úètu bude zaslaná informácia administrátorovi so ¾iados»ou o jeho potvrdenie po overení zaplatenia èlenského poplatku.
 
-Pravidelne bude spú¹»ané zálohovanie databázy, ako aj ulo¾ených plných textov èlánkov, ktoré budú slú¾i» na obnovenie dát v prípade poruchy. Kompletné zálohy budú ukladané na predurèené ulo¾isko. \\ \\
+Pri ka¾dom vlo¾ení nového èlánku registrovaným u¾ívateµom budú vybraný a oboznámený o tomto èlánku recenzenti, ktorých úlohou bude èlánok recenzova».
 
-Redakèné prvky systému umo¾nia administrátorovi upravova» a dopåòa» webové rozhranie systému. Bude ma» mo¾nos» meni» logo portálu, texty na stránkach, pridáva» a zneplatòova» nové stránky. \\
-V¹etky zmeny rozlo¾enia stránok sa budú prejavova» v ¹truktúre menu stránky, ktoré bude najviac 2 úrovòové. Stránky budu môc» by» doplòované do ktorejkoµvek úrovne menu.\\ \\
+Registrovaný u¾ívatelia si mô¾u povoli» oznámenie o nových zverejnených èlánkoch cez mail a pre v¹etkých u¾ívateµov bude k dispozícii RSS zdroj. 
 
-Webové rozhranie bude umo¾òova» zmenu vzhµadu pomocou dodávaných tém. Aplikácia bude vyhotovená s jednou ¹tandardnou témou a s témou pre postihnutých. \\
-Téma sa bude pre registrovaných u¾ívateµov uklada» do ich profilu.\\ \\
+Po dovà¹ení limitu na zostavenie èísla èasopisu bude o tom informovaná redakèná rada a administrátor.  
 
-Nevyhnutná konfigurácia hotovej distribúcie prebehne pri jeho prvom spustení. Vytvori sa tu administrátorské konto a v¹etky nevyhnutné nastavenia aplikácie. \\
-Celý nasledujúci beh systému bude automaticky a v¹etky prípadne zmeny nastavenia a obsahu sa budu dia» cez webové rozhranie administrátora. \\ \\
+Pravidelne bude spú¹»ané zálohovanie databázy, ako aj ulo¾ených plných textov èlánkov, ktoré budú slú¾i» na obnovenie dát v prípade poruchy. Kompletné zálohy budú ukladané na predurèené ulo¾isko. \\ 
+
+Redakèné prvky systému umo¾nia administrátorovi upravova» a dopåòa» webové rozhranie systému. Bude ma» mo¾nos» meni» logo portálu, texty na stránkach, pridáva» a zneplatòova» nové stránky. 
+
+V¹etky zmeny rozlo¾enia stránok sa budú prejavova» v ¹truktúre menu stránky, ktoré bude najviac 2 úrovòové. Stránky budu môc» by» doplòované do ktorejkoµvek úrovne menu.\\ 
+
+Webové rozhranie bude umo¾òova» zmenu vzhµadu pomocou dodávaných tém. Aplikácia bude vyhotovená s jednou ¹tandardnou témou a s témou pre postihnutých. 
+
+Téma sa bude pre registrovaných u¾ívateµov uklada» do ich profilu.\\ 
+
+Nevyhnutná konfigurácia hotovej distribúcie prebehne pri jeho prvom spustení. Vytvori sa tu administrátorské konto a v¹etky nevyhnutné nastavenia aplikácie. 
+
+Celý nasledujúci beh systému bude automaticky a v¹etky prípadne zmeny nastavenia a obsahu sa budu dia» cez webové rozhranie administrátora. \\ 
 
 Webové rozhranie bude prehµadne a funkcionálne, zamerane na rýchle dosiahnutie po¾adovaných informácií. Ka¾dá stránka musí obsahova» tieto prvky:
-\begin{center}
+
 \begin{itemize}
 \item logo a základne údaje o organizácii zriaïujúcej virtuálnu konferenciu
 \item menu stránok webového rozhrania
 \item ak je u¾ívateµ neprihlásený -- mo¾nos» prihlási» sa do systému
 \item ak je u¾ívateµ prihlásený -- meno u¾ívateµa a voµbu na odhlásenie sa
 \end{itemize}
-\end{center}
 
-Informácie o ulo¾ených èlánkoch sa budu zobrazova» do prehµadného výpisu obsahujúceho základné informácie. Záznamy sa budú zobrazova» pre aktuálny rok. Star¹ie roèníky budú ulo¾ené v archíve. \\
-Záznamy pre aktuálny roèník budu chronologicky usporiadané od najnov¹ích po najstar¹ie. Archív bude usporiadaný podµa rokov a bude rovnako zoradený ako aktuálny roèník. Parameter zoraïovanie bude môc» u¾ívateµ pozmeni» na meno, in¹titúciu, názov a dátum. Taktie¾ bude mo¾nos» zmeni» vzostupnos» alebo zostupnos» usporiadania.\\
-V prípade, ¾e záznamov bude viac ako limit zobrazenia na jednu stránku, zoznam sa stane viac stranovým. U¾ívateµ si bude môc» zvoli» koµko záznamov chce na jedne krát zobrazi».\\ \\
+Informácie o ulo¾ených èlánkoch sa budu zobrazova» do prehµadného výpisu obsahujúceho základné informácie. Záznamy sa budú zobrazova» pre aktuálny rok. Star¹ie roèníky budú ulo¾ené v archíve. 
+
+Záznamy pre aktuálny roèník budu chronologicky usporiadané od najnov¹ích po najstar¹ie. Archív bude usporiadaný podµa rokov a bude rovnako zoradený ako aktuálny roèník. Parameter zoraïovanie bude môc» u¾ívateµ pozmeni» na meno, in¹titúciu, názov a dátum. Taktie¾ bude mo¾nos» zmeni» vzostupnos» alebo zostupnos» usporiadania.
+
+V prípade, ¾e záznamov bude viac ako limit zobrazenia na jednu stránku, zoznam sa stane viac stranovým. U¾ívateµ si bude môc» zvoli» koµko záznamov chce na jedne krát zobrazi».\\
 
 Rozhranie vyhµadávania bude èo najjednoduch¹ie. Bude poskytova» voµby na urèenie kategórie, v ktorej sa bude vyhµadáva»:
-\begin{center}
+
 \begin{itemize}
 \item meno, in¹titúcia, názov
 \item kµúèové slová
 \item roèník 
 \end{itemize}
-\end{center}
+
 \begin{center}
 \includegraphics[width=\linewidth]{pic/VyrtualnaKonferencia.png}
- % Use_Case_Diagram1.png: 742x436 pixel, 72dpi, 26.18x15.38 cm, bb=0 0 742 436
 \textit{Use case diagram virtuálnej konferencie.}
 \end{center}
 
-\section{Identifikácia procesov}
-\section{Prechod k UML diagramom}
-\section{Prepojenie komponent}
+\section{Návrh firemných procesov}
+\subsection{Identifikácia procesov}
+\subsection{Urèenie hlavného procesu}
+\subsection{Dekompozicia procesu}
+\subsection{Urèenie komponent}
+\section{Naplánovanie iterácii a inkrementov}
+\section{Popis prípadov u¾itia}
+\subsection{Previazanie BPMN a prípadov u¾itia}
+\section{Diagram tired}
 
 
