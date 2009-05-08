@@ -8,18 +8,30 @@ Pri modelovaní novej metódy musíme ako prvý krok zostavi» jej charakteristiku. P
 
 \subsection{Model ¾ivotného cyklu}
 
-Ako prvé sa zamyslíme nad najvhodnej¹ím modelom pre na¹u metódu. Medzi historicky najstar¹ie modely patrí model vodopád. Tomuto modelu sme sa venovali v tretej kapitole \ref{sec:vod}. Je zalo¾ený na lineárnom postupe skrz fázy vývoja. Jeho prínosom je jasné definovanie jeho vývoja a jeho postupností. V súèastnosti je tento postup prekonaný, lebo len »a¾ko sa s ním zvládajú zlo¾itej¹ie projekty. Hlavnou nevýhodou okrem neflexibility a zlo¾itej opravy chýb je dlhý èasový úsek od zadania projektu do doby kedy sa zákazník mô¾e stretnú» s objednanou aplikáciou. Moderný návrh v¹ak nezabudol na vodopád, ale vyu¾íva jeho vylep¹enia.
+Ako prvé sa zamyslíme nad najvhodnej¹ím modelom pre na¹u metódu. Medzi historicky najstar¹ie modely patrí model vodopád. Tomuto modelu sme sa venovali v tretej kapitole \ref{sec:vod}. Je zalo¾ený na lineárnom postupe skrz fázy vývoja. Jeho prínosom je jasné definovanie èinností vývoja a jeho postupností. V súèastnosti je tento postup prekonaný, lebo len »a¾ko sa s ním zvládajú zlo¾itej¹ie projekty. Hlavnou nevýhodou okrem neflexibility a zlo¾itej opravy chýb je dlhý èasový úsek od zadania projektu do doby kedy sa zákazník mô¾e stretnú» s objednanou aplikáciou. Moderný návrh v¹ak nezabudol na vodopád, ale vyu¾íva jeho vylep¹enia.
 
-Jedným z najroz¹írenej¹ích modelov, ktoré vychádzajú z vodopádu a pou¾ívajú sa v moderných návrhoch je iteratívny model. Rozdeµuje problém na men¹ie podproblémy. Uµahèuje nám tým zvládnutie aj zlo¾itej¹ích projektov. Koncový produkt získame po vykonaní v¹etkých iterácií. Èasto sa tento prístup kombinuje s inkrementálnym vývojom. Podrobnej¹ie boli oba modely popísané v tretej kapitole \ref{sec:InIt}.\\
+Jedným z najroz¹írenej¹ích modelov, ktoré vychádzajú z vodopádu a pou¾ívajú sa v moderných návrhoch je iteratívny model. Rozdeµuje problém na men¹ie podproblémy na základe funkcionality. Pre ka¾dú èiastoènú úlohu sa potom vykonáva analýza, návrh, implementácia a testovania. Prebieha tu vlastne malý vodopád. Pracovanie s men¹ími funkènými èas»ami, uµahèuje zvládnutie aj zlo¾itej¹ích projektov. Koncový produkt získame po vykonaní v¹etkých iterácií. Èasto sa tento prístup kombinuje s inkrementálnym vývojom, ktorého prínosom je postupné vyvíjanie systému v samostatných èastiach. Projekt je rozdelený na inkrementy, ktoré sa osobitne vyvíjajú. Inkrementy sú po ich dokonèení integrujú do výsledného rie¹enia. Podrobnej¹ie boli obidva modely popísané v tretej kapitole \ref{sec:InIt}. \\
 
-dasdasssssssssssssssssssssssssssssssssssssssssssssssssssssss????????
-??????????????????????,
-???????????????????????????
-???????????????????
-???????????????
+Z vopred získaných znalostí je ako najvhodnej¹í prístup vybraný iteraèno-inkrementálny model. Umo¾òuje nám vyvíja» aplikáciu postupne, èím zni¾uje riziko zlyhania projektu a taktie¾ umo¾òuje dodáva» zákazníkovi priebe¾ne verzie systému, ku ktorým sa zákazník mô¾e vyjadri». Vybraný model si mierne poopravíme pre na¹e potreby. Keï¾e pracujeme s malými softvérovým projektami, nie je zapotreby vyu¾íva» veµké mno¾stvo iterácií a inkrementov. Urèenie poètu jednotlivých vývojových oddielov bude hlavne závislé na funkcionalite budúceho systému a na tom ako bude systém dodávaný zákazníkovi. 
 
 \subsection{Agilné prvky}
+Pri súdobom vývoji aplikácií sa stáva jedným z najdôle¾itej¹ích faktorov schopnos» vývojárov reagova» na rýchlo meniace sa prostredie a po¾iadavky na vyvíjaný systém.  Klasické metódy sú v súèasnej dobre »a¾ko efektívne vyu¾iteµné, lebo neposkytujú rie¹enia vo chvíµach, keï sú zapotreby. Problémom zvý¹enia schopnosti prispôsobenia sa aktuálnym potrebám zákazníka sa zaoberala èas» práce o agilných metódach vývoja \ref{sec:agil}.\\
+
+V navrhovanej metóde sa budeme sna¾i» vyu¾i» vlastnosti agilných metód, aby bola zabezpeèená èo najvy¹¹ia flexibilita vývoja. 
+
+Jedným z hlavných bodov v agilných postupoch je vysoká miera zainteresovania zákazníka do procesu vývoja. Napriek tomu ¾e navrhovaná metóda sa má zaobera» malými projektami, ktoré by nemali by» veµmi komplikované na pochopenie, musí prevláda» snaha o zapojenie zákazníka do vývoja. Pri dôle¾itých rozhodnutiach o poradí vývoja èastí aplikácie a pri otáznych bodoch vývoja by zákazník nikdy nemal chýba». V prípade nezáujmu zo strany objednávateµa mô¾e nasta» zní¾enie kvality, prípadne dodanie úplne ne¾iadúceho systému.
+
+Cieµom agilných metodík je èo najrýchlej¹ie sa dosta» do fáze programovania. Modelovacia a dokumentaèná èinnos» je a¾ na druhom mieste. V novej metóde je tie¾ snaha o u¹etrenie nákladov rýchlej¹ím pristúpením k programovaniu. Modelovanie a dokumentovanie sa v¹ak nepova¾uje za èinnos» ktorá spomaµuje vývoj. Dobrý návrh je priam naopak spôsob ako si èas pri vývoji u¹etri». Napriek tomu sa ale pre efektivitu obmedzíme na tie najpotrebnej¹ie modely systému, ktorými je jasne stanovená funkcionalita. Drobné implementaèné detaily sa zbytoène pracne nemodelujú, ale vychádzajúc z kvalifikovanosti programátora, aby daný problém vyrie¹il.
+
+Spolupráca a komunikácia je v rie¹iteµskom tíme maximálne dôle¾itá. Pracovníci musia by» ochotný pomáha» si jedne druhému. Roz¹irujú tým svoje znalosti, zvy¹ujú priemernú kvalifikovanos» tímu a doká¾u sa skôr vysporiada» s problémami. Minimalizuje sa formálna komunikácia, ktorá èasto spôsobuje len zbytoènú zá»a¾ na vývojový proces a oddaµuje µudí v tíme. Z charakteru projektov, pre ktoré je metóda navrhovaná vyplýva, ¾e na ich zvládnutie nebude potreba veµké mno¾stvo pracovníkov. Pre tieto dôvody by nemalo by» obtia¾ne splni» vy¹¹ie spomínané po¾iadavky na tímovú prácu. V¹etky tieto kroky sú vedené na vytvorenie pozitívnej, kon¹truktívnej atmosféry v rie¹iteµskom týme, ktorá motivuje pracovníkov k podávaniu maximálneho výkonu a produkovania kvalitných rie¹ení.
+
 \subsection{Vyu¾itie BPMN}
+
+BPMN slú¾i ako grafický jazyk, ktorý je ¹pecializovaný pre popis firemných procesov. Podrobný popis syntaxe bol podaný v druhej kapitole. \ref{sec:bpmn}. Modelovanie firemných procesov bude slú¾i» na objasnenie fungovania organizácie a presne urèenie procesov, ktoré v nej prebiehajú. Vïaka týmto procesom µahko identifikujeme èasti, ktoré je mo¾né automatizova». Identifikujeme prípady u¾itia a namodelované procesy vyu¾ijeme ako grafické znázornenie krokov, ktoré treba pre daný prípad u¾itia vykona». Touto èinnos»ou získame sadu diagramov, ktorá zobrazuje firemné procesy prepojené na diagramy prípadov u¾itia.\\ 
+
+Diagramy firemných procesov sú pre zákazníka veµmi intuitívne a podrobne popisujú systém, akým organizácia pracuje alebo akým sa urèitá modelovaná èinnos» vykonáva. V kontraste s klasicky pou¾ívaným diagramom prípadov u¾itia, ktoré zachytávajú len heslovite po¾adovanú funkcionalitu, vidí zákazník presné postupy, s ktorými sa mô¾e µahko stoto¾ni». Získavame tak silný graficky model, v ktorom sa zákazník µahko doká¾e orientova». Nad vypracovanými diagramami je mo¾nos» µah¹ej komunikácie so zákazníkom, lebo má presnej¹iu predstavu o tom, èo sa v budúcom systéme ocitne. Mô¾e komentova» presnos» procesov a prípadne spolu s vývojárom diskutova» o ich vylep¹ení.
+
+\subsection{In¹pirácia BDD}
 \section{®ivotný cyklus}
 \section{Vyu¾ité role}
 \section{Vývoj softvérového projektu}
