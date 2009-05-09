@@ -51,24 +51,32 @@ Pre navrhovanú metódu je definovaný ¾ivotný cyklus, ktorý je zobrazený na obrázk
  \label{fig:mypic}
 \end{figure}
 
-
 \begin{description}
-\item[Modelovanie firemných procesov] ?  úèelom  prvej fáze vývojového procesu je za pomoci klienta zozbiera» po¾iadavky na budúci systém. Spísa» ¹pecifikáciu po¾iadavkov a hlavne namodelova» firemné procesy.  Po odsúhlasení modelov zákazníkom sa urèia prípady u¾itia a rozdelí sa funkcionalita. Zákazník urèí prioritu jednotlivých ïalej vyvíjaných èastí.
-\item[Návrh] 
-\item[Vývoj] 
-\item[Testovanie] 
-\item[Nasadenie] 
+\item[Modelovanie firemných procesov] -- Úèelom  prvej fáze vývojového procesu je za pomoci klienta zozbiera» po¾iadavky na budúci systém. Spísa» ¹pecifikáciu po¾iadavkov a hlavne namodelova» firemné procesy.  Po odsúhlasení modelov zákazníkom sa urèia prípady u¾itia a rozdelí sa funkcionalita. Zákazník urèí prioritu jednotlivých ïalej vyvíjaných èastí.
+\item[Návrh] -- Do návrhovej fázy vstupujú modely z predchádzajúcej èinnosti. Tieto modely sú  spracované na návrh budúceho systému. Prípady u¾itia sú popísané pomocou krokov vyplývajúcich z krokov firemných procesov. V prípade  potreby sú v zriedkavých prípadoch bli¾¹ie modelované sekvenènými diagramami. Statickú ¹truktúru budovaného systému zachytávame pomocou diagramu tried. 
+
+Výsledkom návrhovej èinnosti je skromná sada diagramov, ktoré musia by» kombinované s vopred vzniknutými diagramami firemných procesov. Získaná výsledná sada modelov nám dostatoène popisuje budúci systém. Ako posledný bod návrhovej èinnosti je urèená architektúra, pomoci ktorej bude systém vyvíjaný (napr. Java, ASP .Net atï. ).
+\item[Vývoj] -- Pri implementácií budúceho systému vychádzame z vopred vypracovaných modelov a zvolenej architektúry. Rie¹enie implementaèných detailov na najni¾¹ích úrovniach je ponechané na odbornej znalosti programátora. Problémy s porozumením diagramov èi s kódovaním urèitej èasti systému je rie¹ené komunikáciou a dohodou v rámci rie¹iteµského tímu. Koneèným produktom vývoja je testovateµná èas» systému.    
+\item[Testovanie] -- Odhaµovanie chýb je dôle¾itou èas»ou ka¾dej metódy pou¾ívanej pri súèasnom vývoji  softvéru. Z dôvodu zabezpeèenia maximálnej kvality ka¾dého produktu nesmie by» táto fáza opomenutá ani v navrhovanej metóde. Pri testovaní prejde systém sadou ¹tandardných postupov testovania ako napr. automatizovanými testami, testami typu biela a èierna skrinka, akceptaènými testami atï. Pre nedostatoèných výkonnostných výsledkoch sa vykonáva revízia kódu. Softvér, ktorý spåòa po¾iadavky na funkènos» a kvalitu je posunutý do ïal¹ej fázy ¾ivotného cyklu.        
+\item[Nasadenie] -- Na záver je otestovaná èas» systému nasadená do prevádzky.  Zákazník má mo¾nos» pracova» s odovzdanou èas»ou systému. V prípade vzniknutia neoèakávaných nedostatkov produktu mô¾e zákazník vy¾iada» úpravu vyvíjaného rie¹enia. Po úspe¹nom nasadení verzie systému si mô¾e zákazník urèi» nasledujúcu funkcionalitu, ktorá bude spracovaná a pridaná do produktu. V prípade nezmenia sa po¾iadavkov pokraèuje cyklus podµa vopred stanovenej priority vývoja èastí.   
 \end{description}  
 
 \section{Vyu¾ité role}
 
+Procesy prebiehajúce v navrhnutej metóde vy¾adujú na zvládnutie znalosti z viacerých oborov informatiky a mana¾mentu. Osoby pracujúce na vývoji softvéru sa ocitajú v niekoµkých preddefinovaných roliach. Ka¾dá z rolí vykonáva ¹pecifickú úlohu poèas ¾ivotného cyklu tvorenia produktu a je nepostrádateµná na úspe¹né dosiahnutie cieµa. 
+
+Preto¾e sa venujeme produkovaním malých softvérových rie¹ení, nie je pravdepodobné, ¾e rie¹iteµský tím bude obsahova» veµké mno¾stvo pracovníkov. Vïaka tomu, ¾e na produkovaní rie¹enia sa bude podieµa» pomerne malý tím, umo¾ní to intenzívnu komunikáciu a podporu medzi jeho èlenmi. Jednotlivé osoby sa poèas trvania projektu mô¾u dosta» do viacerých rolí v prípade, ¾e splòujú potrebnú kvalifikáciu. 
+
+Navrhovaná metóda definuje nasledujúce role:
+
 \begin{description}
-\item[Firemný analytik] 
-\item[Návrhár]
-\item[Vývojár]
-\item[Tester]
-%\item[Správca systému]    
+\item[Firemný analytik] -- Jeho úlohou je komunikova» zo zákazníkom, pochopi» jeho potreby a fungovanie prostredia, do ktorého bude systém vyvíjaný. Na základe zozbieraných znalostí vypracuje firemný analytik sadu modelov, ktoré zachytia procesy prebiehajúce v organizácií. Opierajúc sa o tieto diagramy komunikuje zo zákazníkom o jich korektnosti a spoloène s návrhárom systému mô¾u diskutova» o mo¾ných vylep¹eniach procesov.    
+\item[Návrhár] -- Jeho hlavnou úlohou je zachytenie dynamickej a statickej ¹truktúry systému. Vyu¾íva na to modely vyprodukované pri analýze podniku a komunikuje o rie¹eniach s firemným analytikom. Vo firemných procesoch identifikuje prípady u¾itia, èím zväzuje tieto modely s modelmi, ktoré zachytávajú návrh systému. Má na starosti navrhnutie vykonateµných technických rie¹ení k po¾iadavkám od zákazníka. Úlohou návrhára je tie¾ voµba vhodnej architektúry systému po dohode so zákazníkom.  
+\item[Vývojár] -- Má na starosti prevedenie navrhnutých modelov do fungujúcej a nasaditeµnej podoby. Väè¹iu nízko úrovòových otázok týkajúcich sa implementaèných detailov má na starosti vyrie¹i» sám. V prípade nepochopenia zadania alebo pri prípadných komplikáciách pri svojej práci mô¾e konzultova» ich rie¹enia s návrhárom.    
+\item[Tester] -- Má na starosti overenie funkcionality a zaistenie kvality odovzdaného systému. Tým ¾e pracuje s koneènou funkènou podobou èasti systému, je táto roµa roz¹írená aj o zodpovednosti   týkajúce sa nasadenia systému. Pomáha zákazníkovi po predaní produktu z jeho nasadením a poskytuje mu informácie týkajúce sa jeho fungovania. Prípadné konfigurovanie produktu spadá tie¾ do povinnosti testera.        
 \end{description}
+
+Pre zákazníka nie je stanovená rola, lebo jeho pozícia pri vývoji odpovedá jeho osobe. Má v¹ak vo v¹etkých prebiehajúcich procesoch významnú úlohu. Podieµa sa pri vývoji produktu a to nie len poèas poèiatoènej fázy, keï sú zbierané po¾iadavky na systém, ale aktívne sa podieµa aj na ovplyvòovaní vyvíjaného produktu poèas celej doby vývoja. Neseriózny prístup k vývoju zo strany objednávateµa vá¾ne naru¹uje úspe¹nos» zvládnutia projektu a kvalitu odovzdávaného produktu.
 
 
 \section{Vývoj softvérového projektu}
