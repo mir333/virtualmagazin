@@ -3,7 +3,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.0
-lastDocument=metodiky.tex
+lastDocument=metoda.tex
 masterDocument=
 name=Diplomka
 pkg_extIsRegExp=false
@@ -44,21 +44,21 @@ order=-1
 
 [item:metoda.tex]
 archive=true
-column=6
+column=0
 encoding=ISO 8859-2
 highlight=LaTeX
-line=51
-open=false
-order=1
+line=72
+open=true
+order=0
 
 [item:metodiky.tex]
 archive=true
-column=9
+column=30
 encoding=ISO 8859-2
 highlight=LaTeX
-line=92
-open=false
-order=2
+line=114
+open=true
+order=1
 
 [item:nastroje.tex]
 archive=true
