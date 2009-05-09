@@ -62,7 +62,6 @@ Výsledkom návrhovej èinnosti je skromná sada diagramov, ktoré musia by» kombinov
 \end{description}  
 
 \section{Vyu¾ité role}
-
 Procesy prebiehajúce v navrhnutej metóde vy¾adujú na zvládnutie znalosti z viacerých oborov informatiky a mana¾mentu. Osoby pracujúce na vývoji softvéru sa ocitajú v niekoµkých preddefinovaných roliach. Ka¾dá z rolí vykonáva ¹pecifickú úlohu poèas ¾ivotného cyklu tvorenia produktu a je nepostrádateµná na úspe¹né dosiahnutie cieµa. 
 
 Preto¾e sa venujeme produkovaním malých softvérových rie¹ení, nie je pravdepodobné, ¾e rie¹iteµský tím bude obsahova» veµké mno¾stvo pracovníkov. Vïaka tomu, ¾e na produkovaní rie¹enia sa bude podieµa» pomerne malý tím, umo¾ní to intenzívnu komunikáciu a podporu medzi jeho èlenmi. Jednotlivé osoby sa poèas trvania projektu mô¾u dosta» do viacerých rolí v prípade, ¾e splòujú potrebnú kvalifikáciu. 
@@ -78,15 +77,37 @@ Navrhovaná metóda definuje nasledujúce role:
 
 Pre zákazníka nie je stanovená rola, lebo jeho pozícia pri vývoji odpovedá jeho osobe. Má v¹ak vo v¹etkých prebiehajúcich procesoch významnú úlohu. Podieµa sa pri vývoji produktu a to nie len poèas poèiatoènej fázy, keï sú zbierané po¾iadavky na systém, ale aktívne sa podieµa aj na ovplyvòovaní vyvíjaného produktu poèas celej doby vývoja. Neseriózny prístup k vývoju zo strany objednávateµa vá¾ne naru¹uje úspe¹nos» zvládnutia projektu a kvalitu odovzdávaného produktu.
 
-
 \section{Vývoj softvérového projektu}
+V nasledujúcej èasti tejto práce sa budeme venova» postupu, akým bude softvér vyvíjaný pomocou novo vyvíjanej metódy pre spracovanie malých softvérových projektov. Pozornos» bude venovaná ka¾dej fázy ¾ivotného cyklu a podrobne budú popísané role a èinnosti, ktoré sa jej zúèastòujú. 
+
 \subsection{©pecifikácia po¾iadavkov}
+Úvodná èinnos» pri vyvíjaní softvérového projektu musí by» venovaná zbierania poznatkov o systéme, ktorý budeme tvori». Táto èinnos» spadá do fázy modelovania firemných procesov. Firemný analytik intenzívne komunikuje zo zákazníkom. Pri vzájomnej komunikácií si analytik objasòuje nároky, ktoré bude zákazník klás» na budúci systém. V prípade, ¾e s budúcim systémom bude pracova» ¹ir¹í okruch pracovníkov vo firme, musia by» do zbierania po¾iadavok zahrnutý aj oni. 
+
+Na základe zozbieraných po¾iadavkov od zákazníka je zostavený dokument ¹pecifikácie po¾iadaviek na budúci systém. Preto¾e pracujeme z neveµkými projektami ¹pecifikácia by nemala by» extrémne rozsiahla a zákazník by nemal ma» problém pre¹tudova» ju a vyjadri» k nej svoje pripomienky. Po dokonèení ¹pecifikácie po¾iadaviek a jej odsúhlasení zo strany klienta mô¾eme postúpi» k ïal¹ej èinnosti. \\
+
+Mýlnikom pre ukonèenie prvej èasti projektu je odsúhlasená ¹pecifikácia po¾iadavkov. 
+
 \subsection{Návrh firemných procesov}
-Identifikácia procesov
-Urèenie hlavného procesu
-Dekompozicia procesu
-Urèenie komponent
-\subsection{Naplánovanie iterácii a inkrementov}
+Podobne ako predchádzajúca èinnos» spadá aj návrh firemných procesov do  prvej fázy ¾ivotného cyklu. Skladá sa z viacerých èinnosti, ktorých cieµom je graficky spracova» dokument ¹pecifikácií po¾iadaviek  získaný v predchádzajúcou èinnos»ou. \\
+
+Podrobným pre¹tudovaním ¹pecifikácie a na základe získaných informácií z prostredia, kde bude systém nasadený, firemný analytik zaène modelova» firemné procesy. Na ich modelovanie vyu¾íva BPMN. Vzniknuté modely podrobne popisujú postup èinnosti, ktoré vedú k vykonaniu urèitého procesu vo firme. Jednotlivé diagramy obsahujú okrem sledu úloh aj role zodpovedné za vykonanie urèitých úloh. V procesoch identifikujeme pasá¾e, ktoré mô¾u by» automatizované a pridelíme ich vykonanie systémovej roli. Na prideµovanie èinností k roliam pou¾ijeme koncepciu plaveckých dráh, ktoré poskytuje BPMN. 
+
+Odporúèaný spôsob návrhu firemných procesov je vyu¾itie prístupu modelovania zhora na dol. Získavame tým hierarchickú ¹truktúru diagramov, kde v najvy¹¹ej úrovni zachytávame globálny pohµad na hlavné èinnosti vykonávané v organizácií. Postupnou dekompozíciou týchto hlavných aktivít získavame podrobný popis aktivít definovaných  na vy¹¹ej úrovni. Úlohy na najni¾¹ej úrovni dekompozície zachytávajú atomické èinnosti, ktoré sú vo firme vykonávané, a vyu¾ívajú sa neskôr ako kroky prípadov u¾itia. 
+
+Po namodelovaní kompletnej hierarchie procesov, konzultujeme výsledky zo zákazníkom a vykonávame prípadne nutné úpravy. Po odsúhlasení modelov zo strany zákazníka nasleduje porada z návrhárom systému. Celý systém je rozdelený na men¹ie èasti podla funkcionality, ktoré predstavujú iterácie. Vymedzený oddiel musí poskytova» ucelenú funkcionalitu, prínosnú pre zákazníka. Jednotlivým èastiam je priradená priorita na základe klientových po¾iadavkov, podla ktorej je systém postupne vyvíjaný. Zostavením plánu ne urèenie poradia iterácií a inkrementov je ukonèená prvá fáza ¾ivotného cyklu. \\
+
+Mílnikmy pre fázu návrhu firemných procesov sú hierarchická sada diagramov, ktorá popisuje budúci systém a plán iterácií a inkrementov podµa ktorého bude systém postupne vyvíjaný. 
+
 \subsection{Popis prípadov u¾itia}
+Prvou èinnos»ou návrhovej fázy ¾ivotného cyklu je spracovanie modelov firemných procesov. Identifikujeme v nich prípady u¾itia, ktoré graficky popí¹eme èas»ami diagramov z ktorých sme vychádzali.  
+
+
+
 Previazanie BPMN a prípadov u¾itia
-\subsection{Diagram tired}
+\subsection{Diagram tried}
+
+\subsection{Vyvoj}
+
+\subsection{Testovanie}
+
+\subsection{Nasadenie a odovzdanie}
