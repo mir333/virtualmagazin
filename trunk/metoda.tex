@@ -56,10 +56,10 @@ Pre navrhovanú metódu je definovaný ¾ivotný cyklus, ktorý je zobrazený na obrázk
 \item[Návrh] -- Do návrhovej fázy vstupujú modely z predchádzajúcej èinnosti. Tieto modely sú  spracované na návrh budúceho systému. Prípady u¾itia sú popísané pomocou krokov vyplývajúcich z krokov firemných procesov. V prípade  potreby sú v zriedkavých prípadoch bli¾¹ie modelované sekvenènými diagramami. Statickú ¹truktúru budovaného systému zachytávame pomocou diagramu tried. 
 
 Výsledkom návrhovej èinnosti je skromná sada diagramov, ktoré musia by» kombinované s vopred vzniknutými diagramami firemných procesov. Získaná výsledná sada modelov nám dostatoène popisuje budúci systém. Ako posledný bod návrhovej èinnosti je urèená architektúra, pomoci ktorej bude systém vyvíjaný (napr. Java, ASP .Net atï. ).
-\item[Vývoj] -- Pri implementácií budúceho systému vychádzame z vopred vypracovaných modelov a zvolenej architektúry. Rie¹enie implementaèných detailov na najni¾¹ích úrovniach je ponechané na odbornej znalosti programátora. Problémy s porozumením diagramov èi s kódovaním urèitej èasti systému je rie¹ené komunikáciou a dohodou v rámci rie¹iteµského tímu. Koneèným produktom vývoja je testovateµná èas» systému.    
-\item[Testovanie] -- Odhaµovanie chýb je dôle¾itou èas»ou ka¾dej metódy pou¾ívanej pri súèasnom vývoji  softvéru. Z dôvodu zabezpeèenia maximálnej kvality ka¾dého produktu nesmie by» táto fáza opomenutá ani v navrhovanej metóde. Pri testovaní prejde systém sadou ¹tandardných postupov testovania ako napr. automatizovanými testami, testami typu biela a èierna skrinka, akceptaènými testami atï. Pre nedostatoèných výkonnostných výsledkoch sa vykonáva revízia kódu. Softvér, ktorý spåòa po¾iadavky na funkènos» a kvalitu je posunutý do ïal¹ej fázy ¾ivotného cyklu.        
-\item[Nasadenie] -- Na záver je otestovaná èas» systému nasadená do prevádzky.  Zákazník má mo¾nos» pracova» s odovzdanou èas»ou systému. V prípade vzniknutia neoèakávaných nedostatkov produktu mô¾e zákazník vy¾iada» úpravu vyvíjaného rie¹enia. Po úspe¹nom nasadení verzie systému si mô¾e zákazník urèi» nasledujúcu funkcionalitu, ktorá bude spracovaná a pridaná do produktu. V prípade nezmenia sa po¾iadavkov pokraèuje cyklus podµa vopred stanovenej priority vývoja èastí.   
-\end{description}  
+\item[Vývoj] -- Pri implementácií budúceho systému vychádzame z vopred vypracovaných modelov a zvolenej architektúry. Rie¹enie implementaèných detailov na najni¾¹ích úrovniach je ponechané na odbornej znalosti programátora. Problémy s porozumením diagramov èi s kódovaním urèitej èasti systému je rie¹ené komunikáciou a dohodou v rámci rie¹iteµského tímu. Koneèným produktom vývoja je testovateµná èas» systému.
+\item[Testovanie] -- Odhaµovanie chýb je dôle¾itou èas»ou ka¾dej metódy pou¾ívanej pri súèasnom vývoji  softvéru. Z dôvodu zabezpeèenia maximálnej kvality ka¾dého produktu nesmie by» táto fáza opomenutá ani v navrhovanej metóde. Pri testovaní prejde systém sadou ¹tandardných postupov testovania ako napr. automatizovanými testami, testami typu biela a èierna skrinka, akceptaènými testami atï. Softvér, ktorý spåòa po¾iadavky na funkènos», výkon a kvalitu je posunutý do ïal¹ej fázy ¾ivotného cyklu. Naopak pri nesplnení funkèných po¾iadavkov sa projekt posúva do ïal¹ej iterácie, v ktorej budú chyby odstránené.
+\item[Nasadenie] -- Na záver je otestovaná èas» systému nasadená do prevádzky.  Zákazník má mo¾nos» pracova» s odovzdanou èas»ou systému. V prípade vzniknutia neoèakávaných nedostatkov produktu mô¾e zákazník vy¾iada» úpravu vyvíjaného rie¹enia. Po úspe¹nom nasadení verzie systému si mô¾e zákazník urèi» nasledujúcu funkcionalitu, ktorá bude spracovaná a pridaná do produktu. V prípade nezmenia sa po¾iadavkov pokraèuje cyklus podµa vopred stanovenej priority vývoja èastí.
+\end{description}
 
 \section{Vyu¾ité role}
 Procesy prebiehajúce v navrhnutej metóde vy¾adujú na zvládnutie znalosti z viacerých oborov informatiky a mana¾mentu. Osoby pracujúce na vývoji softvéru sa ocitajú v niekoµkých preddefinovaných roliach. Ka¾dá z rolí vykonáva ¹pecifickú úlohu poèas ¾ivotného cyklu tvorenia produktu a je nepostrádateµná na úspe¹né dosiahnutie cieµa. 
@@ -78,6 +78,7 @@ Navrhovaná metóda definuje nasledujúce role:
 Pre zákazníka nie je stanovená rola, lebo jeho pozícia pri vývoji odpovedá jeho osobe. Má v¹ak vo v¹etkých prebiehajúcich procesoch významnú úlohu. Podieµa sa pri vývoji produktu a to nie len poèas poèiatoènej fázy, keï sú zbierané po¾iadavky na systém, ale aktívne sa podieµa aj na ovplyvòovaní vyvíjaného produktu poèas celej doby vývoja. Neseriózny prístup k vývoju zo strany objednávateµa vá¾ne naru¹uje úspe¹nos» zvládnutia projektu a kvalitu odovzdávaného produktu.
 
 \section{Vývoj softvérového projektu}
+
 V nasledujúcej èasti tejto práce sa budeme venova» postupu, akým bude softvér vyvíjaný pomocou novo vyvíjanej metódy pre spracovanie malých softvérových projektov. Pozornos» bude venovaná ka¾dej fázy ¾ivotného cyklu a podrobne budú popísané role a èinnosti, ktoré sa jej zúèastòujú. 
 
 \subsection{©pecifikácia po¾iadavkov}
@@ -99,18 +100,35 @@ Po namodelovaní kompletnej hierarchie procesov, konzultujeme výsledky zo zákazní
 Míµniky pre fázu návrhu firemných procesov sú hierarchická sada diagramov, ktorá popisuje budúci systém a plán iterácií a inkrementov podµa ktorého bude systém postupne vyvíjaný. 
 
 \subsection{Návrh systému}
-Prvou èinnos»ou návrhovej fázy ¾ivotného cyklu je spracovanie modelov firemných procesov. Identifikujeme v nich prípady u¾itia, ktoré graficky popí¹eme èas»ami diagramov, z ktorých sme vychádzali.  Jasne sa tým previa¾u diagramy firemných procesov s prípadmi u¾itia, ktoré budú ïalej podµa potreby spracúvané.
+
+Prvým významným rozhodnutím pre návrhára pri navrhovaní systému je zvolenie vhodnej architektúry pre budovaný produkt. Musí by» urèený programovací  jazyk, v akom bude systém implementovaný. Po dohode s klientom sú urèené technológie, ktoré budu pri realizovaní projektu vyu¾ité. Pri tejto èinnosti je dôle¾ité odborne poradi» klientovi, ktoré rie¹enie je pre jeho potreby najvhodnej¹ie. \\
+	
+Hlavnou èinnos»ou návrhovej fázy ¾ivotného cyklu je spracovanie modelov firemných procesov. Identifikujeme v nich prípady u¾itia, ktoré graficky popí¹eme èas»ami diagramov, z ktorých sme vychádzali.  Jasne sa tým previa¾u diagramy firemných procesov s prípadmi u¾itia, ktoré budú ïalej podµa potreby spracúvané.
 
 Urèenie prípadov u¾itia by malo by» pomerne jednoduché a mechanické. Po pre¹tudovaní firemných procesom vyberieme z nich èasti, ktoré boli urèené na automatizáciu a nepreru¹ený sled krokov oznaèíme ako prípad u¾itia. Nepreru¹enos»ou myslime to, ¾e poèas vykonávania sekvencie úloh, nezasahuje do ich vykonávania ¾iadna rola identifikovaná v procesoch.
 
 Obyèajne sa diagramy prípadov u¾itia nepou¾ívajú ako primárna forma návrhového modelu, podµa ktorého sa programuje, ale pre jednoduchos» spracovávaného projektu a urýchlenie vývoja by mali stanovené modely postaèova». Zachytávajú dostatoène po¾adovanú dynamickú ¹truktúru budovaného systému. Implementaèné detaily sú ponechané na programátorovi a jeho zruènosti. V prípade výskytu komplikovanej¹ieho prípadu u¾itia, pre ktorý by popis pomocou krokov z BPMN diagramu nestaèil, mô¾e by» pre objasnenie funkcie pou¾itý sekvenèný diagram.  \\
 
-Druhá èas» návrhovej fázy je zameraná na zachytenie statickej ¹truktúry systému. Pre grafické zachytenie tohoto pohµadu vyu¾ijeme diagram tried. Návrhár pomocou tohoto diagramu rozèleòuje budúcu funkcionalitu do logických zoskupení a sprehµadòuje ¹truktúru kódu. Mô¾e nim nastoli» ¹ablónu pre programátora, vyznaèením premenných a metód, ktoré budú v triede pou¾ité. Pri návrhu mô¾u by» pou¾ité návrhové vzory, èím sa zvy¹ujeme robustnos» rie¹enia.   \\
+Nasleduje èas» návrhovej fázy je zameraná na zachytenie statickej ¹truktúry systému. Pre grafické zachytenie tohoto pohµadu vyu¾ijeme diagram tried. Návrhár pomocou tohoto diagramu rozèleòuje budúcu funkcionalitu do logických zoskupení a sprehµadòuje ¹truktúru kódu. Mô¾e nim nastoli» ¹ablónu pre programátora, vyznaèením premenných a metód, ktoré budú v triede pou¾ité. Pri návrhu mô¾u by» pou¾ité návrhové vzory, èím sa zvy¹ujeme robustnos» rie¹enia.   \\
 
 Míµnikom pre ukonèenie modelovania dynamickej ¹truktúry systému sú diagramy, ktoré zachytávajú statickú a dynamickú ¹truktúru systému. Dynamická je urèená pomocou prípadov u¾itia, ktoré sú popísané pomocou krokov z firemných procesov a mô¾u by» roz¹írené o sekvenèné diagramy. Statickú ¹truktúru urèuje diagram tried.
 
-\subsection{Vyvoj}
+\subsection{Vývoj a testovanie}
 
-\subsection{Testovanie}
+Vo vývojovej fáze sa vy¹¹ie uvedené modely prevádzajú kódovaním do spustiteµnej podoby.  Programátori majú pomerne veµkú voµnos» pri realizovaní najni¾¹ej úrovne dodaných návrhov, ale rastie aj ich zodpovednos» na úspe¹nosti rie¹enia. Je preto dobré aby programátori boli skúsený a schopný rie¹i» prichádzajúce implementaèné výzvy. Prácou v tíme a komunikáciou medzi kolegami v¹ak mô¾e by» µahko doplnená neskúsenos» malého poètu programátorov.
 
-\subsection{Nasadenie a odovzdanie}
+????? spolupráca pre lepsie riesenie???
+
+Míµnikom pre ukonèenie fáze vývoje je ucelená spustiteµná èas» budúceho systému.\\
+
+Fáza testovania zaèína po dodaní prvej iterácie systému. Systém je podrobne testovaný, èi spåòa po¾adovanú funkcionalitu. Testery vykonávajú ¹irokú paletu testov od manuáleneho testovania funkcionality systému a¾ po automatizované testy. Testovaná èas» produktu musí adekvátne reagova» na v¹etky správne aj nesprávne vstupy.
+
+???Odhalenie chyby preskocenie nasadenia dalsia iterazia ak sa chyba nenajde pokracuje sa v nasadeni casti systemu ????\\
+
+Míµnikom pre fázu testovania je správa o výsledkoch testov.
+
+\subsection{Nasadenie a odovzdanie produktu}
+
+Otestovaný produkt je nasadený do prevádzky a zákazník sa s nim mô¾e oboznamova» a osobne ho vyskú¹a». Pri výskyte nespokojnosti s obdr¾anou èastou systému, mô¾e vyjadri» svoju nespokojnos» a prípadné nové potreby. Tieto dodatoèné po¾iadavky sú spracované a postúpené do fázy modelovania na zakomponovanie do po¾iadavkov na systém. Po prebehnutí nasadenia systému pokraèuje projekt ïal¹ou iteráciou.
+
+Po nasadení kompletného systému a jeho odobrení zo strany zákazníka je projekt odovzdaný a ukonèený. Dodatoène odhalené chyby a nové po¾iadavky od zákazníka, ktoré sa prejavia a¾ pri dlhodobom pou¾ívaní produktu sú rie¹ené pomocou otvorenia nového projektu. Novy projekt sa bude riadi» popisovanou metódou a po¾adovanú funkcionalitu do systému doplní.
