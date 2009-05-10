@@ -3,7 +3,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.0
-lastDocument=metoda.tex
+lastDocument=dip.tex
 masterDocument=
 name=Diplomka
 pkg_extIsRegExp=false
@@ -26,12 +26,12 @@ order=0
 
 [item:dip.tex]
 archive=true
-column=24
+column=0
 encoding=ISO 8859-2
 highlight=LaTeX
-line=50
-open=false
-order=0
+line=2
+open=true
+order=2
 
 [item:diplomka.kilepr]
 archive=true
@@ -44,10 +44,10 @@ order=-1
 
 [item:metoda.tex]
 archive=true
-column=212
+column=0
 encoding=ISO 8859-2
 highlight=LaTeX
-line=83
+line=44
 open=true
 order=0
 
