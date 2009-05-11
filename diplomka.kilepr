@@ -3,7 +3,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.0
-lastDocument=dip.tex
+lastDocument=nastroje.tex
 masterDocument=
 name=Diplomka
 pkg_extIsRegExp=false
@@ -26,12 +26,12 @@ order=0
 
 [item:dip.tex]
 archive=true
-column=0
+column=26
 encoding=ISO 8859-2
 highlight=LaTeX
-line=2
+line=47
 open=true
-order=2
+order=3
 
 [item:diplomka.kilepr]
 archive=true
@@ -44,19 +44,19 @@ order=-1
 
 [item:metoda.tex]
 archive=true
-column=0
+column=148
 encoding=ISO 8859-2
 highlight=LaTeX
-line=44
+line=29
 open=true
 order=0
 
 [item:metodiky.tex]
 archive=true
-column=30
+column=0
 encoding=ISO 8859-2
 highlight=LaTeX
-line=114
+line=84
 open=true
 order=1
 
@@ -66,8 +66,8 @@ column=15
 encoding=ISO 8859-2
 highlight=LaTeX
 line=1
-open=false
-order=1
+open=true
+order=2
 
 [item:pic/BDDmodel.png]
 archive=true
@@ -164,9 +164,9 @@ archive=true
 column=0
 encoding=ISO 8859-2
 highlight=LaTeX
-line=8
-open=false
-order=5
+line=17
+open=true
+order=4
 
 [item:zaver.tex]
 archive=true

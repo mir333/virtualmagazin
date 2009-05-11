@@ -1,54 +1,45 @@
-V súèastnosti sa pri vývoji softvérových produktov v drvivej väè¹ine prípadov pou¾íva objektovo orientovaná analýza a návrh. V tomto prístupe sa entity modelovaného systému reprezentujú pomocou objektov, ktoré zachytávajú ich stav, správanie sa a identitu. Pre uµahèenie zvládnutia problému sa vyu¾ívajú rôzna úroveò abstrakcie. Zakrývajú sa òou nepodstatných èasti problému a sústredí sa pozornos» na podstatne aspekty. 
+V súèasnosti sa vo vývoji softvérových produktov v preva¾nej väè¹ine prípadov pou¾íva objektovo orientovaná analýza a návrh. V tomto prístupe sa entity modelovaného systému reprezentujú pomocou objektov, ktoré zachytávajú ich stav, správanie sa a identitu. Na uµahèenie zvládnutia problému sa vyu¾íva rôzna úroveò abstrakcie. Zakrývajú sa òou nepodstatné èasti problému a pozornos» sa sústredí na podstatné aspekty. 
 
-Pri vyu¾ití objektovo orientovanej analýzy sa v najväè¹ej miere pou¾ívajú dva modely: Vodopád a iteratívny/inkrementálny vývoj. Èrty týchto modelov nájdeme vo v¹etkých moderných modelovacích metodikách. 
+Pri vyu¾ití objektovo orientovanej analýzy sa v najväè¹ej miere pou¾ívajú dva modely: vodopád a iteratívny / inkrementálny vývoj. Èrty týchto modelov nájdeme vo v¹etkých moderných modelovacích metodikách. 
 
 \section{Vodopád}
 \label{sec:vod}
-Vodopád patrí medzi najtradiènej¹ie modely vývoja. Historicky je to prvá ucelené metodika pre vývoj softvéru. Definuje jasné postupy pri zvládaní projektu poèas celého jeho ¾ivotného cyklu. Rozdeµuje projekt na základe vykonávaných aktivít na:
+Vodopád patrí medzi najtradiènej¹ie modely vývoja. Historicky je to prvá ucelená metodika na vývoj softvéru. Definuje jasné postupy pri zvládaní projektu poèas celého jeho ¾ivotného cyklu. Rozdeµuje projekt na základe vykonávaných aktivít na:
 
 \begin{itemize}
 \item Definovanie problému
-\item Analýzu a ¹pecifikáciu po¾iadavkov
+\item Analýzu a ¹pecifikáciu po¾iadaviek
 \item Návrh
 \item Implementovanie 
 \item Testovanie a integrovanie
-\item Údr¾ba 
+\item Údr¾bu 
 \end{itemize}
 
-Tieto etapy sa zoradia za seba a postupne sa zaènú sekvenène vykonáva». Ïal¹ia aktivita mô¾e zaèa» a¾ keï skonèí predchádzajúca. Pri výskyte chyby sa projekt vracia spä» do etapy, v krtej chyba vznikla a musí by» opravená. Po opravení chyby sa proces spú¹»a od toho miesta kde chyba nastala. \ref{fig:vod}\\
-
-\begin{figure}
- \centering
- \includegraphics[width=350px]{pic/vodopad.png}
-
- \caption{Schéma ¾ivotného cyklu Vodopád.}
- \label{fig:vod}
-\end{figure}
+Tieto etapy sa zoradia a postupne sa zaènú sekvenène vykonáva». Ïal¹ia aktivita mô¾e zaèa», a¾ keï skonèí predchádzajúca. Pri výskyte chyby sa projekt vracia spä» do etapy, v ktorej chyba vznikla, a chyba musí by» opravená. Po opravení chyby sa proces spú¹»a od toho miesta, kde chyba nastala.\\
 
 Výhodou aj nevýhodou vodopádu je jeho jednoduchos» a µahká pochopiteµnos». Umo¾òuje µahkú kontrolu postupu práce pomocou sledovania výstupov jednotlivých etáp vývoja. V súèasnej dobe v¹ak u¾ nedoká¾e pokry» väè¹ie projekty pre ich zlo¾itos». 
 
-Pri práci podla modelu vodopád sa rýchlo narazí na viaceré úskalia. Jedným z nich je správne odhadnutie èasu prechodu z jednej etapy projektu do nasledujúcej. Problémom mô¾e by» aj to ¾e vodopád neumo¾òuje prekrývania sa etáp. Najväè¹ím problémom v¹ak je neskoré odhalenie chyby v analýze alebo návrhu, ktoré sa prejaví a¾ pri testovaní. Takáto chyba vracia projekt na jeho úplný zaèiatok a mô¾e µahko vies» k jeho neúspechu. Na tieto »a¾kosti naväzuje nakoniec problematický odhad ceny projektu.
+Pri práci podµa modelu vodopád sa rýchlo narazí na viaceré úskalia. Jedným z nich je správne odhadnutie èasu prechodu z jednej etapy projektu do nasledujúcej. Problémom mô¾e by» aj to, ¾e vodopád neumo¾òuje prekrývania sa etáp. Najväè¹ím problémom v¹ak je neskoré odhalenie chyby v analýze alebo návrhu, ktoré sa prejaví a¾ pri testovaní. Takáto chyba vracia projekt na jeho úplný zaèiatok a mô¾e µahko vies» k jeho neúspechu. Napokon na tieto »a¾kosti nadväzuje problematický odhad ceny projektu. 
 
-Spôsob akým vodopád funguje priná¹a e¹te jednu veµkú nevýhodu. Poèas celej doby trvania vývoja nemá zákazník ¾iadnu mo¾nos» zisti» èi dodaný systém bude odpoveda» jeho predstavám a zasahova» do jeho vývoja. Nemá mo¾nos» získa» funkèné podèasti systému, s ktorými mô¾e u¾ pracova», ale musí èaka» a¾ na ukonèenie vývoja. Po ukonèení projektu µahko nastane situácia, pri ktorej je zákazník prekvapený z výsledku ktorý obdr¾í. 
+Spôsob, akým vodopád funguje, priná¹a e¹te jednu veµkú nevýhodu. Poèas celej doby trvania vývoja nemá zákazník ¾iadnu mo¾nos» zisti», èi dodaný systém bude zodpoveda» jeho predstavám, a zasahova» do jeho vývoja. Nemá mo¾nos» získa» funkèné podèasti systému, s ktorými u¾ mô¾e pracova», ale musí èaka» a¾ na ukonèenie vývoja. Po ukonèení projektu mô¾e µahko nasta» situácia,  kedy je zákazník prekvapený z výsledku, ktorý dostane. 
 
 \section{Iteratívny / inkrementálny vývoj}
 \label{sec:InIt}
-Iteratívny / inkrementálny vývoj sa sna¾í o zní¾enie rizika zlyhania projektu. Celý projekt je rozdelený na èasti podla budúcej funkcionality systému. Pre ka¾dú èast sa vykoná analýza, návrh, implementácia a testovanie. Výsledný systém sa vybuduje z podèastí. Rozdelením projektu umo¾níme skor¹iu detekciu chýb a hlavne nemusíme prerába» celý systém ale len èast, v ktorej sa chyba vyskytla. 
+Iteratívny / inkrementálny vývoj sa sna¾í o zní¾enie rizika zlyhania projektu. Celý projekt je rozdelený na èasti podµa budúcej funkcionality systému. Pre ka¾dú èas» sa vykoná analýza, návrh, implementácia a testovanie. Výsledný systém sa vybuduje z podèastí. Rozdelenie projektu umo¾ní skor¹iu detekciu chýb a hlavne nie je nutné prepracúva» celý systém, ale len èas», v ktorej sa vyskytla chyba.
+Pri vyu¾ití tohto modelu vznikajú problémy s integráciou. Vzniká ré¾ia, ktorá musí zabezpeèova» funkcionalitu neúplného systému, ako napríklad vytvorenie protéz. Tvorí sa priestor na vznik nových chýb pri integrácii èastí systému. Okrem technických problémov sa komplikuje aj èasový návrh práce na projekte, lebo nie ka¾dá iterácia zaberá rovnaký èas. Úvodné iterácie sa predl¾ujú z analytických dôvodov, aby bol nastávajúci systém dobre pochopený. Závereèné iterácie zas v sebe zahròujú sprievodné èinnosti projektu, ako za¹kolenie u¾ívateµov.\\
 
-Pri vyu¾ití tohoto modelu vznikajú problémy s integráciou. Vzniká ré¾ia, ktorá musí zabezpeèova» funkcionalitu neúplného systému ak napríklad vytvorenie protéz. Tvorí sa priestor na vznik nových chýb pri integrácii èastí systému. Okrem technických problém sa komplikuje aj èasový návrh práce na projekte, lebo nie ka¾dá iterácia zaberá rovnaký èas. Úvodné iterácia sa predl¾ujú z analytických dôvodov aby bol nastávajúci systém dobre pochopený. Závereèné iterácie zas v sebe zahròujú sprievodné èinnosti projektu ako za¹kolenie u¾ívateµov.\\
+Pomocou inkrementálneho vývoja je systém tvorený z nezávislých funkèných èastí, ktoré sú osobitne vytvárané za pomoci vodopádu alebo iteratívneho vývoja. Celkový systém dostávame spojením jednotlivých èastí do jedného celku. Inkrementálny vývoj je zalo¾ený na filozofii pridávania k existujúcim èastiam systému.
 
-Pomocou inkrementálneho vývoja je systém tvorený z nezávislých funkèných èastí, ktorá sú osobitne vytvárane za pomoci vodopádu alebo iteratívneho vývoja. Celkový systém dostávame spojením jednotlivých èastí do jedného celku. Inkrementálny vývoj je zalo¾ený na filozofii pridávania k existujúcim èastiam systému.\\
-
-Pri  iteratívnom vývoji sa postupuje cestou zdokonaµovania, roz¹irovania a opravovania u¾ existujúceho systému. Nemalá èas» kódu je ïal¹ími iteráciami pripisovaná prípadne umazaná a nahradená. Preferuje sa prepísanie zlého kódu namiesto jeho obchádzania. Tento postup sa v drvivej väè¹ine prípadov spája s inkrementálnym vývojom a veµmi dobre spolu fungujú.
+Pri iteratívnom vývoji sa postupuje cestou zdokonaµovania, roz¹irovania a opravovania u¾ existujúceho systému. Nemalá èas» kódu je ïal¹ími iteráciami pripisovaná, prípadne vymazaná a nahradená. Preferuje sa prepísanie zlého kódu namiesto jeho obchádzania. Tento postup sa v preva¾nej väè¹ine prípadov spája s inkrementálnym vývojom a veµmi dobre spolu fungujú.
 
 \section{Agilné metódy vývoja}
 \label{sec:agil}
 
 Súèasný svet sa veµmi rýchlo mení. Pri vývoji softvéru sa preto kladie veµký doraz na rýchlos» a flexibilitu. Aplikácie sa poèas vývoja musia prispôsobova» meniacim sa podmienkam a by» èo najskôr k dispozícii zákazníkovi.
 
-Z obrázku \ref{fig:agilvsklas} vidíme, ¾e klasické metódy vývoja zakladajú na fixnej funkcionalite, ktorá je daná ¹pecifikáciou po¾iadavkov. Funkcionalita je hlavným merítkom úspe¹nosti projektu. V prípade nesplnenie po¾iadavkov projekt zlyháva. Èas a prostriedky sa pre daný projekt odvíjajú od funkcionality. Èasto sa preto stáva, ¾e dochádza k posúvaniu termínov odovzdania a navy¹ovanie zdrojov na zvládnutie projektu.
+Z obrázku \ref{fig:agilvsklas} vidíme, ¾e klasické metódy vývoja sa zakladajú na fixnej funkcionalite, ktorá je daná ¹pecifikáciou po¾iadaviek. Funkcionalita je hlavným meradlom úspe¹nosti projektu. V prípade nesplnenie po¾iadaviek projekt zlyháva. Èas a prostriedky na daný projekt sa odvíjajú od funkcionality. Èasto sa preto stáva, ¾e dochádza k posúvaniu termínov odovzdania a k zvy¹ovaniu zdrojov na zvládnutie projektu.
 
-Agilné metódy sa k problému stavajú presne naopak. Za fixné pova¾ujú zdroje a èas potrebný na zvládnutie projektu. Zákazníkovi dodáva nie v¾dy úplnú, ale pre neho najpodstatnej¹iu funkcionalitu v¾dy v èase, keï ju potrebuje. Programy vyvíjané agilnými metódami sú µahko roz¹íritelne a preto nie je problém s dodaním zvy¹ných èastí systému. Ïal¹ím dôsledkom nefixnej funkcionality je mo¾nos» menenia po¾iadavkov zákazníka poèas vývoja. Vyvíjaný produkt tým lep¹ie spåòa zákazníkove potreby.\\
+Agilné metódy sa k problému stavajú úplne opaène. Za fixné pova¾ujú zdroje a èas potrebný na zvládnutie projektu. Zákazníkovi dodajú nie v¾dy úplnú, ale pre neho najpodstatnej¹iu funkcionalitu v¾dy v èase, keï ju potrebuje. Programy vyvíjané agilnými metódami sú µahko roz¹íriteµné, a preto nie je problém s dodaním zvy¹ných èastí systému. Ïal¹ím dôsledkom nefixnej funkcionality je mo¾nos» menenia po¾iadaviek zákazníka poèas vývoja. Vyvíjaný produkt tým lep¹ie spåòa zákazníkove potreby.\\
 
 \begin{figure}[ht]
  \centering
@@ -58,57 +49,57 @@ Agilné metódy sa k problému stavajú presne naopak. Za fixné pova¾ujú zdroje a èa
 \end{figure}
 
 \subsection{Manifest agilného programovania}
-Medzi agilná metódy vývoja patria viaceré metodiky. V¹etky majú spoloèný základ vo èastých kontrolách a úpravách, vysoko kvalifikovaných samo-organizovaných týmoch a zainteresovanosti zákazníka v procese. Filozofia agilných metód je zachytená v ich manifeste:
+K agilným metódam vývoja patria viaceré metodiky. V¹etky majú spoloèný základ v èastých kontrolách a úpravách, vysoko kvalifikovaných samoorganizovaných tímoch a zainteresovanosti zákazníka na procese. Filozofia agilných metód je zachytená v ich manifeste:
 \begin{itemize}
  \item Osoby a interakcia majú prednos» pred procesmi a nástrojmi
- \item Fungujúci softvér ma prednos» pred obsiahlou dokumentáciou
- \item Spolupráca so zákazníkom je uprednostnená pred vyjednávaním zmluv
+ \item Fungujúci softvér má prednos» pred obsiahlou dokumentáciou
+ \item Spolupráca so zákazníkom je uprednostnená pred vyjednávaním o zmluvách
  \item Reagovanie na zmenu má prednos» pred nasledovaním plánu\\
 \end{itemize}
 \textbf{Osoby a interakcia majú prednos» pred procesmi a nástrojmi}
 
-Tento bod vyjadruje zameranie metódy na èloveka a jeho schopnosti a skúsenosti. Uprednostòovaný je malý efektívny tým, ktorého èlenovia medzi sebou intenzívne komunikujú pri rie¹ení problémov. Preferované je rie¹enie problémov pomocou komunikácie tvárou v tvár, ktorá je rýchlej¹ia a efektívnej¹ia ako iné formy komunikácie. Je preto dobré aby bol cely tým situovaný fyzicky na jedno miesto. Umo¾òuje to lep¹iu spoluprácu na projekte a tým aj rýchlej¹ie produkovanie kódu. Programovanie èasto prebieha v skupinkách, ktorej èlenovia sa striedajú pri kódovaní daného úseku programu. 
+Tento bod vyjadruje zameranie metódy na èloveka a jeho schopnosti a skúsenosti. Uprednostòovaný je malý efektívny tím, ktorého èlenovia medzi sebou intenzívne komunikujú pri rie¹ení problémov. Preferované je rie¹enie problémov pomocou komunikácie tvárou v tvár, ktorá je rýchlej¹ia a efektívnej¹ia ako iné formy komunikácie. Je preto dobré, aby bol celý tím fyzicky situovaný na jednom mieste. Umo¾òuje to lep¹iu spoluprácu na projekte a tým aj rýchlej¹ie produkovanie kódu. Programovanie èasto prebieha v skupinkách, ktorých èlenovia sa striedajú pri kódovaní daného úseku programu. 
 
-Mana¾éri a vývojári sú v týme na rovnakej úrovni. Pri rozhodnutiach, ktoré sa týkajú technických rie¹ení, majú hlavné slovo vývojári. Mana¾éri majú za úlohu odstraòova» problémy netechnického rázu, ktoré by mohli projekt ohrozi». Obidve skupiny  navzájom intenzívne komunikujú pre dosiahnutie najlep¹ích výsledkov.\\\\
-\textbf{Fungujúci softvér ma prednos» pred obsiahlou dokumentáciou}
+Mana¾éri a vývojári sú v tíme na rovnakej úrovni. Pri rozhodnutiach, ktoré sa týkajú technických rie¹ení, majú hlavné slovo vývojári. Mana¾éri majú za úlohu odstraòova» problémy netechnického rázu, ktoré by mohli projekt ohrozi». Obidve skupiny navzájom intenzívne komunikujú v záujme dosiahnutia èo najlep¹ích výsledkov.\\\\
+\textbf{Fungujúci softvér má prednos» pred obsiahlou dokumentáciou}
 
-Klasické postupy stavajú dokumentáciu na základe ¹pecifikácie po¾iadavkov. Sna¾ia sa tak zachyti» funkcionalitu budovaného systému. Výsledkom vývojového procesu je systém, ktorý zákazník na zaèiatku procesu definoval. Mana¾ment sa týmto postupom sa sna¾í minimalizova» mo¾nos» zlyhania projektu. Klasický prístup má v¹ak dva výrazné nedostatky. Poèíta s presnou predstavou zákazníka o nastávajúcom systéme, ktorú obyèajne zákazník nemá, a nereaguje na zmeny v po¾iadavkách. Od definovania po¾iadavkov po odovzdanie systému uplynie veµa èasu. Svet v¹ak nestojí a taktie¾ ani po¾iadavky zákazníka na systém nestagnujú. Výsledkom klasických postupov  je preto èasto systém, ktorý presne spåòa ¹pecifikáciu po¾iadavkov ale nespåòa aktuálne potreby zákazníka.
+Klasické postupy stavajú dokumentáciu na základe ¹pecifikácie po¾iadaviek. Sna¾ia sa tak zachyti» funkcionalitu budovaného systému. Výsledkom vývojového procesu je systém, ktorý zákazník na zaèiatku procesu definoval. Mana¾ment sa týmto postupom sna¾í minimalizova» mo¾nos» zlyhania projektu. Klasický prístup má v¹ak dva výrazné nedostatky. Poèíta s presnou predstavou zákazníka o nastávajúcom systéme, ktorú obyèajne zákazník nemá, a nereaguje na zmeny v po¾iadavkách. Od definovania po¾iadaviek po odovzdanie systému uplynie veµa èasu. Svet v¹ak nestojí a taktie¾ ani po¾iadavky zákazníka na systém nestagnujú. Výsledkom klasických postupov je preto èasto systém, ktorý presne spåòa ¹pecifikáciu po¾iadaviek, ale nespåòa aktuálne potreby zákazníka.
 
-Agilné metodiky sa sna¾ia tejto nepru¾nosti vyhnú». Nemajú jasne stanovené po¾iadavky na systém na zaèiatku vývoja,  preto nie je mo¾né zostavi» klasickú dokumentáciu. ©etrí sa tým èas potrebný na vývoj. Za kµúèovú èas» dokumentácie je pova¾ovaný vlasý kód. Agilne metodiky priniesli koncept jednoduchosti ? neprodukova» viac ako je treba a nesna¾i» sa tvori» dokumenty, ktoré zachytávajú budúcnos». ©etrí sa tým veµa úsilia, ktoré by bolo potrebné na vyhµadávanie v rozsiahlych dokumentáciách a  udr¾ovanie týchto dokumentov v aktuálnom stave.
+Agilné metodiky sa sna¾ia tejto nepru¾nosti vyhnú». Nemajú jasne stanovené po¾iadavky na systém na zaèiatku vývoja, preto nie je mo¾né zostavi» klasickú dokumentáciu. ©etrí sa tým èas potrebný na vývoj. Za kµúèovú èas» dokumentácie je pova¾ovaný samotný kód. Agilné metodiky priniesli koncept jednoduchosti: Neprodukova» viac, ako je treba, a nesna¾i» sa tvori» dokumenty, ktoré zachytávajú budúcnos». ©etrí sa tým veµa úsilia, ktoré by bolo potrebné na vyhµadávanie v rozsiahlych dokumentáciách a na udr¾ovanie týchto dokumentov v aktuálnom stave.
  
-Za hlavný návrh systému je pova¾ovaný budovaný zdrojový kód. Tento prístup umo¾òuje rýchly presun do fázy programovania, ktorá priamo zachytáva po¾iadavky zákazníka. Preskakuje sa tým modelovanie rôznych abstraktných modelov, èím sa ¹etrí èas. Vzniká tu v¹ak riziko, ¾e zákazník musí by» pripravený na pracovania so systémom poèas jeho vyvíja.\\\\
-\textbf{Spolupráca so zákazníkom je uprednostnená pred vyjednávaním zmluv}
+Za hlavný návrh systému je pova¾ovaný budovaný zdrojový kód. Tento prístup umo¾òuje rýchly presun do fázy programovania, ktorá priamo zachytáva po¾iadavky zákazníka. Preskakuje sa tým modelovanie rôznych abstraktných modelov, èím sa ¹etrí èas. Vzniká tu v¹ak riziko, ¾e zákazník musí by» pripravený na pracovanie so systémom poèas jeho vývoja.\\\\
+\textbf{Spolupráca so zákazníkom je uprednostnená pred vyjednávaním o zmluvách}
 
-Agilné metódy sú zalo¾ené na flexibilite a ich sila spoèíva v mo¾nosti rýchleho sa prispôsobenia meniacim sa po¾iadavkam. Pri vývoji sa intenzívne komunikuje so zákazníkom a funkcionalita sa vytvára a upravuje podµa jeho predstáv. Zákazník sa stáva èlenom vývojového, spolupracuje na odsúhlasovaní rozhodnutí a ovplyvòuje vývoj.
+Agilné metódy sú zalo¾ené na flexibilite a ich sila spoèíva v mo¾nosti rýchleho prispôsobenia sa meniacim sa po¾iadavkám. Pri vývoji sa intenzívne komunikuje so zákazníkom a funkcionalita sa vytvára a upravuje podµa jeho predstáv. Zákazník sa stáva èlenom vývojového tímu, spolupracuje na odsúhlasovaní rozhodnutí a ovplyvòuje vývoj.
 
-Klasické metódy zjednávania kontraktu sa opierajú o ¹pecifikáciu budúceho systému. Podµa nej sa vypoèíta fixná cena projektu. Pre agilné metódy tento postup nie je aplikovateµný, lebo koneèná funkcionalita budúceho systému sa zaène rysova» a¾ poèas samotného vývoja. Agilné metódy musia by» preto podporené novým druhom kontraktu, ktorý nie je zalo¾ený na fixnej cene dodávky. 
+Klasické metódy dojednávania kontraktu sa opierajú o ¹pecifikáciu budúceho systému. Podµa nej sa vypoèíta fixná cena projektu. Pre agilné metódy tento postup nie je aplikovateµný, lebo koneèná funkcionalita budúceho systému sa zaène rysova» a¾ poèas samotného vývoja. Agilné metódy musia by» preto podporené novým druhom kontraktu, ktorý nie je zalo¾ený na fixnej cene dodávky. 
 
 Vniká tu potreba pre nový obchodný vz»ah, ktorý je zalo¾ený na úzkej spolupráci zákazníka s dodávateµom. Zákazník má veµkú moc v ovplyvòovaní celého vývoja a nesie aj veµkú èas» zodpovednosti za úspech projektu.\\\\
 \textbf{Reagovanie na zmenu má prednos» pred nasledovaním plánu}
 
-V súèasnom rýchlo sa meniacom svete je »a¾ké pou¾íva» prediktívne metodiky alebo definova» stabilnú ¹pecifikáciu po¾iadavkov. Klasické postupy sa pomocou plánovania sna¾ia zamedzi» zlyhaniu projektu a tým ¹etri» náklady na projekt. Ich výsledok v¹ak nemusí splni» momentálne oèakávania zákazníka.
+V súèasnom rýchlo sa meniacom svete je »a¾ké pou¾íva» prediktívne metodiky alebo definova» stabilnú ¹pecifikáciu po¾iadaviek. Klasické postupy sa pomocou plánovania sna¾ia zamedzi» zlyhaniu projektu a tým ¹etri» náklady na projekt. Ich výsledok v¹ak nemusí splni» momentálne oèakávania zákazníka.
 
-Agilne metódy volia iný prístup. Zmenám sa nedá vyhnú» a preto sa proti ním nesna¾ia bojova». Vzniká tu snaha o minimalizáciu nákladov na prevádzanie potrebných zmien poèas vývoja. Vývoj striktne nenasleduje stanovený plán. Na zaèiatku je identifikovaná poèiatoèná funkcionalita, ktorá je poèas vývoja prispôsobovaná. Jednotlivým funkèným èastiam je pridelená priorita, podµa ktorej sa pri vývoji postupuje. Zákazník ma mo¾nos» ovplyvòova» prioritu jednotlivých funkcii. Vy¾iada» doplnenie novej funkcionality systému, modifikovanie u¾ existujúcich èastí a vymazanie nevhodnej funkcionality
+Agilné metódy volia iný prístup. Zmenám sa nedá vyhnú», a preto sa proti nim nesna¾ia bojova». Vzniká tu snaha o minimalizáciu nákladov na prevádzanie potrebných zmien poèas vývoja. Vývoj striktne nenasleduje stanovený plán. Na zaèiatku je identifikovaná poèiatoèná funkcionalita, ktorá je poèas vývoja prispôsobovaná. Jednotlivým funkèným èastiam je pridelená priorita, podµa ktorej sa vo vývoji postupuje. Zákazník má mo¾nos» ovplyvòova» prioritu jednotlivých funkcií: vy¾iada» doplnenie novej funkcionality systému, modifikovanie u¾ existujúcich èastí a vymazanie nevhodnej funkcionality.
 
 \section{Business Driven Development}
 \label{sec:bdd}
 
-Business driven development (BDD) je moderný robustný prístup k tvoreniu softvéru. Podobne ako Agilné metodiky sa sna¾í reagova» na èaste a rýchle zmeny pri vývoji softvéru v dne¹nom dynamicky sa meniacom svete. Dôraz je kladení na vývin softvéru, ktorý zodpovedá trhovým trendom a  firemným potrebám. Do popredia sa vyzdvihuje súlad IT rie¹ení a firemných po¾iadaviek.\\
+Business driven development (BDD) je moderný robustný prístup k tvoreniu softvéru. Podobne ako agilné metodiky sa sna¾í reagova» na èasté a rýchle zmeny vo vývoji softvéru v dne¹nom dynamicky sa meniacom svete. Dôraz je kladený na vývin softvéru, ktorý zodpovedá trhovým trendom a firemným potrebám. Do popredia sa vyzdvihuje súlad IT rie¹ení s firemnými po¾iadavkami.\\
 
-Klasické softvérové rie¹enia boli tvorené na základe stanovených po¾iadavkov. Systémy vzniknuté týmto spôsobom boli do veµkej miery neflexibilné. Ich roz¹irovanie bolo veµmi obtia¾ne a nákladne. Znovupou¾itie funkcionalit taktie¾ nebolo veµké. V súèasnom meniacom sa svete nemá takýto prístup miesto. Firmy musia by» ka¾dodenne pripravené na meniace sa prostredie, aby si zachovali konkurencieschopnos». Informaèné systémy musia preto dr¾a» krok s týmito zmenami a podporova» firemné procesy. Kµúèovým sa stáva prepojenie produktov IT a potrieb firmy.
+Klasické softvérové rie¹enia boli tvorené na základe stanovených po¾iadaviek. Systémy vzniknuté týmto spôsobom boli do veµkej miery neflexibilné. Ich roz¹irovanie bolo veµmi komplikované a nákladné. Znovu pou¾itie funkcionality taktie¾ nebolo veµké. V súèasnom meniacom sa svete nemá takýto prístup miesto. Firmy musia by» ka¾dodenne pripravené na meniace sa prostredie, aby si zachovali konkurencieschopnos». Informaèné systémy musia preto dr¾a» krok s týmito zmenami a podporova» firemné procesy. Kµúèovým sa stáva prepojenie produktov IT s potrebami firmy.
 
-Pre dosiahnutie potrebného prepojenia firemných potrieb a IT sa mô¾eme odrazi» od modelovania firemných procesov a rôznych metrík, ako napríklad návratovos» investícii (return of investments ROI), kµúèových indikátorov výkonu (key performance indicaotrs KPI) a dal¹ích.
+Pri dosahovaní potrebného prepojenia firemných potrieb a IT sa mô¾eme odrazi» od modelovania firemných procesov a rôznych metrík, ako napríklad návratnos» investícií (return of investments ROI), kµúèových indikátorov výkonu (key performance indicaotrs KPI) a ïal¹ích.
 
-Ako hlavný prvok premostenia firemných potrieb a IT je vhodne vyu¾i» modelov firemných procesov (Business proces models BPMs). Je preto dôle¾ité aby IT odborníci boli schopný tieto diagramy èíta» a pochopi».
+Ako hlavný prvok premostenia firemných potrieb a IT je vhodné vyu¾i» modely firemných procesov (Business proces models BPMs). Je preto dôle¾ité, aby IT odborníci boli schopní tieto diagramy èíta» a pochopi».
 
-Analyzovaním procesov mô¾eme dospie» k tomu, ¾e po¾adovaná funkcionalita u¾ existuje a mô¾e by» znovu pou¾itá a sú prípadne do programovane len malé èasti na prepojenie u¾ existujúcich modulov. V prípade ¾e sa nedá znovu pou¾i» ¾iadna èast systému, budeme vyvíja» od zaèiatku.\\
+Analyzovaním procesov mô¾eme dospie» k tomu, ¾e po¾adovaná funkcionalita u¾ existuje a mô¾e by» znovu pou¾itá, prípadne sú doprogramované len malé èasti na prepojenie u¾ existujúcich modulov. V prípade, ¾e sa nedá znovu pou¾i» ¾iadna èas» systému, budeme vyvíja» od zaèiatku.\\
 
 \subsection{BDD model èinností}
-Vzniká snaha na uzavretie priepasti medzi firemnými potrebami a IT rie¹eniami. Toto prepojenie v¹ak musí zosta» pru¾né a prístupné pri vytváraní IT rie¹ení. Tieto trendy viedli k zavedeniu servisne-orientovanej architektúry (Service-Oriented Architecture SOA). 
+Vzniká snaha na uzavretie priepasti medzi firemnými potrebami a IT rie¹eniami. Toto prepojenie v¹ak musí zosta» pru¾né a prístupné pre vytváranie IT rie¹ení. Tieto trendy viedli k zavedeniu servisne orientovanej architektúry (Service-Oriented Architecture SOA). 
 
-SOA poskytuje rámec (framework) spolu s princípmi a smernicami na vytváranie znovu pou¾iteµných, zluèiteµných a nastaviteµných servisov (services), ktoré sú platformovo nezávislé. Vyu¾itie SOA vy¾aduje BDD prístup, ktorý spracúva firemné ciele a po¾iadavky z hora na dol do návrhov, vývoja a testovania. Získavame tým prostredie, v ktorom sa aplikácie tvoria zo znovu pou¾iteµných servisov alebo z nových servisov, ktoré sú vyvíjané podla aktuálnych firemných potrieb. Tým sa zabezpeèuje potrebná flexibilita v IT.
+SOA poskytuje rámec (framework) -- spolu s princípmi a smernicami -- na vytváranie znovu pou¾iteµných, zluèiteµných a nastaviteµných slu¾ieb (services), ktoré sú platformovo nezávislé. Vyu¾itie SOA vy¾aduje BDD prístup, ktorý spracúva firemné ciele a po¾iadavky zhora nadol, do návrhov, vývoja a testovania. Získavame tým prostredie, v ktorom sa aplikácie tvoria zo znovu pou¾iteµných slu¾ieb alebo z nových slu¾ieb, ktoré sú vyvíjané podµa aktuálnych firemných potrieb. Tým sa zabezpeèuje potrebná flexibilita v IT.
 
-Nasledujúci obrázok \ref{fig:BDDmod} znázoròuje vysoko-úrovòový náhµad na typickú postupnos» èinností v BDD metodike.
+Nasledujúci obrázok \ref{fig:BDDmod} znázoròuje vysokoúrovòový náhµad na typickú postupnos» èinností v BDD metodike.
 
 \begin{figure}[ht]
  \centering
@@ -118,113 +109,112 @@ Nasledujúci obrázok \ref{fig:BDDmod} znázoròuje vysoko-úrovòový náhµad na typick
  \label{fig:BDDmod}
 \end{figure}
 
-Prvým korkom vo vývoji nového IT rie¹enia je navrhnutie firemného procesu. Odporúèa sa zaèa» modelovaním kµúèových firemných procesov. Výsledkom modelovania je predanie firemných po¾iadaviek na systém IT rie¹iteµskému tímu. Navrhnutým firemným procesom musí by» zo strany firemných návrhárov urèená dôle¾itos», ktorá je vypoèítaná pomocou rôznych metrík ako napríklad ROI a KPI.
+Prvým korkom vo vývoji nového IT rie¹enia je navrhnutie firemného procesu. Odporúèa sa zaèa» modelovaním kµúèových firemných procesov. Výsledkom modelovania je odovzdanie firemných po¾iadaviek na systém IT rie¹iteµskému tímu. Navrhnutým firemným procesom musí by» zo strany firemných návrhárov urèená dôle¾itos», ktorá je vypoèítaná pomocou rôznych metrík, ako napríklad ROI a KPI.
 
-Po ukonèení modelovania firemných procesov nastupuje fáza zbierania po¾iadavkov na systém. Modely vzniknuté v predchádzajúcej fáze sú hlavným vstupom. Identifikujú sa v nich prípady u¾itia (use case), od ktorých sa odvíja návrh servisu. Stále sa pritom berie ohµad na firemné procesy, ktoré zachytávajú vzájomné prepojenie jednotlivých prípadov u¾itia. Po tom ako je servis implementovaný, pokraèuje sa ïal¹ou fázou a to nasadením. Servis je nasadený na aplikaèný server, kde je verejne prístupný a je mo¾né ho vyhµada».
+Po ukonèení modelovania firemných procesov nastupuje fáza zbierania po¾iadaviek na systém. Modely vzniknuté v predchádzajúcej fáze sú hlavným vstupom. Identifikujú sa v nich prípady pou¾itia (use case), od ktorých sa odvíja návrh slu¾ieb. Stále sa pritom berie ohµad na firemné procesy, ktoré zachytávajú vzájomné prepojenie jednotlivých prípadov pou¾itia. Po tom, ako je slu¾ba implementovaná, pokraèuje sa ïal¹ou fázou, a to nasadením. Slu¾ba je nasadená na aplikaèný server, kde je verejne prístupný, a je mo¾né ju vyhµada».
 
-Následne za uvedením servisu do prevádzky zaèína fáza monitorovania. Zbierajú sa v nej informácie o behu servisu v skutoènom èase, spracovávaných dátach a hláseniach. Sledovanie je doplnenie o ¹irokú paletu meraní podla vopred definovaných metrík a výkonnostných parametrov. Fáza monitorovania je podstatná pre urèenie funkènosti a správnosti vytvoreného servisu. Správne vytvorený servis musí spåòa» v¹etky po¾adované parametre.
+Za uvedením slu¾by do prevádzky následne zaèína fáza monitorovania. Zbierajú sa v nej informácie o behu slu¾by v skutoènom èase, spracovávaných dátach a hláseniach. Sledovanie je doplnené o ¹irokú paletu meraní podµa vopred definovaných metrík a výkonnostných parametrov. Fáza monitorovania je podstatná pre urèenie funkènosti a správnosti vytvorenej slu¾by. Správne vytvorená slu¾ba musí spåòa» v¹etky po¾adované parametre.
 
-Na záver nastupuje analyzovanie nazbieraných dát z predchádzajúcej fázy. Dáta sú predané na analýzu architektom, návrhárom a vývojárom. V¹etci zúèastnení pri vývoji vyhodnotia zozbierané údaje a na ich základe navrhnú vylep¹enia systému. Niekedy sa taktie¾ zmeny mô¾u prejavi» aj na firemnej úrovni zmenou firemných pravidiel a externých rozhraní. Zmenami sa proces opä» posúva do fázy modelovania, èím sa postup èinností uzatvára a zaèína nové kolo vývoja. Ustavièným vylep¹ovaním existujúceho systému umo¾òuje tento mechanizmus rýchle prispôsobenie sa meniacim sa podmienkam.
+Na záver nastupuje analyzovanie nazbieraných dát z predchádzajúcej fázy. Dáta sú dané na analýzu architektom, návrhárom a vývojárom. V¹etci zúèastnení na vývoji vyhodnotia zozbierané údaje a na ich základe navrhnú vylep¹enia systému. Niekedy sa taktie¾ zmeny mô¾u prejavi» aj na firemnej úrovni zmenou firemných pravidiel a externých rozhraní. Zmenami sa proces opä» posúva do fázy modelovania, èím sa postup èinností uzatvára a zaèína sa nové kolo vývoja. Ustavièným vylep¹ovaním existujúceho systému umo¾òuje tento mechanizmus rýchle prispôsobenie sa meniacim sa podmienkam.
 
-V nasledujúcej èasti sa budeme podrobnej¹ie venova» vývojovému ¾ivotnému cyklu.
+V nasledujúcej èasti bude pozornos» podrobnej¹ie venovaná vývojovému ¾ivotnému cyklu.
 
-\subsection{Analýza firemných po¾iadavkov}
+\subsection{Analýza firemných po¾iadaviek}
 
-Prvým a veµmi podstatným krokom pri vývoji softvéru je pochopenie firemných po¾iadaviek. Získavame ich pomocou komunikácie so zainteresovanými osobami a pozorovaním u¾ existujúceho systému. Je veµmi dôle¾ité komunikova» so v¹etkými vrstvami pracovníkov vo firme aj s najzaneprázdnenými mana¾érmi a vedúcimi. Výsledky treba zachyti» a zdokumentova». Dokumenty by mali obsahova» minimálne:
+Prvým a veµmi podstatným krokom pri vývoji softvéru je pochopenie firemných po¾iadaviek. Získavame ich pomocou komunikácie so zainteresovanými osobami a pozorovaním u¾ existujúceho systému. Je veµmi dôle¾ité komunikova» so v¹etkými vrstvami pracovníkov vo firme, aj s najzaneprázdnenej¹ími mana¾érmi a vedúcimi. Výsledky treba zachyti» a zdokumentova». Dokumenty by mali obsahova» minimálne:
 
 \begin{itemize}
 \item Firemnú víziu.
-\item Firemné ciele (krátkodobé a dlhodobé), ktorými uskutoèòujeme víziu spoloènosti.
+\item Firemné ciele (krátkodobé a dlhodobé), ktorými uskutoèòujú víziu spoloènosti.
 \item Firemné po¾iadavky vysokej úrovne, ktoré napomáhajú dosiahnu» ciele.
-\item Problémy s existujúcim firemnými procesmi.
+\item Problémy s existujúcimi firemnými procesmi.
 \end{itemize}
 
 Taktie¾ je veµmi dôle¾ité pochopi» prostredie a organizaènú ¹truktúru firmy. Rozèleni» firmu na funkèné celky, ktorým je jasne pridelená firemná funkcionalita vy¹¹ej úrovne. Tieto poznatky treba zachyti» a sformalizova» do firemnej doménovej matice (business domain matrix).\\
 
 \subsection{Modelovanie firemných procesov}
 
-Modelovanie firemných procesov (Business process modeling ? BPM) je technika na vizuálne zachytenie firemných procesov pomocou postupnosti aktivít a rozhodovacích uzlov. Úèelom BPM je vytvori» modely, ktoré in¾inierske skupiny mô¾u pou¾i» na implementovanie servisov. Stanovuje sa ideálny firemný proces, ktorý sa sna¾íme dosiahnu».
+Modelovanie firemných procesov (Business process modeling -- BPM) je technika na vizuálne zachytenie firemných procesov pomocou postupnosti aktivít a rozhodovacích uzlov. Úèelom BPM je vytvori» modely, ktoré in¾inierske skupiny mô¾u pou¾i» na implementovanie slu¾ieb. Stanovuje sa ideálny firemný proces, ktorý je treba sa sna¾i» dosiahnu».
 
-Ka¾dá organizácia alebo jej pod èas» má vymedzenú firemnú funkcionalitu, ktorú podporuje alebo poskytuje. Pomocou BPM modelujeme tieto funkcionality. Ka¾dá úloha je pridelená roli ktorá odpovedá nejakej entite alebo skupine entít. Rola mô¾e by» pridelená viacerým entitám a jedna entita mô¾e vystupova» vo viacerých roliach.
+Ka¾dá organizácia alebo jej sektor má vymedzenú firemnú funkcionalitu, ktorú podporuje alebo poskytuje. Pomocou BPM je mo¾né modelova» tieto funkcionality. Ka¾dá úloha je pridelená role, ktorá zodpovedá nejakej entite alebo skupine entít. Rola mô¾e by» pridelená viacerým entitám a jedna entita mô¾e vystupova» vo viacerých rolách.
 
-Firemný proces po analýze mô¾e by» reprezentovaný postupnos»ou aktivít a úloh. Úloha je najmen¹ia celistvá jednotka funkcionality, ktorá ma pre u¾ívateµa význam. Zlo¾itej¹ie procesy sa podrobnej¹ie modelujú v podprocesoch, z ktorých sa skladá hlavný proces. Príklady procesov sú uvedené na obrázkoch \ref{fig:hlproc} a  \ref{fig:subproc}.
+Firemný proces mô¾e by» po analýze reprezentovaný postupnos»ou aktivít a úloh. Úloha je najmen¹ia celistvá jednotka funkcionality, ktorá má pre u¾ívateµa význam. Zlo¾itej¹ie procesy sa podrobnej¹ie modelujú v podprocesoch, z ktorých sa skladá hlavný proces. Príklady procesov sú uvedené na obrázkoch \ref{fig:hlproc} a  \ref{fig:subproc}.
 
-Obyèajne celistvý úsek procesu odpovedá istej funkènej jednotke firmy, niekedy je v¹ak zapotreby priradi» funkènú jednotku organizácie procesu. Získavame tým hlboké pochopenie rozlo¾enia zodpovedností a úloh vo firme, ktoré neskor zu¾itkujeme pri návrhu a vývoji softvérového projektu.
+Celistvý úsek procesu obyèajne zodpovedá istej funkènej jednotke firmy, niekedy je v¹ak nevyhnutné priradi» funkènú jednotku do organizácie procesu. Získavame tým hlboké pochopenie rozlo¾enia zodpovedností a úloh vo firme, ktoré neskôr zu¾itkujeme pri návrhu a vývoji softvérového projektu.
 
-Navrhnuté modely sa dajú testova» prípadne sú do nich zavedené monitorovacie parametre aby bolo uµahèené meranie výkonu a funkènosti procesov. Vykonávame nad nimi simulácie, skrz ktoré získavame informácie pre vylep¹enie modelov.
+Navrhnuté modely sa dajú testova», prípadne sú do nich zavedené monitorovacie parametre, aby bolo uµahèené meranie výkonu a funkènosti procesov. Vykonávame nimi simulácie, prostredníctvom ktorých získavame informácie na vylep¹enie modelov.
 
 Modelovaním BPM získavame sadu modelov, ktoré slú¾ia ako hlavný vstup do nasledujúcej fázy. Plne popisujú v¹etky funkèné èasti firmy a procesy v nich prebiehajúce. Poskytujú tým náhµad na vz»ahy medzi jednotlivými sekciami firmy. Na základe týchto znalostí sa µahko vytvorí dátový model budúceho systému.
 
-\subsection{Modelovanie prípadov u¾itia}
-Pri modelovaní prípadov u¾itia vyu¾ívame firemne procesy, pomocou ktorých vytvárame jednotlivé prípady u¾itia. Role z firemných procesov sú prevedené na aktorov a prípady u¾itia získame prevedeným jednotlivých firemných procesov prípadne podprocesov. Vlastný prevod modelov poskytuje znaènú mieru flexibility.
+\subsection{Modelovanie prípadov pou¾itia}
+Pri modelovaní prípadov pou¾itia je potrebné vyu¾i» firemné procesy, pomocou ktorých vytvárame jednotlivé prípady pou¾itia. Roly z firemných procesov sú prevedené na aktérov a prípady pou¾itia sa dajú získa» prevedením jednotlivých firemných procesov, prípadne podprocesov. Vlastný prevod modelov poskytuje znaènú mieru flexibility.
 
-Pre prevod nie je jasne definovaný formálny postup, ale je mo¾né naznaèi» pou¾iteµný mechanizmus pre prevádzanie BPMs na modely prípadov u¾itia.
+Na prevod nie je jasne definovaný formálny postup, ale je mo¾né naznaèi» pou¾iteµný mechanizmus prevádzania BPMs na modely prípadov pou¾itia.
 
-Nie je vhodné mapova» jednu aktivitu èi úlohu v procese na jedne prípad u¾itia. Prípady u¾itia by pri takomto postupe znázoròovali len jednu interakciu preto¾e úloha odpovedá jednej interakcii. Podla definície jazyka UML je ale prípad u¾itia úplná postupnos» interakcii. Znamená to, ¾e jedne prípad u¾itia by mal zahàòa» v¹etky interakcie, ktoré privedú systém do takého stavu, aby mohla by» vykonávaná operácia znovu spustená. Vyplýva z toho, ¾e zachytávanie jednotlivých interakcii v prípadoch u¾itia ne je vhodne.
+Nie je vhodné mapova» jednu aktivitu èi úlohu v procese na jeden prípad pou¾itia. Prípady pou¾itia by pri takomto postupe znázoròovali len jednu interakciu, preto¾e úloha zodpovedá jednej interakcii. Podµa definície jazyka UML je ale prípad pou¾itia úplná postupnos» interakcií. Znamená to, ¾e jeden prípad pou¾itia by mal zahàòa» v¹etky interakcie, ktoré privedú systém do takého stavu, aby mohla by» vykonávaná operácia znovu spustená. Vyplýva z toho, ¾e zachytávanie jednotlivých interakcií v prípadoch pou¾itia nie je vhodné.
 
-Podobne mapovanie celého firemného procesu na prípad u¾itia by bolo znaène zlo¾ité a neprehµadné. Vyskytovalo by sa tu veµké mno¾stvo rolí a vznikal by veµký poèet alternatívnych ciest.\\
+Podobne aj mapovanie celého firemného procesu na prípad pou¾itia by bolo znaène zlo¾ité a neprehµadné. Vyskytovalo by sa tu veµké mno¾stvo rol a vznikal by veµký poèet alternatívnych ciest.\\
 
-Jedným spôsobom ako sa k tomuto problému mô¾eme postavi», je zavedenie krokov. Jeden krok si definujeme ako postupnos» úloh, ktoré mô¾u by» vykonané bez preru¹enia tou istou rolou. Napríklad ulo¾enie ?ulo¾ rezerváciu? mô¾e by» prípad u¾itia ale ?ulo¾ rezerváciu a za¹li dovolenkový leták?  nemô¾e by» prípadom u¾itia, lebo uplynie istý èas od momentu ako je rezervácia ulo¾ená a momentu, keï je mo¾né vytvori», prispôsobi» a zasla» dovolenkový leták u¾ívateµovi. Na firemné procesy sa ale mô¾eme pozera» aj ako na postupnos» krokov, prièom ka¾dý krok je prípad u¾itia s po¾adovaným výstupom a správaním. 
+Jedným spôsobom, ako sa k tomuto problému mo¾no postavi», je zavedenie krokov. Jeden krok sa dá definova» ako postupnos» úloh, ktoré mô¾u by» vykonané bez preru¹enia tou istou rolou. Napríklad ulo¾enie \glqq{}ulo¾ rezerváciu\grqq{} mô¾e by» prípad pou¾itia, ale \glqq{}ulo¾ rezerváciu a za¹li dovolenkový leták\grqq{} nemô¾e by» prípadom pou¾itia, lebo uplynie istý èas od momentu, ako je rezervácia ulo¾ená, a¾ do momentu, keï je mo¾né vytvori», prispôsobi» a zasla» dovolenkový leták u¾ívateµovi. Na firemné procesy sa ale dá pozera» aj ako na postupnos» krokov, prièom ka¾dý krok je prípad pou¾itia s po¾adovaným výstupom a správaním. 
 
-Ako náhle sem schopný identifikova» prípad u¾itia, popí¹eme jeho hlavné kroky skrz aktivity, ktoré v òom prebiehajú. Takýmto spôsobom získavame popis prípadu u¾itia pomocou postupnosti krokov.\\
+Hneï, ako sme schopní identifikova» prípad pou¾itia, je nutné popísa» jeho hlavné kroky cez aktivity, ktoré v òom prebiehajú. Takýmto spôsobom získavame popis prípadu pou¾itia pomocou postupnosti krokov.\\
 
-V¹etky identifikované prípady u¾itia majú význam, lebo vznikli identifikovaním krokov vo firemnom procese. Ka¾dý prípad u¾itia odpovedá aspoò jednému firemnému procesu, èi u¾ celému alebo jeho pod èasti, a je ich mo¾né spoji» aspoò s jedným firemným procesom. Sú identifikované v¹etky prípady u¾itia, lebo ka¾dému kroku vo firemných procesoch je pridelený odpovedajúci prípad u¾itia s popisom hlavných krokov. 
+V¹etky identifikované prípady pou¾itia majú význam, lebo vznikli identifikovaním krokov vo firemnom procese. Ka¾dý prípad pou¾itia zodpovedá aspoò jednému firemnému procesu, èi u¾ celému alebo jeho oddielu, a je ho mo¾né spoji» aspoò s jedným firemným procesom. Sú identifikované v¹etky prípady pou¾itia, lebo ka¾dému kroku vo firemných procesoch je pridelený zodpovedajúci prípad pou¾itia s popisom hlavných krokov. 
 
 Ak sa nám úspe¹ne podarí vykona» v¹etky tieto prevody, zvy¹ujeme tým pravdepodobnos» úspechu IT projektu.
 
-\subsection{Modelovanie servisov -- SOA}
-Ak chce spoloènos» vyu¾íva» servisne orientovanú architektúru (SOA) tak si musí vytvori» portfólio servisu, ktoré spoloènos» poskytuje. Buï pre interné alebo externé pou¾itie. Pri dosahovaní SOA mô¾e spoloènos» dosiahnu» rôzne úrovne. Väè¹ina spoloènosti zavádza webové slu¾by, ale sú v¹ak omnoho vy¹¹ie úrovne implementovania SOA v spoloènosti. Urèenie úrovne na ktorej sa firma nachádza v rámci presadzovania SOA je zlo¾itý proces sám o sebe. Na to aby  spoloènos» dosiahla skutoène SOA je potrebné pochopi», prija» a nasledova» metodiku.\\
+\subsection{Modelovanie slu¾ieb -- SOA}
+Ak chce spoloènos» vyu¾íva» servisne orientovanú architektúru (SOA), musí si vytvori» portfólio slu¾ieb, ktoré spoloènos» poskytuje. Buï pre interné alebo externé pou¾itie. Pri dosahovaní SOA mô¾e spoloènos» dosiahnu» rôzne úrovne. Väè¹ina spoloèností zavádza webové slu¾by, no sú aj omnoho vy¹¹ie úrovne implementovania SOA do spoloènosti. Urèenie úrovne, na ktorej sa firma nachádza v rámci presadzovania SOA, je sám o sebe zlo¾itý proces. Na to, aby spoloènos» dosiahla skutoèné SOA, je potrebné pochopi», prija» a nasledova» metodiku. \\
 
-Proces vývoja informaèného systému pre firmu do ktorého vyu¾ijeme SOA architektúru bude pokraèova» spracovaním výsledkov firemnej analýzy , na identifikovanie a navrhnutie servisov. Zaèneme stava» na výsledkoch minulej fázy a to na firemnej vízií a cieµoch organizácie. Na automatizáciu firemných procesov musíme dodr¾a» prioritné kritéria. Pri ich urèení úzko spolupracuje IT a firemní mana¾ment. Musia prehodnoti» kµúèové problémy firmy ako napríklad:
-
+Proces vývoja informaèného systému pre firmu, v ktorom sa vyu¾ije SOA architektúra, bude pokraèova» spracovaním výsledkov firemnej analýzy na identifikovanie a navrhnutie slu¾ieb. Je potrebné zaèa» stava» na výsledkoch minulej fázy, na firemnej vízii a cieµoch organizácie. Pri automatizácii firemných procesov treba dodr¾a» prioritné kritériá. Pri ich urèení úzko spolupracuje IT a firemný mana¾ment. Musia prehodnoti» kµúèové problémy firmy ako napríklad:
+ 
 \begin{itemize}
 \item Urèenie primárnych procesných slabostí a úzkych miest
 \item Problematické body vytknuté zákazníkom 
-\item Procesy, ktoré musia by» ¹kálovateµné z nárastom objemu transakcií 
+\item Procesy, ktoré musia by» ¹kálovateµné s nárastom objemu transakcií 
 \end{itemize}
 
-Na základe takýchto analýz mô¾e by» stanovený plán v akom poradí budú procesy vyvíjané. Procesy sú vlastnené funkènými èas»ami firmy. Pár týchto jednotiek mô¾e by» na zaèiatku vybraných aby sa na ne IT sústredilo a získal sa tým krátkodobý okam¾itý prospech. Akýkoµvek servis, ktorý mô¾e by» identifikovateµný musí podporova» ciele firmy, ktoré sa sna¾í z èasti alebo úplne vyrie¹i». Týmto si pomô¾eme pri uprednostòovaním funkèných èastí firmy pre IT vývoj. Pre veµmi dôle¾ité zlo¾ky firmy budú následne identifikované a definované servisy. Problémy s existujúcimi firemnými procesmi mô¾u by» pou¾ité ako hlavné ciele zavádzania servisov.  V ka¾dom prípade pri urèovaní priority zamerania IT musíme ma» na pamäti firemné potreby.\\
+Na základe takýchto analýz mô¾e by» stanovený plán, v akom poradí budú procesy vyvíjané. Procesy sú vlastnené funkènými èas»ami firmy. Pár týchto jednotiek mô¾e by» na zaèiatku vybraných, aby sa na ne IT sústredilo a získal sa tým krátkodobý okam¾itý prospech. Akákoµvek slu¾ba, ktorá mô¾e by» identifikovateµná, musí podporova» ciele firmy, ktoré sa sna¾í sèasti alebo úplne vyrie¹i». Týmto si mo¾no pomôc» pri uprednostòovaní funkèných èastí firmy pre IT vývoj. Pre veµmi dôle¾ité zlo¾ky firmy budú následne identifikované a definované slu¾ieb. Problémy s existujúcimi firemnými procesmi mô¾u by» pou¾ité ako hlavné ciele zavádzania slu¾ieb. V ka¾dom prípade pri urèovaní priority zamerania IT treba ma» na pamäti firemné potreby.  \\
 
-Ka¾dý firemný proces ako aj prípady u¾itia, ktoré boli identifikované v predchádzajúcich fázach vývoja systému mô¾u by» pripísané na zoznam kandidátskych servisov. V¹ak nie v¹etky kandidátske servisy aj realizované. Zmyslom SOA je zostavi» portfólio servisov, ktoré budú znovu pou¾iteµné v èo najviac firemných procesoch. Implementácia týchto servisov musí by» taktie¾ dobré premyslená aby sa jednotlivo implementované èasti dali vyu¾i» v rôznych implementáciách servisov.
+Ka¾dý firemný proces, ako aj prípady pou¾itia, ktoré boli identifikované v predchádzajúcich fázach vývoja systému, mô¾u by» pripísané na zoznam kandidátskych slu¾ieb. No nie v¹etky kandidátske slu¾by sú aj realizované. Zmyslom SOA je zostavi» portfólio slu¾ieb, ktoré budú znovu pou¾iteµné v èím viacerých firemných procesoch. Implementácia týchto slu¾ieb musí by» taktie¾ dobre premyslená, aby sa jednotlivo implementované èasti dali vyu¾i» v rôznych implementáciách slu¾ieb. 
 
-\begin{figure}[ht]
+\begin{figure}
  \centering
- \includegraphics[width=\linewidth]{pic/BDDlayers.png}
-  \caption{Úrovne servisne-orientovanej architektúry}
+ \includegraphics{pic/BDDmodel.png}
+ \caption{Úrovne servisne orientovanej architektúry}
  \label{fig:SOAL}
 \end{figure}
 
-Obrázok \ref{fig:SOAL} nám poskytuje náhµad na rôzne úrovne SOA. Zobrazuje kroky firemného procesu, ktoré sú prevedené na jeden servis alebo na skupinu viacerých servisov. Taktie¾ zobrazuje ako mô¾e by» servis implementovaný komponentami. Tieto komponenty mô¾u by» pozostatky bývalého systému, komerène dostupné rie¹enia alebo úplne z nuly vyvíjané komponenty. \\
+Obrázok nám poskytuje náhµad na rôzne úrovne S0A. Zobrazuje kroky firemného procesu, ktoré sú prevedené na jednu slu¾bu alebo na skupinu viacerých slu¾ieb. Taktie¾ zobrazuje, ako mô¾e by» slu¾ba implementovaná komponentmi. Tieto komponenty mô¾u by» pozostatky bývalého systému, komerène dostupné rie¹enia alebo úplne od nuly vyvíjané komponenty. \\
 
-Po zostavení listiny kandidátov na servisy sa sna¾íme dopracova» ku koneènej podobe servisného portfólia a vypracova» servisný model pre firmu. Základné èinnosti, ktoré musia by» vykonané na dosiahnutie servisného modelu sú:
+Po zostavení listiny kandidátov na slu¾by sa sna¾íme dopracova» ku koneènej podobe portfólia slu¾ieb a vypracova» model slu¾ieb pre firmu. Základné èinnosti, ktoré musia by» vykonané na dosiahnutie modelu slu¾ieb, sú:
 
 \begin{itemize}
-\item Analýza z hora dole cez procesné modely. 
+\item Analýza zhora dolu cez procesné modely. 
 \item Analýza u¾ existujúceho systému a aplikácií. 
-\item Vytvorenie prvotného servisného modelu pre kandidátske servisy.
-\item Jasné stanovenie popisov vlastnosti a kvality servisov. 
-\item Zviazanie ka¾dého servisu s firemným cieµom a zabezpeèenie aby sa servis podielal aspoò na jednom firemnom procese. 
+\item Vytvorenie prvotného modelu slu¾ieb pre kandidátske slu¾by.
+\item Jasné stanovenie popisov vlastností a kvality slu¾ieb. 
+\item Zviazanie ka¾dej slu¾by s firemným cieµom a zabezpeèenie, aby sa slu¾ba podieµala aspoò na jednom firemnom procese. 
 \end{itemize}
 
-
 \subsection{Systémový návrh a vývoj}
-Poèas vývojovej fázy tím pracuje s poèiatoèným prípadom u¾itia a servisným modelom. Zanára sa do modelu a ¹pecifikuje funkcionalitu pre ka¾dý prípad u¾itia. \\\\
+Poèas vývojovej fázy tím pracuje s poèiatoèným prípadom pou¾itia a modelom slu¾ieb. Vnára sa do modelu a ¹pecifikuje funkcionalitu pre ka¾dý prípad pou¾itia. \\\\
 \textbf{Systémový návrh}
 
-Na vytvorenie modelu systémových komponent vyu¾ijeme popis funkcionality jednotlivých prípadov u¾itia. Model komponent popisuje rozhranie komponent, ktoré ponúkajú a zachytáva taktie¾ vz»ahy medzi jednotlivými komponentami v celom systéme. Delenie systému na komponenty odpovedá navrhnutým servisom v servisnom modeli. V modeli mô¾u by» zahrnuté aj komponenty, ktoré priamo neimplementujú servis, ale poskytujú len podpornú funkcionalitu. Komponenty, ktoré nemajú rozhrania sa nedajú externé vyu¾íva», tak sa vyu¾ívajú len na vnútornú komunikáciu. Pre dôle¾ité prípady u¾itia sú vytvárané sekvenèné diagramy skrz rozhrania komponentov. Týmto je systém navrhnutý aby komponenty z modelu komponent medzi sebou dobre komunikovali skrz rozhranie. 
+Na vytvorenie modelu systémových komponentov vyu¾ijeme popis funkcionality jednotlivých prípadov pou¾itia. Model komponentov popisuje rozhranie komponentov, ktoré ponúkajú, a zachytáva taktie¾ vz»ahy medzi jednotlivými komponentmi v celom systéme. Delenie systému na komponenty zodpovedá navrhnutým slu¾bám v modeli slu¾ieb. V modeli mô¾u by» zahrnuté aj komponenty, ktoré priamo neimplementujú slu¾by, ale poskytujú len podpornú funkcionalitu. Komponenty, ktoré nemajú rozhrania, sa nedajú externe vyu¾íva», tak sa vyu¾ívajú len na vnútornú komunikáciu. Pre dôle¾ité prípady pou¾itia sú vytvárané sekvenèné diagramy cez rozhrania komponentov. Takto je systém navrhnutý, aby komponenty z modelu komponentov medzi sebou dobre komunikovali cez rozhranie. 
 
-V tejto fáze sa taktie¾ identifikujú a dokumentujú nefunkèné po¾iadavky na systém. Nevyu¾ívajú sa len vytvorenie SLA pre servisy ale sú taktie¾ vyu¾ité ako vstupy do operaèného systémového modelu. Tento model okrem iného popisuje infra¹truktúrové komponenty ako middleweare, zasielanie správ, správa súborov a ïal¹ie. Taktie¾ popisuje ako sú komponenty distribuované po sieti a ako sú nasadené na hardvéry. 
+V tejto fáze sa taktie¾ identifikujú a dokumentujú nefunkèné po¾iadavky na systém. Nevyu¾íva sa len vytvorenie SLA pre slu¾by, ale sú tie¾ vyu¾ité ako vstupy do operaèného systémového modelu. Tento model okrem iného popisuje infra¹truktúrové komponenty ako middleweare, zasielanie správ, správa súborov a ïal¹ie. Taktie¾ popisuje, ako sú komponenty distribuované po sieti a ako sú nasadené na hardvéry. 
 
-Pred samotnou implementáciou modelovaných procesov musia by» najskôr definované implementácie servisov, ich popisy a spôsob vyvolania. Nie v¹etky kroky procesov sa v¹ak implementujú ako priame vyvolania servisov. Jedným z hlavných dôvod preèo sa komponenty vyvolávajú priamo cez ich rozhranie je zvý¹enie výkonu systému odstránením nadbytoènej ré¾ie vykonávania. Sú aj iné dôvody, preèo je vhodné zvoli» hybridný prístup pri implementácii procesov. Pri návrhu je preto dôle¾ité uvedomi» si tieto potreby a zaznamena» ich pre ïal¹í vývoj. 
+Pred samotnou implementáciou modelovaných procesov musia by» najskôr definované implementácie slu¾ieb, ich popisy a spôsob vyvolania. Nie v¹etky kroky procesov sa v¹ak implementujú ako priame vyvolania slu¾ieb. Jedným z hlavných dôvodov, preèo sa komponenty vyvolávajú priamo cez ich rozhranie, je zvý¹enie výkonu systému odstránením nadbytoènej ré¾ie vykonávania. Sú aj iné dôvody, preèo je vhodné zvoli» hybridný prístup pri implementácii procesov. Pri návrhu je preto dôle¾ité uvedomi» si tieto potreby a zaznamena» ich pre ïal¹í vývoj. 
 
-Po ukonèení makro-návrhu na modelovaním diagramu komponent a operaèného modelu pristúpime k mikro-návrhu, ktorý zahàòa modelovanie diagramov tried a sekvenèných diagramov pre ka¾dú komponentu systému. Pri návrhu postupujeme iteratívne a vyu¾ívame overené návrhové vzory. Dodávame tým návrhu na robustnosti a spoµahlivosti.\\\\
+Po ukonèení makronávrhu na modelovanom diagrame komponentov a operaèného modelu pristúpime k mikronávrhu, ktorý zahàòa modelovanie diagramov tried a sekvenèných diagramov pre ka¾dý komponent systému. Pri návrhu postupujeme iteratívne a vyu¾ívame overené návrhové vzory. Dodávame tým návrhu na robustnosti a spoµahlivosti.\\\\
 \textbf{Systémový vývoj} 
 
-Poèas vývoja sa prevádzajú modely z návrhovej èasti do praktickej nahraditeµnej podoby. Vyberá sa technológia (nap. Java? 2 Platform, Enterprise Edition), programovací jazyk (nap. Java) a vývojové prostredie, v ktorom bude systém naprogramovaný. Firemné procesy sa prevádzajú do spustiteµnej formy vyu¾itím Business Process Execution Language (BPEL) a slú¾ia ako východiskový bod pre implementáciu procesov do programovacieho jazyka. Pre definície procesov je taktie¾ vybraná technológia. Vyvinuté servisy sú medzi sebou previazané pomocou nástroja na koordinovanie procesov, ktorý poskytuje mo¾nos» previaza» servisy skrz rozhrania ktoré poskytujú podµa navrhnutých firemných procesov.
+Poèas vývoja sa prevádzajú modely z návrhovej èasti do praktickej nahraditeµnej podoby. Vyberá sa technológia (napr. Java 2 Platform, Enterprise Edition), programovací jazyk (napr. Java) a vývojové prostredie, v ktorom bude systém naprogramovaný. Firemné procesy sa prevádzajú do spustiteµnej formy vyu¾itím Business Process Execution Language (BPEL) a slú¾ia ako východiskový bod pre implementáciu procesov do programovacieho jazyka. Pre definície procesov je taktie¾ vybraná technológia. Vyvinuté slu¾by sú medzi sebou previazané pomocou nástroja na koordinovanie procesov, ktorý poskytuje mo¾nos» previaza» slu¾by cez rozhrania, ktoré poskytujú podµa navrhnutých firemných procesov.
 
-Dôle¾itým aspektom takéhoto prístupu ¾e jeden servis mô¾e by» pou¾itý vo viacerých procesoch èo je hlavným prínosom BDD prístupu. Firemné procesy vznikajú preskladaním servisov podµa potreby. Tento prístup poskytuje veµkú flexibilitu, lebo nevyhovujúce procesy sú vytvorené z nových lep¹ích servisov a vyvinuté servisy sa zas pou¾ívajú v iných procesoch. Nové procesy nie sú tvorené úplne od nuly ale mô¾u byt tvorené u¾ z existujúcich servisov. Minimalizuje sa tým èas a náklady na roz¹irovanie a úpravy systému, a IT mô¾e µah¹ie a rýchlej¹ie reagova» na potreby firmy.
+Dôle¾itým aspektom takéhoto prístupu je, ¾e jedna slu¾ba mô¾e by» pou¾itý vo viacerých procesoch, èo je hlavným prínosom BDD prístupu. Firemné procesy vznikajú preskladaním slu¾ieb podµa potreby. Tento prístup poskytuje veµkú flexibilitu, lebo nevyhovujúce procesy sú vytvorené z nových lep¹ích slu¾ieb a vyvinuté slu¾by sa zas pou¾ívajú v iných procesoch. Nové procesy nie sú tvorené úplne od nuly, ale mô¾u by» tvorené u¾ z existujúcich slu¾ieb. Minimalizuje sa tým èas a náklady na roz¹irovanie a úpravy systému a IT mô¾e µah¹ie a rýchlej¹ie reagova» na potreby firmy.
 
-Paralelne s vývojom je budovaná aj infra¹truktúra pre budúci systém. Vyu¾íva sa pri tom operaèný model systému. Súèasne po dokonèení vývoja musí by» pripravený aj hardvér aby mohlo nasta» nasadenie systému.
+Paralelne s vývojom je budovaná aj infra¹truktúra pre budúci systém. Vyu¾íva sa pri tom operaèný model systému. Súèasne musí by» po dokonèení vývoja pripravený aj hardvér, aby mohlo nasta» nasadenie systému.
 
 \subsection{Nasadenie, monitorovanie a analýza zozbieraných dat}
 
