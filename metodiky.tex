@@ -4,18 +4,15 @@ Pri vyu¾ití objektovo orientovanej analýzy sa v najväè¹ej miere pou¾ívajú dva mo
 
 \section{Vodopád}
 \label{sec:vod}
-Vodopád patrí medzi najtradiènej¹ie modely vývoja. Historicky je to prvá ucelená metodika na vývoj softvéru. Definuje jasné postupy pri zvládaní projektu poèas celého jeho ¾ivotného cyklu. Rozdeµuje projekt na základe vykonávaných aktivít na:
+Vodopád patrí medzi najtradiènej¹ie modely vývoja. Historicky je to prvá ucelená metodika na vývoj softvéru. Definuje jasné postupy pri zvládaní projektu poèas celého jeho ¾ivotného cyklu. Rozdeµuje projekt na základe vykonávaných aktivít na: definovanie problému, analýzu a ¹pecifikáciu po¾iadaviek, návrh, implementovanie, testovanie a integrovanie, údr¾bu. Tieto etapy sa zoradia a postupne sa zaènú sekvenène vykonáva». Ïal¹ia aktivita mô¾e zaèa», a¾ keï skonèí predchádzajúca. Pri výskyte chyby sa projekt vracia spä» do etapy, v ktorej chyba vznikla, a chyba musí by» opravená. Po opravení chyby sa proces spú¹»a od toho miesta, kde chyba nastala. Postupnos» èinností modelu vodopád znázoròuje obrázok \ref{fig:vod}.
 
-\begin{itemize}
-\item Definovanie problému
-\item Analýzu a ¹pecifikáciu po¾iadaviek
-\item Návrh
-\item Implementovanie 
-\item Testovanie a integrovanie
-\item Údr¾bu 
-\end{itemize}
+\begin{figure}
+ \centering
+ \includegraphics[width=240px]{pic/vodopad.png}
+ \caption{Schéma ¾ivotného cyklu vodopád.}
+ \label{fig:vod}
+\end{figure}
 
-Tieto etapy sa zoradia a postupne sa zaènú sekvenène vykonáva». Ïal¹ia aktivita mô¾e zaèa», a¾ keï skonèí predchádzajúca. Pri výskyte chyby sa projekt vracia spä» do etapy, v ktorej chyba vznikla, a chyba musí by» opravená. Po opravení chyby sa proces spú¹»a od toho miesta, kde chyba nastala.\\
 
 Výhodou aj nevýhodou vodopádu je jeho jednoduchos» a µahká pochopiteµnos». Umo¾òuje µahkú kontrolu postupu práce pomocou sledovania výstupov jednotlivých etáp vývoja. V súèasnej dobe v¹ak u¾ nedoká¾e pokry» väè¹ie projekty pre ich zlo¾itos». 
 
@@ -39,11 +36,11 @@ Súèasný svet sa veµmi rýchlo mení. Pri vývoji softvéru sa preto kladie veµký dor
 
 Z obrázku \ref{fig:agilvsklas} vidíme, ¾e klasické metódy vývoja sa zakladajú na fixnej funkcionalite, ktorá je daná ¹pecifikáciou po¾iadaviek. Funkcionalita je hlavným meradlom úspe¹nosti projektu. V prípade nesplnenie po¾iadaviek projekt zlyháva. Èas a prostriedky na daný projekt sa odvíjajú od funkcionality. Èasto sa preto stáva, ¾e dochádza k posúvaniu termínov odovzdania a k zvy¹ovaniu zdrojov na zvládnutie projektu.
 
-Agilné metódy sa k problému stavajú úplne opaène. Za fixné pova¾ujú zdroje a èas potrebný na zvládnutie projektu. Zákazníkovi dodajú nie v¾dy úplnú, ale pre neho najpodstatnej¹iu funkcionalitu v¾dy v èase, keï ju potrebuje. Programy vyvíjané agilnými metódami sú µahko roz¹íriteµné, a preto nie je problém s dodaním zvy¹ných èastí systému. Ïal¹ím dôsledkom nefixnej funkcionality je mo¾nos» menenia po¾iadaviek zákazníka poèas vývoja. Vyvíjaný produkt tým lep¹ie spåòa zákazníkove potreby.\\
+Agilné metódy sa k problému stavajú úplne opaène. Za fixné pova¾ujú zdroje a èas potrebný na zvládnutie projektu. Zákazníkovi dodajú nie v¾dy úplnú, ale pre neho najpodstatnej¹iu funkcionalitu v¾dy v èase, keï ju potrebuje. Programy vyvíjané agilnými metódami sú µahko roz¹íriteµné, a preto nie je problém s dodaním zvy¹ných èastí systému. Ïal¹ím dôsledkom nefixnej funkcionality je mo¾nos» menenia po¾iadaviek zákazníka poèas vývoja. Vyvíjaný produkt tým lep¹ie spåòa zákazníkove potreby.
 
 \begin{figure}[ht]
  \centering
- \includegraphics[width=400px]{pic/agilvsklasik.png}
+ \includegraphics[width=300px]{pic/agilvsklasik.png}
  \caption{Porovnanie klasického a agilného prístupu.}
  \label{fig:agilvsklas}
 \end{figure}
@@ -54,29 +51,29 @@ K agilným metódam vývoja patria viaceré metodiky. V¹etky majú spoloèný základ v 
  \item Osoby a interakcia majú prednos» pred procesmi a nástrojmi
  \item Fungujúci softvér má prednos» pred obsiahlou dokumentáciou
  \item Spolupráca so zákazníkom je uprednostnená pred vyjednávaním o zmluvách
- \item Reagovanie na zmenu má prednos» pred nasledovaním plánu\\
+ \item Reagovanie na zmenu má prednos» pred nasledovaním plánu
 \end{itemize}
-\textbf{Osoby a interakcia majú prednos» pred procesmi a nástrojmi}
 
+\subsection*{Osoby a interakcia majú prednos» pred procesmi a nástrojmi}
 Tento bod vyjadruje zameranie metódy na èloveka a jeho schopnosti a skúsenosti. Uprednostòovaný je malý efektívny tím, ktorého èlenovia medzi sebou intenzívne komunikujú pri rie¹ení problémov. Preferované je rie¹enie problémov pomocou komunikácie tvárou v tvár, ktorá je rýchlej¹ia a efektívnej¹ia ako iné formy komunikácie. Je preto dobré, aby bol celý tím fyzicky situovaný na jednom mieste. Umo¾òuje to lep¹iu spoluprácu na projekte a tým aj rýchlej¹ie produkovanie kódu. Programovanie èasto prebieha v skupinkách, ktorých èlenovia sa striedajú pri kódovaní daného úseku programu. 
 
-Mana¾éri a vývojári sú v tíme na rovnakej úrovni. Pri rozhodnutiach, ktoré sa týkajú technických rie¹ení, majú hlavné slovo vývojári. Mana¾éri majú za úlohu odstraòova» problémy netechnického rázu, ktoré by mohli projekt ohrozi». Obidve skupiny navzájom intenzívne komunikujú v záujme dosiahnutia èo najlep¹ích výsledkov.\\\\
-\textbf{Fungujúci softvér má prednos» pred obsiahlou dokumentáciou}
+Mana¾éri a vývojári sú v tíme na rovnakej úrovni. Pri rozhodnutiach, ktoré sa týkajú technických rie¹ení, majú hlavné slovo vývojári. Mana¾éri majú za úlohu odstraòova» problémy netechnického rázu, ktoré by mohli projekt ohrozi». Obidve skupiny navzájom intenzívne komunikujú v záujme dosiahnutia èo najlep¹ích výsledkov.
 
+\subsection*{Fungujúci softvér má prednos» pred obsiahlou dokumentáciou}
 Klasické postupy stavajú dokumentáciu na základe ¹pecifikácie po¾iadaviek. Sna¾ia sa tak zachyti» funkcionalitu budovaného systému. Výsledkom vývojového procesu je systém, ktorý zákazník na zaèiatku procesu definoval. Mana¾ment sa týmto postupom sna¾í minimalizova» mo¾nos» zlyhania projektu. Klasický prístup má v¹ak dva výrazné nedostatky. Poèíta s presnou predstavou zákazníka o nastávajúcom systéme, ktorú obyèajne zákazník nemá, a nereaguje na zmeny v po¾iadavkách. Od definovania po¾iadaviek po odovzdanie systému uplynie veµa èasu. Svet v¹ak nestojí a taktie¾ ani po¾iadavky zákazníka na systém nestagnujú. Výsledkom klasických postupov je preto èasto systém, ktorý presne spåòa ¹pecifikáciu po¾iadaviek, ale nespåòa aktuálne potreby zákazníka.
 
 Agilné metodiky sa sna¾ia tejto nepru¾nosti vyhnú». Nemajú jasne stanovené po¾iadavky na systém na zaèiatku vývoja, preto nie je mo¾né zostavi» klasickú dokumentáciu. ©etrí sa tým èas potrebný na vývoj. Za kµúèovú èas» dokumentácie je pova¾ovaný samotný kód. Agilné metodiky priniesli koncept jednoduchosti: Neprodukova» viac, ako je treba, a nesna¾i» sa tvori» dokumenty, ktoré zachytávajú budúcnos». ©etrí sa tým veµa úsilia, ktoré by bolo potrebné na vyhµadávanie v rozsiahlych dokumentáciách a na udr¾ovanie týchto dokumentov v aktuálnom stave.
  
-Za hlavný návrh systému je pova¾ovaný budovaný zdrojový kód. Tento prístup umo¾òuje rýchly presun do fázy programovania, ktorá priamo zachytáva po¾iadavky zákazníka. Preskakuje sa tým modelovanie rôznych abstraktných modelov, èím sa ¹etrí èas. Vzniká tu v¹ak riziko, ¾e zákazník musí by» pripravený na pracovanie so systémom poèas jeho vývoja.\\\\
-\textbf{Spolupráca so zákazníkom je uprednostnená pred vyjednávaním o zmluvách}
+Za hlavný návrh systému je pova¾ovaný budovaný zdrojový kód. Tento prístup umo¾òuje rýchly presun do fázy programovania, ktorá priamo zachytáva po¾iadavky zákazníka. Preskakuje sa tým modelovanie rôznych abstraktných modelov, èím sa ¹etrí èas. Vzniká tu v¹ak riziko, ¾e zákazník musí by» pripravený na pracovanie so systémom poèas jeho vývoja.
 
+\subsection*{Spolupráca so zákazníkom je uprednostnená pred vyjednávaním o zmluvách}
 Agilné metódy sú zalo¾ené na flexibilite a ich sila spoèíva v mo¾nosti rýchleho prispôsobenia sa meniacim sa po¾iadavkám. Pri vývoji sa intenzívne komunikuje so zákazníkom a funkcionalita sa vytvára a upravuje podµa jeho predstáv. Zákazník sa stáva èlenom vývojového tímu, spolupracuje na odsúhlasovaní rozhodnutí a ovplyvòuje vývoj.
 
 Klasické metódy dojednávania kontraktu sa opierajú o ¹pecifikáciu budúceho systému. Podµa nej sa vypoèíta fixná cena projektu. Pre agilné metódy tento postup nie je aplikovateµný, lebo koneèná funkcionalita budúceho systému sa zaène rysova» a¾ poèas samotného vývoja. Agilné metódy musia by» preto podporené novým druhom kontraktu, ktorý nie je zalo¾ený na fixnej cene dodávky. 
 
-Vniká tu potreba pre nový obchodný vz»ah, ktorý je zalo¾ený na úzkej spolupráci zákazníka s dodávateµom. Zákazník má veµkú moc v ovplyvòovaní celého vývoja a nesie aj veµkú èas» zodpovednosti za úspech projektu.\\\\
-\textbf{Reagovanie na zmenu má prednos» pred nasledovaním plánu}
+Vniká tu potreba pre nový obchodný vz»ah, ktorý je zalo¾ený na úzkej spolupráci zákazníka s dodávateµom. Zákazník má veµkú moc v ovplyvòovaní celého vývoja a nesie aj veµkú èas» zodpovednosti za úspech projektu.
 
+\subsection*{Reagovanie na zmenu má prednos» pred nasledovaním plánu}
 V súèasnom rýchlo sa meniacom svete je »a¾ké pou¾íva» prediktívne metodiky alebo definova» stabilnú ¹pecifikáciu po¾iadaviek. Klasické postupy sa pomocou plánovania sna¾ia zamedzi» zlyhaniu projektu a tým ¹etri» náklady na projekt. Ich výsledok v¹ak nemusí splni» momentálne oèakávania zákazníka.
 
 Agilné metódy volia iný prístup. Zmenám sa nedá vyhnú», a preto sa proti nim nesna¾ia bojova». Vzniká tu snaha o minimalizáciu nákladov na prevádzanie potrebných zmien poèas vývoja. Vývoj striktne nenasleduje stanovený plán. Na zaèiatku je identifikovaná poèiatoèná funkcionalita, ktorá je poèas vývoja prispôsobovaná. Jednotlivým funkèným èastiam je pridelená priorita, podµa ktorej sa vo vývoji postupuje. Zákazník má mo¾nos» ovplyvòova» prioritu jednotlivých funkcií: vy¾iada» doplnenie novej funkcionality systému, modifikovanie u¾ existujúcich èastí a vymazanie nevhodnej funkcionality.
@@ -103,9 +100,8 @@ Nasledujúci obrázok \ref{fig:BDDmod} znázoròuje vysokoúrovòový náhµad na typickú
 
 \begin{figure}[ht]
  \centering
- \includegraphics[width=300px]{pic/BDDmodel.png}
- % BDDmodel.png: 1214x622 pixel, 72dpi, 42.83x21.94 cm, bb=0 0 1214 622
- \caption{BDD model èinností.}
+ \includegraphics[width=150px]{pic/BDDmodel.png}
+  \caption{BDD model èinností.}
  \label{fig:BDDmod}
 \end{figure}
 
@@ -138,7 +134,7 @@ Modelovanie firemných procesov (Business process modeling -- BPM) je technika na
 
 Ka¾dá organizácia alebo jej sektor má vymedzenú firemnú funkcionalitu, ktorú podporuje alebo poskytuje. Pomocou BPM je mo¾né modelova» tieto funkcionality. Ka¾dá úloha je pridelená role, ktorá zodpovedá nejakej entite alebo skupine entít. Rola mô¾e by» pridelená viacerým entitám a jedna entita mô¾e vystupova» vo viacerých rolách.
 
-Firemný proces mô¾e by» po analýze reprezentovaný postupnos»ou aktivít a úloh. Úloha je najmen¹ia celistvá jednotka funkcionality, ktorá má pre u¾ívateµa význam. Zlo¾itej¹ie procesy sa podrobnej¹ie modelujú v podprocesoch, z ktorých sa skladá hlavný proces. Príklady procesov sú uvedené na obrázkoch \ref{fig:hlproc} a  \ref{fig:subproc}.
+Firemný proces mô¾e by» po analýze reprezentovaný postupnos»ou aktivít a úloh. Úloha je najmen¹ia celistvá jednotka funkcionality, ktorá má pre u¾ívateµa význam. Zlo¾itej¹ie procesy sa podrobnej¹ie modelujú v podprocesoch, z ktorých sa skladá hlavný proces. Príklady procesov sú uvedené na obrázkoch \ref{fig:hproc} a \ref{fig:lproc}.
 
 Celistvý úsek procesu obyèajne zodpovedá istej funkènej jednotke firmy, niekedy je v¹ak nevyhnutné priradi» funkènú jednotku do organizácie procesu. Získavame tým hlboké pochopenie rozlo¾enia zodpovedností a úloh vo firme, ktoré neskôr zu¾itkujeme pri návrhu a vývoji softvérového projektu.
 
@@ -180,7 +176,7 @@ Ka¾dý firemný proces, ako aj prípady pou¾itia, ktoré boli identifikované v predc
 
 \begin{figure}
  \centering
- \includegraphics{pic/BDDmodel.png}
+ \includegraphics[width=350px]{pic/BDDlayers.png}
  \caption{Úrovne servisne orientovanej architektúry}
  \label{fig:SOAL}
 \end{figure}
@@ -198,8 +194,9 @@ Po zostavení listiny kandidátov na slu¾by sa sna¾íme dopracova» ku koneènej podo
 \end{itemize}
 
 \subsection{Systémový návrh a vývoj}
-Poèas vývojovej fázy tím pracuje s poèiatoèným prípadom pou¾itia a modelom slu¾ieb. Vnára sa do modelu a ¹pecifikuje funkcionalitu pre ka¾dý prípad pou¾itia. \\\\
-\textbf{Systémový návrh}
+Poèas vývojovej fázy tím pracuje s poèiatoèným prípadom pou¾itia a modelom slu¾ieb. Vnára sa do modelu a ¹pecifikuje funkcionalitu pre ka¾dý prípad pou¾itia.
+
+\subsection*{Systémový návrh}
 
 Na vytvorenie modelu systémových komponentov vyu¾ijeme popis funkcionality jednotlivých prípadov pou¾itia. Model komponentov popisuje rozhranie komponentov, ktoré ponúkajú, a zachytáva taktie¾ vz»ahy medzi jednotlivými komponentmi v celom systéme. Delenie systému na komponenty zodpovedá navrhnutým slu¾bám v modeli slu¾ieb. V modeli mô¾u by» zahrnuté aj komponenty, ktoré priamo neimplementujú slu¾by, ale poskytujú len podpornú funkcionalitu. Komponenty, ktoré nemajú rozhrania, sa nedajú externe vyu¾íva», tak sa vyu¾ívajú len na vnútornú komunikáciu. Pre dôle¾ité prípady pou¾itia sú vytvárané sekvenèné diagramy cez rozhrania komponentov. Takto je systém navrhnutý, aby komponenty z modelu komponentov medzi sebou dobre komunikovali cez rozhranie. 
 
@@ -207,8 +204,9 @@ V tejto fáze sa taktie¾ identifikujú a dokumentujú nefunkèné po¾iadavky na systé
 
 Pred samotnou implementáciou modelovaných procesov musia by» najskôr definované implementácie slu¾ieb, ich popisy a spôsob vyvolania. Nie v¹etky kroky procesov sa v¹ak implementujú ako priame vyvolania slu¾ieb. Jedným z hlavných dôvodov, preèo sa komponenty vyvolávajú priamo cez ich rozhranie, je zvý¹enie výkonu systému odstránením nadbytoènej ré¾ie vykonávania. Sú aj iné dôvody, preèo je vhodné zvoli» hybridný prístup pri implementácii procesov. Pri návrhu je preto dôle¾ité uvedomi» si tieto potreby a zaznamena» ich pre ïal¹í vývoj. 
 
-Po ukonèení makronávrhu na modelovanom diagrame komponentov a operaèného modelu pristúpime k mikronávrhu, ktorý zahàòa modelovanie diagramov tried a sekvenèných diagramov pre ka¾dý komponent systému. Pri návrhu postupujeme iteratívne a vyu¾ívame overené návrhové vzory. Dodávame tým návrhu na robustnosti a spoµahlivosti.\\\\
-\textbf{Systémový vývoj} 
+Po ukonèení makronávrhu na modelovanom diagrame komponentov a operaèného modelu pristúpime k mikronávrhu, ktorý zahàòa modelovanie diagramov tried a sekvenèných diagramov pre ka¾dý komponent systému. Pri návrhu postupujeme iteratívne a vyu¾ívame overené návrhové vzory. Dodávame tým návrhu na robustnosti a spoµahlivosti.
+
+\subsection*{Systémový vývoj} 
 
 Poèas vývoja sa prevádzajú modely z návrhovej èasti do praktickej nahraditeµnej podoby. Vyberá sa technológia (napr. Java 2 Platform, Enterprise Edition), programovací jazyk (napr. Java) a vývojové prostredie, v ktorom bude systém naprogramovaný. Firemné procesy sa prevádzajú do spustiteµnej formy vyu¾itím Business Process Execution Language (BPEL) a slú¾ia ako východiskový bod pre implementáciu procesov do programovacieho jazyka. Pre definície procesov je taktie¾ vybraná technológia. Vyvinuté slu¾by sú medzi sebou previazané pomocou nástroja na koordinovanie procesov, ktorý poskytuje mo¾nos» previaza» slu¾by cez rozhrania, ktoré poskytujú podµa navrhnutých firemných procesov.
 
@@ -232,7 +230,7 @@ Do úspe¹ného zvládnutia projektu je potrebné zapoji» µudí s rôznymi schopnos»ami
 
 \begin{figure}
  \centering
- \includegraphics{pic/BDDmodel.png}
+ \includegraphics[width=220px]{pic/roles.png}
  \caption{Hlavné roly vyu¾ívané v BDD.}
  \label{fig:roles}
 \end{figure}
