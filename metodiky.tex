@@ -216,34 +216,35 @@ Dôle¾itým aspektom takéhoto prístupu je, ¾e jedna slu¾ba mô¾e by» pou¾itý vo via
 
 Paralelne s vývojom je budovaná aj infra¹truktúra pre budúci systém. Vyu¾íva sa pri tom operaèný model systému. Súèasne musí by» po dokonèení vývoja pripravený aj hardvér, aby mohlo nasta» nasadenie systému.
 
-\subsection{Nasadenie, monitorovanie a analýza zozbieraných dat}
+\subsection{Nasadenie, monitorovanie a analýza zozbieraných dát}
 
-Po dovedení vývojovej snahy do bodu, keï je otestovaná a odobrená èas» systému, nastáva jej nasadenie do skutoènej prevádzky. Tento okamih musí predchádza» zosynchronizovanie plánov projektu, aby bola pripravená infra¹truktúra pre nasadzovaný systém. Nasadenie musí by» pozorne naplánované aby nenastalo pre»a¾enie urèitých èastí systému u¾ívateµmi. Je treba uva¾ova» o distribuovanom rozlo¾ení softvérových artefaktov a vytváraní zhlukov (clusters).\\
+Po dovedení vývojovej snahy do bodu, keï je otestovaná a odobrená èas» systému, nastáva jej nasadenie do skutoènej prevádzky. Tento okamih musí predchádza» zosynchronizovanie plánov projektu, aby bola pripravená infra¹truktúra pre nasadzovaný systém. Nasadenie musí by» pozorne naplánované, aby nenastalo pre»a¾enie urèitých èastí systému u¾ívateµmi. Je treba uva¾ova» o distribuovanom rozlo¾ení softvérových artefaktov a vytváraní zhlukov (clusters).\\
 
-Behové prostredie pre firemné procesy slú¾i» aj pre analyzovanie be¾iacich procesov. Monitorovanie poèas behu umo¾òuje mera» výkon rie¹enia, vyhodnoti» jeho výkon a urèi» èi spåòa po¾iadavky, ktoré boli preò stanovené. V¹etky dáta zozbierané poèas chodu systému sa ukladajú pre ïal¹iu analýzu.\\
+Prostredie pre beh (run-time enviroment) firemných procesov mô¾e slú¾i» aj na analyzovanie be¾iacich procesov. Monitorovanie poèas priebehu umo¾òuje mera» výkon rie¹enia, vyhodnoti» jeho výkon a urèi», èi spåòa po¾iadavky, ktoré boli preò stanovené. V¹etky dáta zozbierané poèas chodu systému sa ukladajú na ïal¹iu analýzu.\\
 
-Pri vyhodnocovaní výsledkov monitorovacej fázy sa vyu¾ijú simulácie firemných procesov, ktoré boli vytvorené v rámci BPM. Dáta nazbierané za behu sa porovnávajú s oèakávanými výsledkami, ktoré sme získali zo simulácii. Ak sa výsledky od seba zanedbateµne lí¹ia, vývoj systému je oznaèený za úspe¹ný, lebo splnil zadané po¾iadavky.  Naopak ak sa výsledky od seba znaène lí¹ia, musia by» prevedené ïal¹ie èinnosti. Dáta zozbierané poèas behu systému sa analyzujú a identifikuje sa krok, v ktorom vzniká najväè¹í rozdiel medzi po¾adovanými a dosiahnutými  výsledkami.
+Pri vyhodnocovaní výsledkov monitorovacej fázy sa vyu¾ijú simulácie firemných procesov, ktoré boli vytvorené v rámci BPM. Dáta nazbierané v priebehu sa porovnávajú s oèakávanými výsledkami, ktoré sme získali zo simulácií. Ak sa výsledky od seba zanedbateµne lí¹ia, vývoj systému je oznaèený za úspe¹ný, lebo splnil zadané po¾iadavky.  Naopak, ak sa výsledky od seba znaène lí¹ia, musia by» uskutoènené ïal¹ie èinnosti. Dáta zozbierané poèas priebehu systému sa analyzujú a identifikuje sa krok, v ktorom vzniká najväè¹í rozdiel medzi po¾adovanými a dosiahnutými výsledkami.
 
-Ako prvé sa prevedie podrobná analýza implementovaného zdrojového kódu. Je tu snaha odhali» miesta, ktorých prepísaním zvý¹ime výkon systému. Ak po ukonèení úpravy kódu nezískame ¾iadne priblí¾enie sa k po¾adovanému výkonu pristúpime k opatrnej zmene firemného procesu. Prevedená zmena na procese musí by» následne analyzovaná a musí by» urèený jej vplyv na spoloènos». Ak by tento vplyv bol zásadný a nevyhnutný pre spoloènos», musí by» zmenený krok procesu a identifikovaný nedostatok je odstránený. V úvahu taktie¾ pripadá analýza infra¹truktúry, na ktorej je systém nasadený. Jej prestavba mô¾e zvý¹i» výkon ale taktie¾ mô¾e by» µahko prekroèený rozpoèet preto je toto jedna z posledných mo¾ností.
+Ako prvá sa prevedie podrobná analýza implementovaného zdrojového kódu. Je tu snaha odhali» miesta, ktorých prepísaním zvý¹ime výkon systému. Ak po ukonèení úpravy kódu nezískame ¾iadne priblí¾enie sa k po¾adovanému výkonu, pristúpime k opatrnej zmene firemného procesu. Prevedená zmena v procese musí by» následne analyzovaná a musí by» urèený jej vplyv na spoloènos». Ak by bol tento vplyv zásadný a nevyhnutný pre spoloènos», musí by» zmenený krok procesu a identifikovaný nedostatok je odstránený. Do úvahy taktie¾ prichádza analýza infra¹truktúry, na ktorej je systém nasadený. Jej prestavba mô¾e zvý¹i» výkon a rovnako mô¾e by» µahko prekroèený rozpoèet, preto je toto jedna z posledných mo¾ností. 
 
 \subsection{Definované role}
-Pre úspe¹né zvládnutie projektu je potrebné zapoji» µudí s rôznymi schopnos»ami. BDD definuje role, ktoré napomáhajú k úspe¹nému prevedeniu IT projektu poháòaného firemnými cieµmi, víziami a potrebami. Obrázok \ref{fig:roles} znázoròuje ¹es» najdôle¾itej¹ích rolí, ktoré sú vy¾adované na vykonanie BDD vývojového cyklu.
 
-\begin{figure}[ht]
+Do úspe¹ného zvládnutia projektu je potrebné zapoji» µudí s rôznymi schopnos»ami. BDD definuje roly, ktoré napomáhajú úspe¹né prevedenie IT projektu poháòaného firemnými cieµmi, víziami a potrebami. Obrázok \ref{fig:roles} znázoròuje ¹es» najdôle¾itej¹ích rol, ktoré sú vy¾adované na vykonanie BDD vývojového cyklu.
+
+\begin{figure}
  \centering
- \includegraphics[width=350px]{pic/roles.png}
- \caption{Hlavné role vyu¾ívané v BDD.}
+ \includegraphics{pic/BDDmodel.png}
+ \caption{Hlavné roly vyu¾ívané v BDD.}
  \label{fig:roles}
 \end{figure}
 
-Popis jednotlivých kµúèových rolí:
+Popis jednotlivých kµúèových rol:
 \begin{description}
-\item[Obchodný analytik] -- je rola vysokej úrovne, ktorá ma na starosti obchodné analýzy a BPM. Vykonáva identifikáciu prípadov u¾itia a vytvára ¹pecifikácie pre ka¾dý prípad u¾itia. Analytik v tejto role sa mô¾e podieµa» aj na ¹pecializovanej¹ích úlohách v neskor¹ích fázach projektu. \\
-\item[Architekt] -- je rola vysokej úrovne zodpovedná za architektúru a návrh systému. Táto roµa zahrnuje ¹pecializované pod-role ako napríklad aplikaèný architekt, SOA architekt, vedúci návrhár a ïal¹í. Tieto role sú zodpovedné za rôznu architektonickú èinnos», ktorá súvisí z návrhom projektu. \\
-\item[Vývojár] -- je rola vysokej úrovne, ktorá má na starosti implementáciu navrhnutého rie¹enia. Opä» mô¾e by» ¹pecializovaná na pod-role urèené na èiastoèné úlohy ako napríklad databázoví programátor, vývojár, vývojár v jazyku java, vývojár webu a ïal¹í. Vývojári pracujú na rôznych úrovniach aplikaènej vrstvy podµa ich zamerania.\\
-\item[Tester] -- je rola zodpovedná za aktivity spojené s testovaním aplikácie pred jej nasadením do reálneho prevádzky. Tester vytvára testovacie skripty priamo podµa funkèných po¾iadavkov, ktoré vychádzajú z prípadov u¾itia. Tieto testovacie skripty sú následne spú¹»ané s rôznymi vstupnými dátami a je vyhodnocovaná správnos» vracaných hodnôt. Èím podrobnej¹ie sú testovacie prípady a ich vykonávanie, tím je robustnej¹ia aplikácia a minimalizuje sa v nej výskyt chýb.  \\
-\item[Mana¾ér nasadenia] -- je zodpovedný za nasadenie aplikácií na infra¹truktúru v rôznych prostrediach. Taktie¾ je zodpovedný za èinnos» spojenú z nasadzovaním aplikácií do cieµového prostredia. Napríklad vyvíjanie in¹talaèných skriptov, správne na-konfigurovanie aplikácie atï.  \\
-\item[Správca systému] -- je zodpovedný za fungovanie aplikácie a jej správu poèas jej behu a vyu¾ívania. Táto rola taktie¾ mô¾e by» zodpovedná za zbieranie dát poèas chodu aplikácie, ich analyzovania a porovnania výsledkov voèi po¾iadavkam na systém.
+\item[Obchodný analytik] -- je rola vysokej úrovne, ktorá sa zaoberá obchodnými analýzami a BPM. Vykonáva identifikáciu prípadov pou¾itia a vytvára ¹pecifikácie pre ka¾dý prípad pou¾itia. Analytik sa v tejto role mô¾e podieµa» v neskor¹ích fázach projektu aj na ¹pecializovanej¹ích úlohách.
+\item[Architekt] -- je rola vysokej úrovne zodpovedná za architektúru a návrh systému. Táto rola zahrnuje ¹pecializované vedµaj¹ie roly, ako napríklad aplikaèný architekt, SOA architekt, vedúci návrhár a ïal¹í. Tieto roly sú zodpovedné za rôznu architektonickú èinnos», ktorá súvisí s návrhom projektu.
+\item[Vývojár] -- je rola vysokej úrovne, ktorá zabezpeèuje implementáciu navrhnutého rie¹enia. Opä» mô¾e by» ¹pecializovaná na vedµaj¹ie roly urèené na èiastoèné úlohy, ako napríklad databázový programátor, vývojár, vývojár v jazyku java, vývojár webu a ïal¹í. Vývojári pracujú na rôznych úrovniach aplikaènej vrstvy podµa ich zamerania.
+\item[Tester] -- je rola zodpovedná za aktivity spojené s testovaním aplikácie pred jej nasadením do reálnej prevádzky. Tester vytvára testovacie skripty priamo podµa funkèných po¾iadaviek, ktoré vychádzajú z prípadov pou¾itia. Tieto testovacie skripty sú následne spú¹»ané s rôznymi vstupnými dátami a je vyhodnocovaná správnos» navrátených hodnôt. Èím podrobnej¹ie sú testovacie prípady a ich vykonávanie, tým je robustnej¹ia aplikácia a minimalizuje sa v nej výskyt chýb. 
+\item[Mana¾ér nasadenia] -- je zodpovedný za nasadenie aplikácií do infra¹truktúry v rôznych prostrediach. Taktie¾ je zodpovedný za èinnos» spojenú s nasadzovaním aplikácií do cieµového prostredia. Napríklad vyvíjanie in¹talaèných skriptov, správne nakonfigurovanie aplikácie atï. 
+\item[Správca systému] -- je zodpovedný za fungovanie aplikácie a jej správu poèas jej priebehu a vyu¾ívania. Táto rola taktie¾ mô¾e by» zodpovedná za zbieranie dát poèas chodu aplikácie, ich analyzovanie a porovnanie výsledkov s po¾iadavkami na systém.
 \end{description}
 %\section{Unified Process}
 %\label{sec:up}
