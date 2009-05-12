@@ -16,7 +16,15 @@ Základné kategórie elementov sú:
 \end{itemize}
 
 \subsection{Tokové objekty}
-Tokové objekty sú základné objekty BPD, udávajú správanie firemného procesu. Definované sú tri Flow Objects: \\
+Tokové objekty sú základné objekty BPD, udávajú správanie firemného procesu. Definované sú tri Flow Objects zachytené na obrázku \ref{fig:TO}. \\
+
+\begin{figure}[ht]
+ \centering
+ \includegraphics[width=170px]{pic/flowO.png}
+  \caption{Tokové objekty}
+ \label{fig:TO}
+\end{figure}
+
 
 \subsection*{Udalos»}
 Udalos» (Event) je reprezentovaná krú¾kom a vyjadruje nieèo, èo sa stalo poèas chodu firemného procesu. Tieto udalosti ovplyvòujú tok procesu a obyèajne majú príèinu (spú¹»aè) alebo dôsledok (výsledok). Definované sú tri typy udalostí. Na zaèiatku toku sa umiestòujú ¹tartovacie udalosti (Start), v priebehu pou¾ívame medziµahlé (Intermediate) a tok ukonèujeme koncovými (End) udalos»ami.
@@ -37,7 +45,15 @@ Aktivita (Activity) je spoloèný pojem pre èinnos», ktorá prebieha vo firme. Akti
 Bránou (Gateway) sa zabezpeèuje rozdelenie a zlúèenie sekvenèného toku. Reprezentuje ho diamant, v ktorého strede sú zobrazené spresòujúce symboly. Tie ¹pecifikujú, o aký typ vetvenia ide. Na výber máme rozhodovacie alebo paralelné delenie. K týmto deleniam sú definované zodpovedajúce zluèovania. 
 
 \subsection{Spojovacie objekty}
-Tokové objekty sa spájajú a vytvárajú základnú kostru firemného procesu. Spojovacie objekty (Connecting Objects) zabezpeèujú toto prepojenie a taktie¾ umo¾òujú pripájanie artefaktov.
+Tokové objekty sa spájajú a vytvárajú základnú kostru firemného procesu. Spojovacie objekty zachytené na obrázku \ref{fig:SO} (Connecting Objects) zabezpeèujú toto prepojenie a taktie¾ umo¾òujú pripájanie artefaktov.
+
+\begin{figure}[ht]
+ \centering
+ \includegraphics[width=220px]{pic/msg.png}
+ \caption{Spojovacie objekty}
+ \label{fig:SO}
+\end{figure}
+
 
 \subsection*{Sekvenèný tok}
 Sekvenèný tok (Sequence Flow) reprezentuje nepreru¹ovaná èiara s vyplnenou ¹ípkou. Vyznaèuje poradie, v akom sú aktivity v procese vykonávané.
@@ -49,14 +65,22 @@ Tok správ (Message Flow) reprezentuje preru¹ovaná èiara s prázdnou ¹ípkou. Pou¾í
 Na znázornenie asociácie (Association) sa pou¾íva preru¹ovaná èiara. Pomocou nej priraïujeme k tokovým objektom textové popisy alebo iné objekty, ktoré nepatria do skupiny tokových objektov. Pridaním ¹ípky k preru¹ovanej èiare mô¾eme urèi» smer priradenia.
 
 \subsection{Plavecké dráhy}
-Plavecké dráhy (Swimlanes) sa pou¾ívajú ako prostriedok na organizáciu aktivít. Opticky sa pomocou nich oddeµujú zodpovednosti roly alebo usporiadanie èinnosti v procese.
+Plavecké dráhy (Swimlanes) sa pou¾ívajú ako prostriedok na organizáciu aktivít. Opticky sa pomocou nich oddeµujú zodpovednosti roly alebo usporiadanie èinnosti v procese. Obrázok \ref{fig:PD} zachytáva príklad zobrazenia plaveckých dráh.
+
+\begin{figure}[ht]
+ \centering
+ \includegraphics[width=150px]{pic/sl.png}
+ \caption{Plavecké dráhy}
+ \label{fig:PD}
+\end{figure}
+
 
 \subsection*{Pool}
 Pool (Pool) ohranièuje proces a graficky vymedzuje jeho hranice. V rámci jedného poolu sa nachádza len jeden proces. Interakcia medzi poolmi prebieha pomocou správ. Pooly sa v diagrame pou¾ívajú na zachytenie dvoch separátnych firemných entít alebo úèastníkov. Proces ka¾dého úèastníka je uzavretý v jeho poole, èím je stanovené jeho jasné ohranièenie. Zachytený proces nemô¾e interagova» s okolitými procesmi pomocou sekvenèných tokov. Na interakciu medzi dvomi poolmi je urèený mechanizmus toku správ. Správy nesmú by» pou¾ité v rámci jedného poolu. [Obr. \ref{fig:polex}]
 
 \begin{figure}[ht]
  \centering
- \includegraphics[width=350px]{pic/poolex.png}
+ \includegraphics[width=360px]{pic/poolex.png}
  \caption{Príklad vyu¾itia poolu.}
  \label{fig:polex}
 \end{figure}
@@ -66,13 +90,20 @@ Dráha (Lane) delí pool na men¹ie èasti po celej jeho då¾ke. Slú¾i na usporiadani
 
 \begin{figure}[ht]
  \centering
- \includegraphics[width=220px]{pic/laneex.png}
+ \includegraphics[width=230px]{pic/laneex.png}
  \caption{Príklad vyu¾itia dráhy.}
  \label{fig:lanex}
 \end{figure}
 
 \subsection{Artefakty}
-Artefakty (Artifacts) neovplyvòujú základnú ¹truktúru procesu budovanú z aktivít, brán a sekvenèných tokov. Ponúkajú v¹ak spresòujúce informácie o elementoch procesu. U¾ívateµ si mô¾e sám doplni» sadu artefaktov na uµahèenie a sprehµadnenie diagramov. V BPMN sú preddefinované len tri typy artefaktov.
+Artefakty (Artifacts) neovplyvòujú základnú ¹truktúru procesu budovanú z aktivít, brán a sekvenèných tokov. Ponúkajú v¹ak spresòujúce informácie o elementoch procesu. U¾ívateµ si mô¾e sám doplni» sadu artefaktov na uµahèenie a sprehµadnenie diagramov. V BPMN sú preddefinované len tri typy artefaktov (\ref{fig:art}).
+
+\begin{figure}[ht]
+ \centering
+ \includegraphics[width=170px]{pic/art.png}
+ \caption{Artefakty}
+ \label{fig:art}
+\end{figure}
 
 \subsection*{Dátový objekt}
 Dátový objekt (Data Object) slú¾i na zobrazenie toku dát v procese. Pomocou neho modelujeme, aké dáta sú po¾adované a aké dáta systém produkuje. Dátový objekt je k aktivitám pripájaný pomocou asociácie. Graficky je reprezentovaný obdå¾nikom s ohnutým rohom.
@@ -87,15 +118,21 @@ Anotácia (Annotation) slú¾i na zachytenie dodatoènej textovej informácie pre èit
 Pomocou BPMN sme schopní modelova» procesy na rôznych úrovniach. Od detailného popisu jednotlivých èiastoèných procesov ku globálnej orchestrácii firemných procesov, ktoré sa javia ako èierna skrinka. BPMN tým oslovuje rôznorodé publikum, ktorému predáva ¹iroké spektrum informácií na rozlièných úrovniach detailu. Podµa miery záberu moderovaných procesov sa BPD delia na dve základné skupiny.
 \begin{description}
  \item[Kooperatívne medzifiremné procesy] Kooperatívny typ diagramu zachytáva medzifiremné procesy. Jeho hlavným cieµom je znázornenie vz»ahov medzi dvomi a viacerými procesmi. Dôraz je kladený na modelovanie vzájomnej komunikácie. Obrázok \ref{fig:polex} je príkladom kooperatívneho medzifiremného procesu. 
- \item[Interné firemné procesy] Interné procesy firmy sú zachytené v hierarchii diagramov. Najvy¹¹ia úroveò zachytáva hlavný firemný proces, ktorý je prostredníctvom podprocesov podrobne popísaný. Najni¾¹ia úroveò podrobne modeluje v¹etky èinnosti, ktoré prebiehajú v procese. Príkladom procesu vysokej úrovne je obrázok \ref{fig:proc}. Diagram sa skladá z podprocesov, ktoré reprezentujú ni¾¹ie úrovne. Rozkreslením niektorého z podprocesov dostávame podrobný diagram jeho fungovania. Takýto diagram je znázornený na obrázku \ref{fig:proc}. 
+ \item[Interné firemné procesy] Interné procesy firmy sú zachytené v hierarchii diagramov. Najvy¹¹ia úroveò zachytáva hlavný firemný proces, ktorý je prostredníctvom podprocesov podrobne popísaný. Najni¾¹ia úroveò podrobne modeluje v¹etky èinnosti, ktoré prebiehajú v procese. Príkladom procesu vysokej úrovne je obrázok \ref{fig:hproc}. Diagram sa skladá z podprocesov, ktoré reprezentujú ni¾¹ie úrovne. Rozkreslením niektorého z podprocesov dostávame podrobný diagram jeho fungovania. Takýto diagram je znázornený na obrázku \ref{fig:lproc}. 
 \end{description}
 
 \begin{figure}[ht]
  \centering
+  \includegraphics[width=350px]{pic/subproc.png}
+ \caption{Interný proces nízskej úrovne.}
+ \label{fig:lproc}
+\end{figure}
+
+\begin{figure}[ht]
+ \centering
  \includegraphics[width=350px]{pic/hlproc.png}
- \includegraphics[width=350px]{pic/subproc.png}
- \caption{Interný proces vysokej a nízskej úrovne.}
- \label{fig:proc}
+ \caption{Interný proces vysokejúrovne.}
+ \label{fig:hproc}
 \end{figure}
 
 \section{Unified Modeling Language}

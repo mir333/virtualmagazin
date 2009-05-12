@@ -3,7 +3,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.0
-lastDocument=nastroje.tex
+lastDocument=aplikacia.tex
 masterDocument=
 name=Diplomka
 pkg_extIsRegExp=false
@@ -17,12 +17,12 @@ QuickBuild=PDFLaTeX+ViewPDF
 
 [item:aplikacia.tex]
 archive=true
-column=180
+column=17
 encoding=ISO 8859-2
 highlight=LaTeX
-line=21
-open=false
-order=0
+line=51
+open=true
+order=5
 
 [item:dip.tex]
 archive=true
@@ -44,28 +44,28 @@ order=-1
 
 [item:metoda.tex]
 archive=true
-column=148
+column=30
 encoding=ISO 8859-2
 highlight=LaTeX
-line=29
+line=50
 open=true
 order=0
 
 [item:metodiky.tex]
 archive=true
-column=0
+column=11
 encoding=ISO 8859-2
 highlight=LaTeX
-line=84
+line=56
 open=true
 order=1
 
 [item:nastroje.tex]
 archive=true
-column=15
+column=12
 encoding=ISO 8859-2
 highlight=LaTeX
-line=1
+line=128
 open=true
 order=2
 
@@ -105,6 +105,15 @@ line=0
 open=false
 order=-1
 
+[item:pic/art.png]
+archive=true
+column=7143536
+encoding=
+highlight=
+line=0
+open=false
+order=-1
+
 [item:pic/association.png]
 archive=true
 column=0
@@ -132,6 +141,33 @@ line=0
 open=false
 order=-1
 
+[item:pic/flowO.png]
+archive=true
+column=0
+encoding=
+highlight=
+line=0
+open=false
+order=-1
+
+[item:pic/main.png]
+archive=true
+column=0
+encoding=
+highlight=
+line=0
+open=false
+order=-1
+
+[item:pic/msg.png]
+archive=true
+column=0
+encoding=
+highlight=
+line=0
+open=false
+order=-1
+
 [item:pic/poolex.png]
 archive=true
 column=3342458
@@ -150,7 +186,25 @@ line=0
 open=false
 order=-1
 
+[item:pic/sl.png]
+archive=true
+column=6750318
+encoding=
+highlight=
+line=0
+open=false
+order=-1
+
 [item:pic/usecaseex.png]
+archive=true
+column=6750318
+encoding=
+highlight=
+line=0
+open=false
+order=-1
+
+[item:pic/vodopad.png]
 archive=true
 column=6750318
 encoding=
