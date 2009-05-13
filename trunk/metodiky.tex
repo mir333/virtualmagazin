@@ -20,9 +20,10 @@ Pri práci podµa modelu vodopád sa rýchlo narazí na viaceré úskalia. Jedným z nic
 
 Spôsob, akým vodopád funguje, priná¹a e¹te jednu veµkú nevýhodu. Poèas celej doby trvania vývoja nemá zákazník ¾iadnu mo¾nos» zisti», èi dodaný systém bude zodpoveda» jeho predstavám, a zasahova» do jeho vývoja. Nemá mo¾nos» získa» funkèné podèasti systému, s ktorými u¾ mô¾e pracova», ale musí èaka» a¾ na ukonèenie vývoja. Po ukonèení projektu mô¾e µahko nasta» situácia,  kedy je zákazník prekvapený z výsledku, ktorý dostane. 
 
-\section{Iteratívny / inkrementálny vývoj}
+\section{Iteratívny a inkrementálny vývoj}
 \label{sec:InIt}
-Iteratívny / inkrementálny vývoj sa sna¾í o zní¾enie rizika zlyhania projektu. Celý projekt je rozdelený na èasti podµa budúcej funkcionality systému. Pre ka¾dú èas» sa vykoná analýza, návrh, implementácia a testovanie. Výsledný systém sa vybuduje z podèastí. Rozdelenie projektu umo¾ní skor¹iu detekciu chýb a hlavne nie je nutné prepracúva» celý systém, ale len èas», v ktorej sa vyskytla chyba.
+Iteratívny a inkrementálny vývoj sa sna¾í o zní¾enie rizika zlyhania projektu. Celý projekt je rozdelený na èasti podµa budúcej funkcionality systému. Pre ka¾dú èas» sa vykoná analýza, návrh, implementácia a testovanie. Výsledný systém sa vybuduje z podèastí. Rozdelenie projektu umo¾ní skor¹iu detekciu chýb a hlavne nie je nutné prepracúva» celý systém, ale len èas», v ktorej sa vyskytla chyba. 
+
 Pri vyu¾ití tohto modelu vznikajú problémy s integráciou. Vzniká ré¾ia, ktorá musí zabezpeèova» funkcionalitu neúplného systému, ako napríklad vytvorenie protéz. Tvorí sa priestor na vznik nových chýb pri integrácii èastí systému. Okrem technických problémov sa komplikuje aj èasový návrh práce na projekte, lebo nie ka¾dá iterácia zaberá rovnaký èas. Úvodné iterácie sa predl¾ujú z analytických dôvodov, aby bol nastávajúci systém dobre pochopený. Závereèné iterácie zas v sebe zahròujú sprievodné èinnosti projektu, ako za¹kolenie u¾ívateµov.\\
 
 Pomocou inkrementálneho vývoja je systém tvorený z nezávislých funkèných èastí, ktoré sú osobitne vytvárané za pomoci vodopádu alebo iteratívneho vývoja. Celkový systém dostávame spojením jednotlivých èastí do jedného celku. Inkrementálny vývoj je zalo¾ený na filozofii pridávania k existujúcim èastiam systému.
