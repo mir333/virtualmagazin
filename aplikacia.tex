@@ -47,7 +47,10 @@ Nevyhnutná konfigurácia hotovej distribúcie prebehne pri jeho prvom spustení. Vy
 Informácie o ulo¾ených èlánkoch sa budu zobrazova» do prehµadného výpisu obsahujúceho základné informácie. Záznamy sa budú zobrazova» pre aktuálny rok. Star¹ie roèníky budú ulo¾ené v archíve. Záznamy pre aktuálny roèník budu chronologicky usporiadané od najnov¹ích po najstar¹ie. Archív bude usporiadaný podµa rokov a bude rovnako zoradený ako aktuálny roèník. Parameter zoraïovanie bude môc» u¾ívateµ pozmeni» na meno, in¹titúciu, názov a dátum. Taktie¾ bude mo¾nos» zmeni» vzostupnos» alebo zostupnos» usporiadania. V prípade, ¾e záznamov bude viac ako limit zobrazenia na jednu stránku, zoznam sa stane viac stranovým. U¾ívateµ si bude môc» zvoli» koµko záznamov chce na jedne krát zobrazi».
 
 \section{Návrh firemných procesov}
-Modelovanie firemných procesov zaèína pre¹tudovaním ¹pecifikácie po¾iadavkov. Identifikuje sa v nej hlavný proces, ktorý zachytíme pomocou BPMN. Na uµahèenie identifikácie tohoto procesu pomô¾e otázka -- Akým hlavným èinnostiam sa firma venuje? Vymedzené èinnosti graficky zachytíme do diagramu podµa ich postupnosti. Zo ¹pecifikácie uvedenej v predchádzajúcej sekcii bol identifikovaný hlavný proces, ktorý je tvorený z nasledujúcich èinností:??????????? .Po grafickom zachytení postupnosti jednotlivých èinností dostávame prvý diagram systému (\ref{fig:mainproc}) popisujúci systém na najvy¹¹ej úrovni. 
+Modelovanie firemných procesov zaèína pre¹tudovaním ¹pecifikácie po¾iadavkov. Identifikuje sa v nej hlavný proces, ktorý zachytíme pomocou BPMN. Na uµahèenie identifikácie tohoto procesu pomô¾e otázka -- Akým hlavným èinnostiam sa firma venuje? Vymedzené èinnosti graficky zachytíme do diagramu podµa ich postupnosti. 
+
+\subsection{Identifikácia hlavného procesu}
+Zo ¹pecifikácie uvedenej v predchádzajúcej sekcii bol identifikovaný hlavný proces tvorený z piatich základných èastí. Prvým v línii vykonania je proces zabezpeèujúci autentizáciu u¾ívateµa a jeho autorizovanie. Následne proces pokraèuje podla pridelenej role. Neregistrovaný u¾ívateµ si mô¾e prehliada» virtuálny èasopis alebo sa zaregistrova». Registrovaný u¾ívateµ mô¾e upravova» svoj profil a prida» èlánok. Recenzenti pristupujú k podprocesu recenzia èlánku. Administrátor má na starosti správu èasopisu. Redakèná rada pristupuje k procesu zostavenia èasopisu. Po grafickom zachytení postupnosti jednotlivých èinností dostávame prvý diagram systému (\ref{fig:mainproc}) popisujúci systém na najvy¹¹ej úrovni. 
 
 \begin{figure}[ht]
  \centering
@@ -56,11 +59,15 @@ Modelovanie firemných procesov zaèína pre¹tudovaním ¹pecifikácie po¾iadavkov. Id
  \label{fig:mainproc}
 \end{figure}
 
-Postupnou dekompozíciou hlavného procesu je budovaná hierarchia modelov, ktorá popisuje funkènú ¹truktúru organizácie a na najni¾¹ej úrovni zachytáva základné èinnosti vykonávané vo firme. Na nasledujúcom obrázku \ref{} je zachytená postupná dekompozícia jednej funkènej èasti hlavného procesu a¾ na najni¾¹iu úroveò. Keï¾e rozparcelovanie celej hierarchie by bolo veµmi pracné a ako názorná uká¾ka postaèuje analýza jednej vetvy, zvy¹né diagramy táto prace obsahuje v dodatku A.
+Postupnou dekompozíciou hlavného procesu je budovaná hierarchia modelov, ktorá popisuje funkènú ¹truktúru organizácie a na najni¾¹ej úrovni zachytáva základné èinnosti vykonávané vo firme. Na nasledujúcom obrázku \ref{fig:LL} je zachytená postupná dekompozícia jednej funkènej èasti hlavného procesu a¾ na najni¾¹iu úroveò. Keï¾e rozpracovanie celej hierarchie by bolo veµmi pracné a ako názorná uká¾ka postaèuje analýza jednej vetvy, zvy¹né diagramy táto prace obsahuje v dodatku A.
 
-\subsection{Identifikácia procesov}
-\subsection{Urèenie hlavného procesu}
-\subsection{Dekompozicia procesu}
+\begin{figure}[ht]
+ \centering
+ \includegraphics[width=330px]{pic/main.png}
+  \caption{?????.}
+ \label{fig:LL}
+\end{figure}
+
 \subsection{Urèenie komponent}
 \section{Naplánovanie iterácii a inkrementov}
 \section{Popis prípadov u¾itia}
