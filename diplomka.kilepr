@@ -17,12 +17,12 @@ QuickBuild=PDFLaTeX+ViewPDF
 
 [item:aplikacia.tex]
 archive=true
-column=11
+column=241
 encoding=ISO 8859-2
 highlight=LaTeX
-line=137
+line=138
 open=true
-order=5
+order=0
 
 [item:dip.tex]
 archive=true
@@ -30,7 +30,7 @@ column=19
 encoding=ISO 8859-2
 highlight=LaTeX
 line=82
-open=true
+open=false
 order=3
 
 [item:diplomka.kilepr]
@@ -48,7 +48,7 @@ column=303
 encoding=ISO 8859-2
 highlight=LaTeX
 line=107
-open=true
+open=false
 order=0
 
 [item:metodiky.tex]
@@ -57,7 +57,7 @@ column=0
 encoding=ISO 8859-2
 highlight=LaTeX
 line=26
-open=true
+open=false
 order=1
 
 [item:nastroje.tex]
@@ -66,7 +66,7 @@ column=0
 encoding=ISO 8859-2
 highlight=LaTeX
 line=22
-open=true
+open=false
 order=2
 
 [item:pic/BDDmodel.png]
@@ -219,7 +219,7 @@ column=17
 encoding=UTF-8
 highlight=LaTeX
 line=11
-open=true
+open=false
 order=7
 
 [item:uvod.tex]
@@ -228,7 +228,7 @@ column=0
 encoding=ISO 8859-2
 highlight=LaTeX
 line=17
-open=true
+open=false
 order=4
 
 [item:zaver.tex]
@@ -237,5 +237,5 @@ column=0
 encoding=UTF-8
 highlight=LaTeX
 line=0
-open=true
+open=false
 order=6

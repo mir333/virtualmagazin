@@ -130,9 +130,13 @@ Zavedenie rol do systému vy¾aduje funkcionalitu na ich vytvorenie a overenie. Ob
 \end{description}
 
 \subsection*{Statická ¹truktúra}
-Diagram tried (obr.: \ref{fig:dt1}) zachytávajúci statickú ¹truktúru systému budujeme za pomoci vypracovaného modelu prípadov pou¾itia. Na úvod sú naèrtnuté hrubé obrysy diagramu, ktorý je postupne spresòovaný. Za výstup iterácie sa pova¾uje presný návrhový diagram tried zachytený na obrázku \ref{fig:uc1}.
+Diagram tried (obr.: \ref{fig:dt1}) zachytávajúci statickú ¹truktúru systému budujeme za pomoci vypracovaného modelu prípadov pou¾itia a pomocou ¹pecifikácie po¾iadavkov.. Na úvod sú naèrtnuté hrubé obrysy diagramu, ktorý je postupne spresòovaný. Za výstup iterácie sa pova¾uje presný návrhový diagram tried.
 
-Diagram obsahuje ... .
+Diagram popisujúci prvú iteráciu stavia na dvoch triedach \textit{Uzivatel} a \textit{Clanok}. Prvá zabezpeèuje zachytenie informácii o osobách pracujúcich zo systémom. Pomocou dediènosti sú definované triedy reprezentujúce role vyskytujúce sa v systéme. S u¾ívateµom je spojená aj trieda \textit{ManazerUzivatelov} umo¾òujúca vytvorenie nového konta a mo¾nos» nastavenia platnosti registrácie pre registrovaného u¾ívateµa. 
+
+Èlánok virtuálneho èasopisu je v systéme reprezentovaný triedou \textit{Clanok}. Uchováva si informácie o príspevkoch vedených v èasopise a odkazuje sa na òu registrovaný u¾ívateµ, èím sa tieto triedy zväzujú. Aj pre èlánok je vytvorený mana¾ér spravujúci vytváranie príspevkov. 
+
+Pre úèeli notifikácie je vytvorená trieda \textit{Akcia} aj s mana¾érom udr¾ujúca informácie o udalostiach nastávajúcich v systéme. Umo¾òuje taktie¾ rozosielanie informaèných e-mailov èi u¾ na priame vy¾iadanie alebo po èasových intervaloch.
 
 \begin{figure}[ht]
  \centering
@@ -158,9 +162,9 @@ Z diagramov popisujúcich procesy mô¾eme identifikova» dvoch aktérov. S recenziam
 
 \subsection*{Prípady pou¾itia}
 \begin{description}
-\item[Vlo¾enie recenzie] ? Recenzent po vypracovaní hodnotenia vstúpi do systému a vyplní formulár pre recenziu. Systém formulár skontroluje a ak je v¹etko v poriadku recenzia je nahraná a autor je pomocou \textit{notifikácie} informovaný o vykonanej recenzii. Recenzent uvádza pri zadávaní recenzie èi je potrebná korektúra. V prípade, ¾e je korektúra potrebná je autor informovaný o tomto fakte. Ak korektúra nie je zapotreby je u¾ len skontrolovaný stav naplnenia èasopisu. Ak bolo odovzdaných dostatok èlánkov je informovaná redakèná rada.
-\item[Zostavenie èísla] ? Pri zostavení èísla je redakènej rade zobrazený zoznam doruèených publikácii. Rada si v zozname oznaèí èlánky, ktoré zaradí do budúceho èísla a taktie¾ mô¾e èlánky podla zvá¾enia zo zoznamu vylúèi». Autorom vylúèených èlánkov budú o tom informovaný. Po urèení obsahu vydania sú èlánky zaradene do èísla v DB, pre èíslo je vygenerovaná vlastná webová stránka. Je zostavený zoznam odkazov na plné texty èlánkov a tento zoznam je zaslaný do tlaèe.  
-\item[Notifikácia] ? Na upozoròuje u¾ívateµov o výskyte udalosti sa vyu¾íva notifikácia navrhnutá v prvej iterácii.
+\item[Vlo¾enie recenzie] -- Recenzent po vypracovaní hodnotenia vstúpi do systému a vyplní formulár pre recenziu. Systém formulár skontroluje a ak je v¹etko v poriadku recenzia je nahraná a autor je pomocou \textit{notifikácie} informovaný o vykonanej recenzii. Recenzent uvádza pri zadávaní recenzie èi je potrebná korektúra. V prípade, ¾e je korektúra potrebná je autor informovaný o tomto fakte. Ak korektúra nie je zapotreby je u¾ len skontrolovaný stav naplnenia èasopisu. Ak bolo odovzdaných dostatok èlánkov je informovaná redakèná rada.
+\item[Zostavenie èísla] -- Pri zostavení èísla je redakènej rade zobrazený zoznam doruèených publikácii. Rada si v zozname oznaèí èlánky, ktoré zaradí do budúceho èísla a taktie¾ mô¾e èlánky podla zvá¾enia zo zoznamu vylúèi». Autorom vylúèených èlánkov budú o tom informovaný. Po urèení obsahu vydania sú èlánky zaradene do èísla v DB, pre èíslo je vygenerovaná vlastná webová stránka. Je zostavený zoznam odkazov na plné texty èlánkov a tento zoznam je zaslaný do tlaèe.  
+\item[Notifikácia] -- Na upozoròuje u¾ívateµov o výskyte udalosti sa vyu¾íva notifikácia navrhnutá v prvej iterácii.
 \end{description}
 
 \begin{figure}[ht]
@@ -172,8 +176,9 @@ Z diagramov popisujúcich procesy mô¾eme identifikova» dvoch aktérov. S recenziam
 
 \subsection*{Statická ¹truktúra}
 
-V druhej iterácii bol diagram tried roz¹írený o treidy ... .
+Druhá iterácia vná¹a do systému recenzie a usporiadanie èlánkov do èísiel. Recenzovanie zasiahlo aj do tried pracujúcich s odovzdanými publikáciami a pridalo do nich premenné a funkcie udr¾ujúce previazanie èlánku s recenziou. Trieda \textit{Recenzia} si uchováva dátum zadania a kto ju vykonal. Recenzie sú vkladané do systému pomocou funkcionality poskytovanej mana¾érom recenzii.
 
+Usporiadanie príspevkov do èísiel zabezpeèuje trieda \textit{Cislo}. Udr¾uje si informáciu o poradí vydania a odkazuje na na v¹etky èlánky zaradené do daného vydania. Vytváranie a vkladanie èlánkov do nových èísiel má na starosti \textit{ManazerCasopisu}. Táto trieda ma na starosti aj generovanie webových stránok pre novovytvorené èíslo a generovanie zoznamov pre tlaè. So zaraïovaním príspevkov do èísiel súvisí aj metóda vyluèujúca èlánok, ktorá bola pridaná do mana¾éra èlánkov.
 \begin{figure}[ht]
  \centering
  \includegraphics[width=\linewidth]{pic/CD2.png}
@@ -181,4 +186,33 @@ V druhej iterácii bol diagram tried roz¹írený o treidy ... .
  \label{fig:CD2}
 \end{figure}
 
-\subsection{Záver návrhu}
+\subsection{Tretia iterácia}
+\subsection*{Prípady pou¾itia}
+\begin{figure}[ht]
+ \centering
+ \includegraphics[width=370px]{pic/UC3.png}
+  \caption{Diagram prípadov pou¾itia po druhej iterácii.}
+ \label{fig:uc3}
+\end{figure}
+\subsection*{Statická ¹truktúra}
+\begin{figure}[ht]
+ \centering
+ \includegraphics[width=\linewidth]{pic/CD3.png}
+  \caption{Diagram prípadov pou¾itia prvej iterácie.}
+ \label{fig:CD3}
+\end{figure}
+\subsection{Stvrtá iterácia}
+\subsection*{Prípady pou¾itia}
+\begin{figure}[ht]
+ \centering
+ \includegraphics[width=370px]{pic/UC4.png}
+  \caption{Diagram prípadov pou¾itia po druhej iterácii.}
+ \label{fig:uc4}
+\end{figure}
+\subsection*{Statická ¹truktúra}
+\begin{figure}[ht]
+ \centering
+ \includegraphics[width=\linewidth]{pic/CD4.png}
+  \caption{Diagram prípadov pou¾itia prvej iterácie.}
+ \label{fig:CD4}
+\end{figure}
