@@ -17,10 +17,10 @@ QuickBuild=PDFLaTeX+ViewPDF
 
 [item:aplikacia.tex]
 archive=true
-column=0
+column=11
 encoding=ISO 8859-2
 highlight=LaTeX
-line=114
+line=137
 open=true
 order=5
 
