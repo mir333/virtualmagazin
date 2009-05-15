@@ -3,7 +3,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.0
-lastDocument=dip.tex
+lastDocument=aplikacia.tex
 masterDocument=
 name=Diplomka
 pkg_extIsRegExp=false
@@ -20,16 +20,16 @@ archive=true
 column=0
 encoding=ISO 8859-2
 highlight=LaTeX
-line=177
+line=114
 open=true
 order=5
 
 [item:dip.tex]
 archive=true
-column=13
+column=19
 encoding=ISO 8859-2
 highlight=LaTeX
-line=58
+line=82
 open=true
 order=3
 
@@ -44,10 +44,10 @@ order=-1
 
 [item:metoda.tex]
 archive=true
-column=30
+column=303
 encoding=ISO 8859-2
 highlight=LaTeX
-line=50
+line=107
 open=true
 order=0
 
@@ -212,6 +212,15 @@ highlight=
 line=0
 open=false
 order=-1
+
+[item:prilohaA.tex]
+archive=true
+column=17
+encoding=UTF-8
+highlight=LaTeX
+line=11
+open=true
+order=7
 
 [item:uvod.tex]
 archive=true

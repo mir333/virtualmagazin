@@ -74,16 +74,9 @@ Postupnou dekompozíciou hlavného procesu je budovaná hierarchia modelov, ktorá p
 
 \subsection{Naplánovanie iterácii a inkrementov}
 
-Pomocou schémy zachytávajúcej hierarchickú ¹truktúru procesov prebiehajúcich vo firme je mo¾né pokraèova» v ïal¹om plánovaní. Funkcionalita celého systému je rozdelená na èasti  definované pre µah¹ie zvládnutie projektu a rýchlej¹ie poskytnutie funkcionality zákazníkovo. Obrázok \ref{fig:hs} zachytáva rozdelenie systému virtuálneho èasopisu. 
+Pomocou hierarchickú ¹truktúru procesov prebiehajúcich vo firme je mo¾né pokraèova» v ïal¹om plánovaní. Funkcionalita celého systému je rozdelená na èasti  definované pre µah¹ie zvládnutie projektu a rýchlej¹ie poskytnutie funkcionality zákazníkovo. Po identifikácii funkèných èastí je rozdelenie prediskutované so zákazníkom. Objednávateµ na základe svojich najnutnej¹ích potrieb urèí poradie dodávaných komponent. 
 
-\begin{figure}[ht]
- \centering
- \includegraphics[width=100px]{pic/BDDmodel.png}
-  \caption{Schéma hierarchickej ¹truktúry procesov.}
- \label{fig:hs}
-\end{figure}
-
-Po identifikácii funkèných èastí je rozdelenie prediskutované so zákazníkom. Objednávateµ na základe svojich najnutnej¹ích potrieb urèí poradie dodávaných komponent. Pre uká¾kový projekt je za primárnu èast systému oznaèená funkcionalita poskytujúca jednoduché prelistovanie a vkladania èlánkov do virtuálneho èasopisu. K základnej funkcionalite patria aj u¾ívateµské role. U¾ívatelia sa budú môc» registrova» prihlasova», meni» svoje údaje a prístup ku plným zneniam èlánkov bude obmedzený len pre registrovaných u¾ívateµov. Po zvládnutí identifikácie u¾ívateµa je spracovaná èas» systému umo¾òujúca recenzovanie a zostavovanie èísla èasopisu. Následne je systém roz¹írený o mo¾nos» vyhµadávanie v databáze èlánkov a upravovanie profilu u¾ívateµa. Ako posledná funkcionalita je sprístupnená správa systému pre administrátor. Umo¾òuje mu úpravu obsahu webového rozhrania.
+Pre uká¾kový projekt je za primárnu èast systému oznaèená funkcionalita poskytujúca jednoduché prelistovanie a vkladania èlánkov do virtuálneho èasopisu. K základnej funkcionalite patria aj u¾ívateµské role. U¾ívatelia sa budú môc» registrova» prihlasova», meni» svoje údaje a prístup ku plným zneniam èlánkov bude obmedzený len pre registrovaných u¾ívateµov. Po zvládnutí identifikácie u¾ívateµa je spracovaná èas» systému umo¾òujúca recenzovanie a zostavovanie èísla èasopisu. Následne je systém roz¹írený o mo¾nos» vyhµadávanie v databáze èlánkov a upravovanie profilu u¾ívateµa. Ako posledná funkcionalita je sprístupnená správa systému pre administrátor. Umo¾òuje mu úpravu obsahu webového rozhrania.
 
 \subsection*{Nasledujúci zoznam zoraïuje iterácie podla postupnosti poradia vývoja:}
 
@@ -99,16 +92,9 @@ Po identifikácii funkèných èastí je rozdelenie prediskutované so zákazníkom. Obj
 Pomocou diagramov vypracovaných v predchádzajúcej fáze pristúpime k návrhu systému. Podµa plánu iterácii budeme postupne vypracováva» jednotlivé èasti systému. Ako prvá funkcionalita, ktorá má by» vyprodukovaná je vkladanie èlánkov a ich jednoduché zobrazenie. 
 
 \subsection{Prvá iterácia}
-Zoberieme si diagramy firemných procesov popisujúce procesy spojené s vkladaním èlánku (obr. \ref{fig:hs}). Sú na òom viditeµné súvislé automatizovateµné èasti vykonávané systémom, ktoré poskytujú dobrých kandidátov na prípady pou¾itia. Z diagramu taktie¾ mô¾eme vyèíta» aktérov. Jasne viditeµný aktéri sú \textit{registrovaný u¾ívateµ} a \textit{administrátor} posledný trochu skrytým je \textit{èas}. Po malej úvahe zistíme, ¾e okrem prípadov pou¾itia pre vlo¾enie knihy, vy¾iadanie recenzie a korektúry je vhodne vymedzi» aj prípad u¾itia zabezpeèujúci notifikáciu. 
+Zoberieme si diagramy firemných procesov popisujúce procesy spojené s vkladaním èlánku (obr. \ref{fig:LL}). Sú na òom viditeµné súvislé automatizovateµné èasti vykonávané systémom, ktoré poskytujú dobrých kandidátov na prípady pou¾itia. Z diagramu taktie¾ mô¾eme vyèíta» aktérov. Jasne viditeµný aktéri sú \textit{registrovaný u¾ívateµ} a \textit{administrátor} posledný trochu skrytým je \textit{èas}. Po malej úvahe zistíme, ¾e okrem prípadov pou¾itia pre vlo¾enie knihy, vy¾iadanie recenzie a korektúry je vhodne vymedzi» aj prípad u¾itia zabezpeèujúci notifikáciu. 
 
 Zavedenie rol do systému vy¾aduje funkcionalitu na ich vytvorenie a overenie. Obrázoky \ref{fig:vytrol} a \ref{fig:overrol} zobrazujú diagramy zachytávajúce úlohy spojené s vytvorením a overením registrovaného u¾ívateµa. Pribudol v nich nový aktér a to \textit{u¾ívateµ}. Prípady pou¾itia pozorovateµné v modeloch sa týkajú vytvorenia registrácie s vy¾iadaním úhrady poplatku a jej potvrdenie. Z druhého firemného procesu identifikujeme prípad pou¾itia pre prihlásenie sa. 
-
-\begin{figure}[ht]
- \centering
-  \includegraphics[width=240px]{pic/login.png}
-  \caption{Proces overenie u¾ívateµa.}
- \label{fig:overrol}
-\end{figure}
 
 \begin{figure}[ht]
  \centering
@@ -117,10 +103,18 @@ Zavedenie rol do systému vy¾aduje funkcionalitu na ich vytvorenie a overenie. Ob
  \label{fig:vytrol}
 \end{figure}
 
-\subsection*{Prípady pou¾itia}
 \begin{figure}[ht]
  \centering
- \includegraphics[width=320px]{pic/UC1.png}
+  \includegraphics[width=280px]{pic/login.png}
+  \caption{Proces overenie u¾ívateµa.}
+ \label{fig:overrol}
+\end{figure}
+
+\subsection*{Prípady pou¾itia}
+
+\begin{figure}[ht]
+ \centering
+ \includegraphics[width=300px]{pic/UC1.png}
   \caption{Diagram prípadov pou¾itia prvej iterácie.}
  \label{fig:uc1}
 \end{figure}
@@ -135,13 +129,10 @@ Zavedenie rol do systému vy¾aduje funkcionalitu na ich vytvorenie a overenie. Ob
 \item[Potvrdenie registrácie] -- Administrátor po overení platby aktivuje úèet uchádzaèovi o registráciu a je mu zaslaný e-mail o schválení registrácie. 
 \end{description}
 
-
 \subsection*{Statická ¹truktúra}
 Diagram tried (obr.: \ref{fig:dt1}) zachytávajúci statickú ¹truktúru systému budujeme za pomoci vypracovaného modelu prípadov pou¾itia. Na úvod sú naèrtnuté hrubé obrysy diagramu, ktorý je postupne spresòovaný. Za výstup iterácie sa pova¾uje presný návrhový diagram tried zachytený na obrázku \ref{fig:uc1}.
 
 Diagram obsahuje ... .
-
-
 
 \begin{figure}[ht]
  \centering
@@ -167,9 +158,9 @@ Z diagramov popisujúcich procesy mô¾eme identifikova» dvoch aktérov. S recenziam
 
 \subsection*{Prípady pou¾itia}
 \begin{description}
-\item[Vlo¾enie recenzie] -- Recenzent po vypracovaní hodnotenia vstúpi do systému a vyplní formulár pre recenziu. Systém formulár skontroluje a ak je v¹etko v poriadku recenzia je nahraná a autor je pomocou \textit{notifikácie} informovaný o vykonanej recenzii. Recenzent uvádza pri zadávaní recenzie èi je potrebná korektúra. V prípade, ¾e je korektúra potrebná je autor informovaný o tomto fakte. Ak korektúra nie je zapotreby je u¾ len skontrolovaný stav naplnenia èasopisu. Ak bolo odovzdaných dostatok èlánkov je informovaná redakèná rada.
-\item[Zostavenie èísla] -- Pri zostavení èísla je redakènej rade zobrazený zoznam doruèených publikácii. Rada si v zozname oznaèí èlánky, ktoré zaradí do budúceho èísla a taktie¾ mô¾e èlánky podla zvá¾enia zo zoznamu vylúèi». Autorom vylúèených èlánkov budú o tom informovaný. Po urèení obsahu vydania sú èlánky zaradene do èísla v DB, pre èíslo je vygenerovaná vlastná webová stránka. Je zostavený zoznam odkazov na plné texty èlánkov a tento zoznam je zaslaný do tlaèe.  
-\item[Notifikácia] -- Na upozoròuje u¾ívateµov o výskyte udalosti sa vyu¾íva notifikácia navrhnutá v prvej iterácii.
+\item[Vlo¾enie recenzie] ? Recenzent po vypracovaní hodnotenia vstúpi do systému a vyplní formulár pre recenziu. Systém formulár skontroluje a ak je v¹etko v poriadku recenzia je nahraná a autor je pomocou \textit{notifikácie} informovaný o vykonanej recenzii. Recenzent uvádza pri zadávaní recenzie èi je potrebná korektúra. V prípade, ¾e je korektúra potrebná je autor informovaný o tomto fakte. Ak korektúra nie je zapotreby je u¾ len skontrolovaný stav naplnenia èasopisu. Ak bolo odovzdaných dostatok èlánkov je informovaná redakèná rada.
+\item[Zostavenie èísla] ? Pri zostavení èísla je redakènej rade zobrazený zoznam doruèených publikácii. Rada si v zozname oznaèí èlánky, ktoré zaradí do budúceho èísla a taktie¾ mô¾e èlánky podla zvá¾enia zo zoznamu vylúèi». Autorom vylúèených èlánkov budú o tom informovaný. Po urèení obsahu vydania sú èlánky zaradene do èísla v DB, pre èíslo je vygenerovaná vlastná webová stránka. Je zostavený zoznam odkazov na plné texty èlánkov a tento zoznam je zaslaný do tlaèe.  
+\item[Notifikácia] ? Na upozoròuje u¾ívateµov o výskyte udalosti sa vyu¾íva notifikácia navrhnutá v prvej iterácii.
 \end{description}
 
 \begin{figure}[ht]
