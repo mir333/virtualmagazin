@@ -3,7 +3,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.0
-lastDocument=aplikacia.tex
+lastDocument=metoda.tex
 masterDocument=
 name=Diplomka
 pkg_extIsRegExp=false
@@ -17,21 +17,21 @@ QuickBuild=PDFLaTeX+ViewPDF
 
 [item:aplikacia.tex]
 archive=true
-column=26
+column=90
 encoding=ISO 8859-2
 highlight=LaTeX
-line=232
+line=40
 open=true
-order=0
+order=2
 
 [item:dip.tex]
 archive=true
-column=19
+column=326
 encoding=ISO 8859-2
 highlight=LaTeX
-line=82
-open=false
-order=3
+line=32
+open=true
+order=0
 
 [item:diplomka.kilepr]
 archive=true
@@ -44,30 +44,30 @@ order=-1
 
 [item:metoda.tex]
 archive=true
-column=303
+column=27
 encoding=ISO 8859-2
 highlight=LaTeX
-line=107
-open=false
-order=0
+line=62
+open=true
+order=5
 
 [item:metodiky.tex]
 archive=true
-column=0
+column=570
 encoding=ISO 8859-2
 highlight=LaTeX
-line=26
-open=false
-order=1
+line=89
+open=true
+order=3
 
 [item:nastroje.tex]
 archive=true
 column=0
 encoding=ISO 8859-2
 highlight=LaTeX
-line=22
-open=false
-order=2
+line=127
+open=true
+order=4
 
 [item:pic/BDDmodel.png]
 archive=true
@@ -219,7 +219,7 @@ column=0
 encoding=UTF-8
 highlight=LaTeX
 line=0
-open=true
+open=false
 order=1
 
 [item:uvod.tex]
@@ -227,15 +227,15 @@ archive=true
 column=0
 encoding=ISO 8859-2
 highlight=LaTeX
-line=17
-open=false
-order=4
+line=9
+open=true
+order=6
 
 [item:zaver.tex]
 archive=true
-column=387
+column=0
 encoding=ISO 8859-2
 highlight=LaTeX
-line=14
-open=false
-order=6
+line=15
+open=true
+order=1
