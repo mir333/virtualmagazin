@@ -3,7 +3,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.0
-lastDocument=metoda.tex
+lastDocument=dip.tex
 masterDocument=
 name=Diplomka
 pkg_extIsRegExp=false
@@ -17,21 +17,21 @@ QuickBuild=PDFLaTeX+ViewPDF
 
 [item:aplikacia.tex]
 archive=true
-column=90
+column=12
 encoding=ISO 8859-2
 highlight=LaTeX
-line=40
+line=44
 open=true
-order=2
+order=0
 
 [item:dip.tex]
 archive=true
-column=326
+column=0
 encoding=ISO 8859-2
 highlight=LaTeX
-line=32
+line=62
 open=true
-order=0
+order=4
 
 [item:diplomka.kilepr]
 archive=true
@@ -44,12 +44,12 @@ order=-1
 
 [item:metoda.tex]
 archive=true
-column=27
+column=0
 encoding=ISO 8859-2
 highlight=LaTeX
-line=62
-open=true
-order=5
+line=122
+open=false
+order=1
 
 [item:metodiky.tex]
 archive=true
@@ -57,17 +57,17 @@ column=570
 encoding=ISO 8859-2
 highlight=LaTeX
 line=89
-open=true
+open=false
 order=3
 
 [item:nastroje.tex]
 archive=true
-column=0
+column=95
 encoding=ISO 8859-2
 highlight=LaTeX
-line=127
+line=3
 open=true
-order=4
+order=5
 
 [item:pic/BDDmodel.png]
 archive=true
@@ -215,12 +215,30 @@ order=-1
 
 [item:prilohaA.tex]
 archive=true
-column=0
-encoding=UTF-8
+column=26
+encoding=ISO 8859-2
 highlight=LaTeX
-line=0
-open=false
+line=9
+open=true
 order=1
+
+[item:prilohaB.tex]
+archive=true
+column=8
+encoding=ISO 8859-2
+highlight=LaTeX
+line=14
+open=true
+order=2
+
+[item:prilohaC.tex]
+archive=true
+column=12
+encoding=ISO 8859-2
+highlight=LaTeX
+line=7
+open=true
+order=3
 
 [item:uvod.tex]
 archive=true
@@ -228,7 +246,7 @@ column=0
 encoding=ISO 8859-2
 highlight=LaTeX
 line=9
-open=true
+open=false
 order=6
 
 [item:zaver.tex]
@@ -237,5 +255,5 @@ column=0
 encoding=ISO 8859-2
 highlight=LaTeX
 line=15
-open=true
+open=false
 order=1
