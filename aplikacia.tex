@@ -1,58 +1,42 @@
 Piata kapitola sa zaoberá predvedením metódy navrhnutej v predchádzajúcej kapitole. Overuje jej vhodnos» vytvorením prípadovej ¹túdie popisujúcej správu vedeckého èasopisu. Názorne sú predvedené úvodné fázy ¾ivotného cyklu definovanej metódy venované firemnej analýze a návrhu. Uká¾ku implementácie a následných èinností u¾ táto práca neponúka.
 
-Úvod kapitoly je venovaný ¹pecifikovaniu po¾iadaviek, ktoré tvoria základ pre modelovaciu fázu. Popisuje sa tvorba hierarchie firemných procesov pomocou BPMN a prechod od procesov k prípadom pou¾itia. Názorne je predvedené ich previazanie s krokmi vo firemných procesoch. V závere je e¹te zachytená statická ¹truktúra systému pomocou diagramu tried.
+\section{Modelovaním firemných procesov}
+\label{sec:MFP}
+Prvou fázou ¾ivotného cyklu MPDD je modelovanie firemných procesov vykonávane firemným analytikom. Tato fáza zahàòa aj zachytenie ¹pecifikácie po¾iadavkov slú¾iacej ako základný bod na zaèatie modelovacích aktivít. Na základe zachytených informácii sú následne s vyu¾itím BPMN modelovaná firemné procesy.
 
-\section{©pecifikácia po¾iadaviek}
-Úèelom systému je zabezpeèenie vedeckého èasopisu. Webová aplikácia musí ma» prvky redakèného systému, ktoré umo¾nia administrátorovi upravova», pridáva» a odobera» jej obsah. Aplikácie bude zabezpeèova» zbieranie a sprostredkovávanie vedeckých èlánkov. Na webovom rozhraní budú zobrazované základné informácie o ka¾dom èlánku, a to:
-\begin{itemize}
-\item autora 
-\item in¹titúciu
-\item názov
-\item kµúèové slová
-\item anotáciu
-\item odkaz na plný text v PDF formáte prístupný len pre registrovaných u¾ívateµov
-\end{itemize}
+\subsection{©pecifikácia po¾iadaviek}
+Úèelom systému je zabezpeèenie vedeckého èasopisu. Webová aplikácia musí ma» prvky redakèného systému, ktoré umo¾nia administrátorovi upravova», pridáva» a odobera» jej obsah. Aplikácie bude zabezpeèova» zbieranie a sprostredkovávanie vedeckých èlánkov. Na webovom rozhraní budú zobrazované základné informácie o ka¾dom èlánku obsahujúce meno a priezvisko autora, in¹titúciu zastre¹ujúcu prispievateµa, názov vkladaného èlánku, kµúèové slová vyskytujúce sa v príspevku. Nesmie chýba» ani krátka anotácia a odkaz na plný text v PDF formáte prístupný len pre registrovaných u¾ívateµov.
+
 %Ku ka¾dému èlánku bude pripojená diskusia, kde budú môc» u¾ívatelia vyjadri» svoj názor na èlánok a budú ma» mo¾nos» reagova» na komentáre iných u¾ívateµov. Diskusia bude rozvrstvená podµa logickej nadväznosti komentárov.
 
 Aplikácia bude obsahova» rad notifikácií. Pri zalo¾ení nového úètu bude administrátorovi zaslaná informácia so ¾iados»ou o jeho potvrdenie po overení zaplatenia èlenského poplatku. Po ka¾dom vlo¾ení nového èlánku registrovaným u¾ívateµom budú vybraní a oboznámení s týmto èlánkom recenzenti, ktorých úlohou bude èlánok recenzova». Registrovaní u¾ívatelia si mô¾u povoli» oznámenie o nových zverejnených èlánkoch cez e-mail. Po dovà¹ení limitu na zostavenie jedného èísla èasopisu bude o tom informovaná redakèná rada a administrátor. 
 
-Informácie ulo¾ené v databáze bude mo¾né prehµadáva». Vyhµadávanie bude uskutoèniteµné podµa základných informácií, okrem anotácie. Taktie¾ sa nebude vyhµadáva» v samotnom texte èlánkov. Rozhranie vyhµadávania bude èo najjednoduch¹ie. Bude poskytova» voµby na urèenie kategórie, v ktorej sa bude vyhµadáva»:
-\begin{itemize}
-\item meno, in¹titúcia, názov
-\item kµúèové slová
-\item roèník 
-\end{itemize}
+Informácie ulo¾ené v databáze bude mo¾né prehµadáva». Vyhµadávanie bude uskutoèniteµné podµa základných informácií, okrem anotácie. Taktie¾ sa nebude vyhµadáva» v samotnom texte èlánkov. Rozhranie vyhµadávania bude èo najjednoduch¹ie.  Systém bude pre u¾ívateµa poskytova» na výber tri kategórie, podµa ktorých sa bude vyhµadáva». Prvou mo¾nos»ou je vyhµadávanie podµa mena, priezviska, in¹titúcie a názvu. Druhý prípad vyhµadávania je podµa kµúèových slov. Poslednou mo¾nos»ou je vyhµadávanie èlánkov na základe príslu¹nosti do roèníka.
 
-\subsection{Konfigurácia a vzhµad systému}
+\subsection*{Konfigurácia a vzhµad systému}
 Redakèné prvky systému umo¾nia administrátorovi upravova» a dopåòa» webové rozhranie systému. Bude ma» mo¾nos» meni» logo portálu, texty na stránkach, pridáva» a znefunkèòova» nové stránky. V¹etky zmeny rozlo¾enia stránok sa budú prejavova» v ¹truktúre menu stránky, ktoré bude najviac dvojúrovòové. Stránky budú môc» by» dopåòané do ktorejkoµvek úrovne menu. 
 
 Webové rozhranie bude umo¾òova» zmenu vzhµadu pomocou dodávaných tém. Aplikácia bude vyhotovená s jednou ¹tandardnou témou a s jednou témou pre handicapovaných jedincov. Téma sa bude pre registrovaných u¾ívateµov uklada» do ich profilu. 
 
-Nevyhnutná konfigurácia hotovej distribúcie prebehne pri prvom spustení. Vytvorí sa tu administrátorské konto a v¹etky nevyhnutné nastavenia aplikácie. Celý nasledujúci chod systému bude automatický a v¹etky prípadné zmeny nastavenia a obsahu sa budú dia» cez webové rozhranie administrátora. Webové rozhranie bude prehµadné, zamerané na rýchle dosiahnutie po¾adovaných informácií. Ka¾dá stránka musí obsahova» tieto prvky:
-\begin{itemize}
-\item logo a základné údaje o organizácii zriaïujúcej virtuálnu konferenciu
-\item menu stránok webového rozhrania
-\item ak je u¾ívateµ neprihlásený -- mo¾nos» prihlási» sa do systému
-\item ak je u¾ívateµ prihlásený -- meno u¾ívateµa a voµbu na odhlásenie sa
-\end{itemize}
+Nevyhnutná konfigurácia hotovej distribúcie prebehne pri prvom spustení. Vytvorí sa tu administrátorské konto a v¹etky nevyhnutné nastavenia aplikácie. Celý nasledujúci chod systému bude automatický a v¹etky prípadné zmeny nastavenia a obsahu sa budú dia» cez webové rozhranie administrátora. Webové rozhranie bude prehµadné, zamerané na rýchle dosiahnutie po¾adovaných informácií. Na ka¾dej stránke bude zobrazené logo a základné údaje o organizácii zriaïujúcej virtuálny èasopis. Ïalej nesmie na nich chýba» menu stránok webového rozhrania a mo¾nosti prihlásenia sa prípadne odhlásenia sa zo systému. Ak je u¾ívateµ prihlásený je na stránkach odkaz na jeho profil.
+
 Informácie o ulo¾ených èlánkoch sa budú zobrazova» do prehµadného výpisu obsahujúceho základné informácie. Záznamy sa budú zobrazova» pre aktuálny rok. Star¹ie roèníky budú ulo¾ené v archíve. Záznamy aktuálneho roèníka budú chronologicky usporiadané od najnov¹ích po najstar¹ie. Archív bude usporiadaný podµa rokov a bude zoradený rovnako ako aktuálny roèník. Parameter zoraïovania bude môc» u¾ívateµ pozmeni» na meno, in¹titúciu, názov a dátum. Taktie¾ bude mo¾nos» zmeni» vzostupnos» alebo zostupnos» usporiadania. V prípade, ¾e záznamov bude viac ako je limit zobrazenia na jednu stránku, zoznam sa stane viacstranovým. U¾ívateµ si bude môc» zvoli», koµko záznamov chce zobrazi» naraz.
 
-\subsection{Definované roly}
+\subsection*{Definované role}
 Aplikácia bude rozli¹ova» u¾ívateµov, ktorí do nej budú pristupova». Ka¾dý u¾ívateµ, ktorý sa neprihlási, bude ma» právomoci neregistrovaného u¾ívateµa. Na registráciu bude k dispozícii formulár na vytváranie nových registrovaných u¾ívateµov. Administrátorský úèet bude pridelený u¾ívateµovi pri inicializaènom spustení webovej aplikácie. Prípadné ïal¹ie administrátorské úèty musí vytvára» u¾ existujúci administrátor.
 Systém rozoznáva nasledovné u¾ívateµské skupiny:
 \begin{description}
  \item[Administrátor] - Administrátor bude ma» mo¾nos» manipulova» s obsahom stránok, spravova» u¾ívateµov a má na starosti prvotnú konfiguráciu. V správe u¾ívateµov bude potvrdzova» nové ¾iadosti o registráciu, bude môc» pozmeòova» údaje o u¾ívateµoch, meni» ich role a blokova» úèty.
 \item[Neregistrovaný u¾ívateµ] - Bude ma» mo¾nos» prehliada» si zoznam ulo¾ených èlánkov, mô¾e v nich vyhµadáva», ale nemá prístup k plným textom èlánkov.
-\item[\textbf{Registrovaný u¾ívateµ}] - Bude ma» v¹etky práva neregistrovaného u¾ívateµa a navy¹e aj prístup k plným textom èlánkov z roèníka, v ktorom zaplatil èlenský poplatok. Taktie¾ bude môc» za základný èlenský poplatok vlo¾i» jeden èlánok. Bude si môc» upravova» informácie v profile a meni» prístupové heslo.
+\item[Registrovaný u¾ívateµ] - Bude ma» v¹etky práva neregistrovaného u¾ívateµa a navy¹e aj prístup k plným textom èlánkov z roèníka, v ktorom zaplatil èlenský poplatok. Taktie¾ bude môc» za základný èlenský poplatok vlo¾i» jeden èlánok. Bude si môc» upravova» informácie v profile a meni» prístupové heslo.
 \item[Redakèná rada] - Bude ma» mo¾nos» stopnú» uverejnenie príspevku s odôvodnením jeho pozastavenia.
 \item[Recenzenti] - Budú ma» prístup k textom èlánkov v upravovateµnej podobe a k odovzdaným èlánkom majú mo¾nos» pridáva» recenzovanú verziu.
 \end{description}
 
-
-\section{Návrh firemných procesov}
+\subsection{Návrh firemných procesov}
 Modelovanie firemných procesov zaèína pre¹tudovaním ¹pecifikácie po¾iadaviek. Identifikuje sa v nej hlavný proces, ktorý sa zachytáva pomocou BPMN. Na uµahèenie identifikácie tohto procesu pomô¾e otázka -- Akým hlavným èinnostiam sa firma venuje? Vymedzené èinnosti budú graficky zachytené do diagramu podµa ich postupnosti. 
 
-\subsection{Identifikácia hlavného procesu}
+\subsection*{Identifikácia hlavného procesu}
 Zo ¹pecifikácie uvedenej v predchádzajúcej sekcii bol identifikovaný hlavný proces tvorený z piatich základných èastí. Prvým v línii vykonania je proces zabezpeèujúci autentizáciu u¾ívateµa a jeho autorizovanie. Následne proces pokraèuje podµa pridelenej roly. Neregistrovaný u¾ívateµ si mô¾e prehliada» virtuálny èasopis a vyhµadáva» v òom alebo sa zaregistrova». Registrovaný u¾ívateµ mô¾e upravova» svoj profil a prida» èlánok. Recenzenti pristupujú k podprocesu recenzia èlánku. Administrátor má na starosti správu èasopisu. Redakèná rada pristupuje k procesu zostavenia èasopisu. Po grafickom zachytení postupnosti jednotlivých èinností dostávame prvý diagram systému (\ref{fig:mainproc}) popisujúci systém na najvy¹¹ej úrovni. 
 
 \begin{figure}[ht]
@@ -62,23 +46,51 @@ Zo ¹pecifikácie uvedenej v predchádzajúcej sekcii bol identifikovaný hlavný proc
  \label{fig:mainproc}
 \end{figure}
 
-Postupnou dekompozíciou hlavného procesu je budovaná hierarchia modelov, ktorá popisuje funkènú ¹truktúru organizácie a po najni¾¹iu úroveò zachytáva základné èinnosti vykonávané vo firme. Na nasledujúcom obrázku \ref{fig:LL} je zachytená postupná dekompozícia jednej funkènej èasti hlavného procesu a¾ po najni¾¹iu úroveò. V práci sú postupne rozpracované  a zobrazené jednotlivé podprocesy podla príslu¹nosti k iterácii, pre ktorú sú popisované diagramy relevantné. 
+\subsection*{Dekompozícia hlavného procesu}
+
+Postupnou dekompozíciou hlavného procesu je budovaná hierarchia modelov, ktorá popisuje funkènú ¹truktúru organizácie a po najni¾¹iu úroveò zachytáva základné èinnosti vykonávané vo firme. V nasledujúcej èasti sa budeme venova» popisu vybraných procesov. Zvy¹né diagramy procesov sú umiestnené do prílohy A a na prilo¾enom médiu je dostupná úplná sada diagramov. 
 
 \begin{figure}[ht]
  \centering
 \includegraphics[width=\linewidth]{pic/pridaniec.png} 
-\includegraphics[width=250px]{pic/pridanierec.png}
   \caption{Dekompozícia pridania èlánku.}
- \label{fig:LL}
+ \label{fig:pridc}
 \end{figure}
-\subsection{Naplánovanie iterácií a inkrementov.}
+
+Proces zachytený na obrázku \ref{fig:pridc} popisuje postup èinností pri vkladaní èísla do èasopisu. Prvým krokom procesu je vyplnenie formuláru pre vlo¾enie èlánku registrovaným u¾ívateµom. Následne je formulár systémom skontrolovaný. V prípade výskytu chyby v zadávaných údajoch je formulár vrátený u¾ívateµovi a je vy¾iadaná oprava. Ak je v¹etko v poriadku údaje sú ulo¾ene v databáze a èlánok je nahraný na server. Po zavedení èlánku do systému je rozoslaná notifikácia o pridaní nového príspevku. Proces pokraèuje podprocesom priradenie recenzenta. Ak do siedmych nebude doruèená recenzia vy¾iada sa opätovné priradenie recenzenta. Po doruèení recenzie a na základe jej ohodnotenia je rozhodnuté èi je zapotreby vykona» korektúru èlánku. V prípade potreby korektúry je autor informovaný o tomto fakte a do piatich dní by mal vlo¾i» opravený èlánok, lebo bude pomocou informaèného mailu opä» informovaný o potrebe korektúry. Po vlo¾ení opravy sa proces dostáva spä» do kroku vy¾iadania recenzenta. Keï na základe stavu recenzie nie je potrebná oprava od autora proces sa posúva do koneènej fázy, kde je najskôr skontrolovaná naklonenos» èísla èasopisu a ak e¹te nie je splnený limit proces konèí. V prípade dosiahnutia naplnenia èísla je o tejto skutoènosti informovaná redakèná rada a proces je ukonèený. 
+
+\begin{figure}[ht]
+ \centering
+\includegraphics[width=250px]{pic/pridanierec.png}
+  \caption{Proces pridania recenzenta.}
+ \label{fig:pridr}
+\end{figure}
+
+Firemný proces priradenia recenzenta (obr. \ref{fig:pridr}) zaèína administrátorovým výberom recenzenta pre vlo¾ený èlánok. Ak administrátor nevykoná priradenie do 24 hodin systém ho opätovne informuje. Po pridelení recenzenta systém vygeneruje informaèný e-mail a za¹le ho recenzentovi aby vykonal recenziu.
+
+\begin{figure}[ht]
+ \centering
+ \includegraphics[width=400px]{pic/registracia.png}
+   \caption{Diagramy popisujúce vytvorenie u¾ívateµa.}
+ \label{fig:vytrol}
+\end{figure}
+
+Registrácia u¾ívateµa zaèína vyplnením registraèného formulára u¾ívateµom. Formulár je následne vyhodnotený a odhaµujú sa v òom chyby. V prípade nesprávneho zadania niektorej èasti je formulár vrátený u¾ívateµovi, aby vykonal opravu. Po úspe¹nom vyplnení formuláru sú informácie ulo¾ené v databáze a ¾iadateµovi je zaslaný informaèný email s in¹trukciami na uhradenie èlenského poplatku. Taktie¾ je o novej registrácii informovaný administrátor, ktorý priebe¾ne kontroluje èi bol poplatok uhradený. Po vypr¹aní urèitej doby ho mô¾e zamietnu» alebo ak bol poplatok uhradený potvrdi». Na základe tohoto rozhodnutia bude registrácia zru¹ená alebo systém registráciu potvrdí a informuje u¾ívateµa o úspechu. Proces je zachytený na obrázku \ref{fig:vytrol} 
+
+\begin{figure}[ht]
+ \centering
+  \includegraphics[width=280px]{pic/login.png}
+  \caption{Firemný proces prihlásenia sa u¾ívateµa.}
+ \label{fig:overrol}
+\end{figure}
+
+Prihlásenie  (obr. \ref{fig:overrol})  sa zaèína vy¾iadaním mena a hesla od u¾ívateµa. Nasleduje overenie získaných informácii pomocou dát ulo¾ených v databáze. Ak autentizácia uspeje u¾ívateµovi sú pridelené práva a proces konèí. V prípade, ¾e sa zadané informácie nepodarí overi», vy¾iada sa opätovné zadanie mena a hesla od u¾ívateµa.
+
+\subsection{Naplánovanie iterácií}
 
 Pomocou hierarchickej ¹truktúry procesov prebiehajúcich vo firme je mo¾né pokraèova» v ïal¹om plánovaní. Funkcionalita celého systému je rozdelená na èasti definované pre µah¹ie zvládnutie projektu a rýchlej¹ie poskytnutie funkcionality zákazníkovi. Po identifikácii funkèných èastí je rozdelenie prediskutované so zákazníkom. Objednávateµ na základe svojich najnutnej¹ích potrieb urèí poradie dodávaných komponentov. 
 
-V uká¾kovom projekte je ako primárna èas» systému oznaèená funkcionalita poskytujúca jednoduché prelistovanie a vkladania èlánkov do virtuálneho èasopisu. K základnej funkcionalite patria aj u¾ívateµské roly. U¾ívatelia sa budú môc» registrova», prihlasova», meni» svoje údaje a prístup k plným zneniam èlánkov bude obmedzený len pre registrovaných u¾ívateµov. Po zvládnutí identifikácie u¾ívateµa je spracovaná èas» systému umo¾òujúca recenzovanie a zostavovanie èísla èasopisu. Následne je systém roz¹írený o mo¾nos» vyhµadávanie v databáze èlánkov a upravovanie profilu u¾ívateµa. Ako posledná funkcionalita je sprístupnená správa systému pre administrátora. Umo¾òuje mu úpravu obsahu webového rozhrania.
-
-\subsection*{Nasledujúci zoznam zoraïuje iterácie podµa postupnosti poradia vývoja:}
-
+V uká¾kovom projekte je ako primárna èas» systému oznaèená funkcionalita poskytujúca jednoduché prelistovanie a vkladania èlánkov do virtuálneho èasopisu. K základnej funkcionalite patria aj u¾ívateµské roly. U¾ívatelia sa budú môc» registrova», prihlasova», meni» svoje údaje a prístup k plným zneniam èlánkov bude obmedzený len pre registrovaných u¾ívateµov. Po zvládnutí identifikácie u¾ívateµa je spracovaná èas» systému umo¾òujúca recenzovanie a zostavovanie èísla èasopisu. Následne je systém roz¹írený o mo¾nos» vyhµadávanie v databáze èlánkov a upravovanie profilu u¾ívateµa. Ako posledná funkcionalita je sprístupnená správa systému pre administrátora. Umo¾òuje mu úpravu obsahu webového rozhrania. Nasledujúci zoznam zoraïuje iterácie podµa postupnosti poradia vývoja:
 \begin{enumerate}
 \item Jednoduché zobrazenie, vkladanie èlánkov a u¾ívateµské roly
 \item  Recenzovanie a zostavovanie èísla èasopisu
@@ -90,33 +102,12 @@ V uká¾kovom projekte je ako primárna èas» systému oznaèená funkcionalita poskytu
 
 Pomocou diagramov vypracovaných v predchádzajúcej fáze pristúpime k návrhu systému. Podµa plánu iterácií budeme postupne vypracováva» jednotlivé èasti systému. Ako prvá funkcionalita, ktorá má by» vyprodukovaná, je vkladanie èlánkov a ich jednoduché zobrazenie. 
 
-\subsection{Prvá iterácia}
-Zoberieme si diagramy firemných procesov popisujúce procesy spojené s vkladaním èlánku (obr. \ref{fig:LL}). Sú tam viditeµné súvislé automatizovateµné èasti vykonávané systémom, ktoré poskytujú dobrých kandidátov na prípady pou¾itia. Z diagramu taktie¾ mô¾eme vyèíta» aktérov. Jasne viditeµní aktéri sú \textit{registrovaný u¾ívateµ} a \textit{administrátor} posledný, trochu skrytý, je \textit{èas}. Po malej úvahe zistíme, ¾e okrem prípadov pou¾itia na vlo¾enie knihy, vy¾iadanie recenzie a korektúry je vhodné vymedzi» aj prípad pou¾itia zabezpeèujúci notifikáciu. 
+\subsection{Jednoduché zobrazenie, vkladanie èlánkov a u¾ívateµské roly}
+Zoberieme si diagramy firemných procesov popisujúce procesy spojené s vkladaním èlánku (obr. \ref{fig:pridc}, \ref{fig:pridr}). Sú tam viditeµné súvislé automatizovateµné èasti vykonávané systémom, ktoré poskytujú dobrých kandidátov na prípady pou¾itia. Z diagramu taktie¾ mô¾eme vyèíta» aktérov. Jasne viditeµní aktéri sú \textit{registrovaný u¾ívateµ} a \textit{administrátor} posledný, trochu skrytý, je \textit{èas}. Po malej úvahe zistíme, ¾e okrem prípadov pou¾itia na vlo¾enie knihy, vy¾iadanie recenzie a korektúry je vhodné vymedzi» aj prípad pou¾itia zabezpeèujúci notifikáciu. 
 
 Zavedenie rol do systému vy¾aduje funkcionalitu na ich vytvorenie a overenie. Obrázky \ref{fig:vytrol} a \ref{fig:overrol} zobrazujú diagramy zachytávajúce úlohy spojené s vytvorením a overením registrovaného u¾ívateµa. Pribudol v nich nový aktér, a to \textit{u¾ívateµ}. Prípady pou¾itia pozorovateµné v modeloch sa týkajú vytvorenia registrácie s vy¾iadaním uhradenia poplatku a jeho potvrdenia. Z druhého firemného procesu identifikujeme prípad pou¾itia pre prihlásenie sa. 
 
-\begin{figure}[ht]
- \centering
- \includegraphics[width=400px]{pic/registracia.png}
-   \caption{Diagramy popisujúce vytvorenie u¾ívateµa.}
- \label{fig:vytrol}
-\end{figure}
-
-\begin{figure}[ht]
- \centering
-  \includegraphics[width=280px]{pic/login.png}
-  \caption{Proces overenie u¾ívateµa.}
- \label{fig:overrol}
-\end{figure}
-
 \subsection*{Prípady pou¾itia}
-
-\begin{figure}[ht]
- \centering
- \includegraphics[width=300px]{pic/UC1.png}
-  \caption{Diagram prípadov pou¾itia prvej iterácie.}
- \label{fig:uc1}
-\end{figure}
 
 \begin{description}
 \item[Vlo¾enie èlánku] -- Skladá sa z troch krokov urèených v diagrame firemných procesov. Prvým je kontrola zadávaných údajov pri vkladaní èlánku, nasleduje jeho nahranie. Na záver  vyu¾íva \textit{notifikáciu} na zaslanie informácie o pridaní èlánku. 
@@ -127,6 +118,13 @@ Zavedenie rol do systému vy¾aduje funkcionalitu na ich vytvorenie a overenie. Ob
 \item[Registrácia] -- U¾ívateµ dostane po vyplnení formulára variabilný symbol a èíslo úètu na uhradenie èlenského poplatku. Administrátor je pomocou \textit{notifikácie} informovaný o novej registrácii.
 \item[Potvrdenie registrácie] -- Po overení platby administrátor aktivuje uchádzaèovi úèet na registráciu a je mu zaslaný e-mail o schválení registrácie. 
 \end{description}
+
+\begin{figure}[ht]
+ \centering
+ \includegraphics[width=300px]{pic/UC1.png}
+  \caption{Diagram prípadov pou¾itia prvej iterácie.}
+ \label{fig:uc1}
+\end{figure}
 
 \subsection*{Statická ¹truktúra}
 Diagram tried (obr.: \ref{fig:dt1}) zachytávajúci statickú ¹truktúru systému budujeme za pomoci vypracovaného modelu prípadov pou¾itia a pomocou ¹pecifikácie po¾iadavkov.. Na úvod sú naèrtnuté hrubé obrysy diagramu, ktorý je postupne spresòovaný. Za výstup iterácie sa pova¾uje presný návrhový diagram tried.
@@ -144,153 +142,53 @@ Pre úèeli notifikácie je vytvorená trieda \textit{Akcia} aj s mana¾érom udr¾ujúc
  \label{fig:dt1}
 \end{figure}
 
-\subsection{Druhá iterácia}
+\subsection{Recenzovanie a zostavovanie èísla èasopisu}
 
-Po dokonèení práci na prvej iterácii a posunutie ich výsledkov do fázy vývoja zaèína pre návrhára práca na ïal¹ej iterácii. Druhá iterácia ma za cieµ roz¹íri» doteraz vytvorený systém o èas» pre recenzovanie èlánkov a umo¾ni» redakènej rade zostavi» èíslo èasopisu. Zoberú sa preto firemné procesy popisujúce tieto èinnosti (obr.: \ref{fig:recacas}). Taktie¾ je potrebné doplni» spracovanie recenzie popísané na diagrame \ref{fig:LL}.
+Po dokonèení práci na prvej iterácii a posunutie ich výsledkov do fázy vývoja zaèína pre návrhára práca na ïal¹ej iterácii. Druhá iterácia ma za cieµ roz¹íri» doteraz vytvorený systém o èas» pre recenzovanie èlánkov a umo¾ni» redakènej rade zostavi» èíslo èasopisu. Zoberú sa preto firemné procesy popisujúce tieto èinnosti (obr. \ref{fig:recacas}, \ref{fig:zoscas}).
 
 Z diagramov popisujúcich procesy mô¾eme identifikova» dvoch aktérov. S recenziami je spojený textit{recenzent}  hodnotiaci èlánok a vytvárajúci recenziu. Druhým aktérom je \textit{redakèná rada} majúca na starosti zostavovanie èísla èasopisu, keï je dosiahnutý limit potrebný na jeho naplnenie. \textit{Redakèná rada} má právo na vylúèenie èlánku. 
 
-\begin{figure}[ht]
- \centering
- \includegraphics[width=370px]{pic/pridajrecenziu.png}
- \includegraphics[width=260px]{pic/zostaveniecis.png}
-  \caption{Model recenzovania a zostavovania èísla èasopisu.}
- \label{fig:recacas}
-\end{figure}
-
 
 \subsection*{Prípady pou¾itia}
 \begin{description}
-\item[Vlo¾enie recenzie] ? Recenzent po vypracovaní hodnotenia vstúpi do systému a vyplní formulár pre recenziu. Systém formulár skontroluje a ak je v¹etko v poriadku recenzia je nahraná a autor je pomocou \textit{notifikácie} informovaný o vykonanej recenzii. Recenzent uvádza pri zadávaní recenzie èi je potrebná korektúra. V prípade, ¾e je korektúra potrebná je autor informovaný o tomto fakte. Ak korektúra nie je zapotreby je u¾ len skontrolovaný stav naplnenia èasopisu. Ak bolo odovzdaných dostatok èlánkov je informovaná redakèná rada.
-\item[Zostavenie èísla] ? Pri zostavení èísla je redakènej rade zobrazený zoznam doruèených publikácii. Rada si v zozname oznaèí èlánky, ktoré zaradí do budúceho èísla a taktie¾ mô¾e èlánky podla zvá¾enia zo zoznamu vylúèi». Autorom vylúèených èlánkov budú o tom informovaný. Po urèení obsahu vydania sú èlánky zaradene do èísla v DB, pre èíslo je vygenerovaná vlastná webová stránka. Je zostavený zoznam odkazov na plné texty èlánkov a tento zoznam je zaslaný do tlaèe.  
-\item[Notifikácia] ? Na upozoròuje u¾ívateµov o výskyte udalosti sa vyu¾íva notifikácia navrhnutá v prvej iterácii.
+\item[Vlo¾enie recenzie] -- Recenzent po vypracovaní hodnotenia vstúpi do systému a vyplní formulár pre recenziu. Systém formulár skontroluje a ak je v¹etko v poriadku recenzia je nahraná a autor je pomocou \textit{notifikácie} informovaný o vykonanej recenzii. Recenzent uvádza pri zadávaní recenzie èi je potrebná korektúra. V prípade, ¾e je korektúra potrebná je autor informovaný o tomto fakte. Ak korektúra nie je zapotreby je u¾ len skontrolovaný stav naplnenia èasopisu. Ak bolo odovzdaných dostatok èlánkov je informovaná redakèná rada.
+\item[Zostavenie èísla] -- Pri zostavení èísla je redakènej rade zobrazený zoznam doruèených publikácii. Rada si v zozname oznaèí èlánky, ktoré zaradí do budúceho èísla a taktie¾ mô¾e èlánky podla zvá¾enia zo zoznamu vylúèi». Autorom vylúèených èlánkov budú o tom informovaný. Po urèení obsahu vydania sú èlánky zaradene do èísla v DB, pre èíslo je vygenerovaná vlastná webová stránka. Je zostavený zoznam odkazov na plné texty èlánkov a tento zoznam je zaslaný do tlaèe.  
+\item[Notifikácia] -- Na upozoròuje u¾ívateµov o výskyte udalosti sa vyu¾íva notifikácia navrhnutá v prvej iterácii.
 \end{description}
-
-\begin{figure}[ht]
- \centering
- \includegraphics[width=350px]{pic/UC2.png}
-  \caption{Diagram prípadov pou¾itia po druhej iterácii.}
- \label{fig:uc2}
-\end{figure}
-
-\subsection*{Statická ¹truktúra}
-Diagram tried (obr.: \ref{fig:dt1}) zachytávajúci statickú ¹truktúru systému budujeme za pomoci vypracovaného modelu prípadov pou¾itia a pomocou ¹pecifikácie po¾iadaviek. Na úvod sú naèrtnuté hrubé obrysy diagramu, ktorý je postupne spresòovaný. Za výstup iterácie sa pova¾uje presný návrhový diagram tried.
-
-Diagram popisujúci prvú iteráciu stavia na dvoch triedach \textit{U¾ívateµ} a \textit{Èlánok}. Prvá zabezpeèuje zachytenie informácie o osobách pracujúcich so systémom. Pomocou dediènosti sú definované triedy reprezentujúce roly vyskytujúce sa v systéme. S u¾ívateµom je spojená aj trieda \textit{Mana¾ér u¾ívateµov} umo¾òujúca vytvorenie nového konta a mo¾nos» nastavenia platnosti registrácie pre registrovaného u¾ívateµa. 
-
-Èlánok virtuálneho èasopisu je v systéme reprezentovaný triedou \textit{Èlánok}. Uchováva si informácie o príspevkoch vedených v èasopise a odkazuje sa na òu registrovaný u¾ívateµ, èím sa tieto triedy zväzujú. Aj pre èlánok je vytvorený mana¾ér spravujúci vytváranie príspevkov. 
-
-Pre úèely notifikácie je vytvorená trieda \textit{Akcia} aj s mana¾érom, udr¾ujúca informácie o udalostiach nastávajúcich v systéme. Umo¾òuje taktie¾ rozosielanie informaèných e-mailov, èi u¾ na priame vy¾iadanie, alebo po èasových intervaloch.
-
-\begin{figure}[ht]
- \centering
- \includegraphics[width=400px]{pic/CD1.png}
-  \caption{Diagram prípadov pou¾itia prvej iterácie.}
- \label{fig:dt1}
-\end{figure}
-
-\subsection{Druhá iterácia}
-
-Po dokonèení práce na prvej iterácii a posunutí výsledkov do fázy vývoja zaèína pre návrhára práca na ïal¹ej iterácii. Druhá iterácia má za cieµ roz¹íri» doteraz vytvorený systém o èas» pre recenzovanie èlánkov a umo¾ni» redakènej rade zostavi» èíslo èasopisu. Zoberú sa preto firemné procesy popisujúce tieto èinnosti (obr.: \ref{fig:recacas}). Taktie¾ je potrebné doplni» spracovanie recenzie popísané v diagrame \ref{fig:LL}.
-
-Z diagramov popisujúcich procesy mô¾eme identifikova» dvoch aktérov. S recenziami je spojený textit{recenzent},  hodnotiaci èlánok a vytvárajúci recenziu. Druhým aktérom je \textit{redakèná rada}, majúca na starosti zostavovanie èísla èasopisu, keï je dosiahnutý limit potrebný na jeho naplnenie. \textit{Redakèná rada} má právo na vylúèenie èlánku. 
-
-\begin{figure}[ht]
- \centering
- \includegraphics[width=370px]{pic/pridajrecenziu.png}
- \includegraphics[width=260px]{pic/zostaveniecis.png}
-  \caption{Model recenzovania a zostavovania èísla èasopisu.}
- \label{fig:recacas}
-\end{figure}
-
-
-\subsection*{Prípady pou¾itia}
-\begin{description}
-\item[Vlo¾enie recenzie] ? Recenzent po vypracovaní hodnotenia vstúpi do systému a vyplní formulár pre recenziu. Systém formulár skontroluje, a ak je v¹etko v poriadku, recenzia je nahraná a autor je pomocou \textit{notifikácie} informovaný o vykonanej recenzii. Recenzent uvádza pri zadávaní recenzie, èi je potrebná korektúra. V prípade, ¾e je korektúra potrebná, je autor informovaný o tomto fakte. Ak korektúra nie je nutná, u¾ je len skontrolovaný stav naplnenia èasopisu. Ak bol odovzdaný dostatok èlánkov, je informovaná redakèná rada.
-\item[Zostavenie èísla] ? Pri zostavení èísla je redakènej rade zobrazený zoznam doruèených publikácií. Rada si v zozname oznaèí èlánky, ktoré zaradí do budúceho èísla, taktie¾ mô¾e èlánky, podµa uvá¾enia, zo zoznamu vylúèi». Autori vylúèených èlánkov budú o tom informovaní. Po urèení obsahu vydania sú èlánky zaradene do èísla v DB, pre èíslo je vygenerovaná vlastná webová stránka. Je zostavený zoznam odkazov na plné texty èlánkov a tento zoznam je zaslaný do tlaèe.  
-\item[Notifikácia] ? Na upozornenie u¾ívateµov o výskyte udalosti sa vyu¾íva notifikácia navrhnutá v prvej iterácii.
-\end{description}
-
-\begin{figure}[ht]
- \centering
- \includegraphics[width=370px]{pic/UC2.png}
-  \caption{Diagram prípadov pou¾itia po druhej iterácii.}
- \label{fig:uc2}
-\end{figure}
 
 \subsection*{Statická ¹truktúra}
 
 Druhá iterácia vná¹a do systému recenzie a usporiadanie èlánkov do èísiel. Recenzovanie zasiahlo aj do tried pracujúcich s odovzdanými publikáciami a pridalo do nich premenné a funkcie udr¾ujúce previazanie èlánku s recenziou. Trieda \textit{Recenzia} si uchováva dátum zadania a autora jej vykonania. Recenzie sú vkladané do systému pomocou funkcionality poskytovanej mana¾érom recenzie.
 
 Usporiadanie príspevkov do èísiel zabezpeèuje trieda \textit{Èíslo}. Udr¾uje si informáciu o poradí vydania a odkazuje na v¹etky èlánky zaradené do daného vydania. Vytváranie a vkladanie èlánkov do nových èísiel má na starosti \textit{Mana¾ér èasopisu}. Táto trieda má na starosti aj generovanie webových stránok pre novovytvorené èíslo a generovanie zoznamov pre tlaè. So zaraïovaním príspevkov do èísiel súvisí aj metóda vyluèujúca èlánok, ktorá bola pridaná do mana¾éra èlánkov.
-\begin{figure}[ht]
- \centering
- \includegraphics[width=\linewidth]{pic/CD2.png}
-  \caption{Diagram prípadov pou¾itia  pre druhú iterácu}
- \label{fig:CD2}
-\end{figure}
 
-\subsection{Tretia iterácia}
+\subsection{Vyhµadávanie a úprava profilu}
 
-Tretia iterácia priná¹a do systému funkcionalitu spätú s vyhµadávaním èlánkov v databáze podµa rôznych kritérií. Taktie¾ je tu zavedená mo¾nos» úpravy profilu. Firemné procesy zachytávajúce pridávanú funkcionalitu sú zobrazené na obrázku \ref{}. Z uvedených diagramov identifikujeme diagramy pou¾itia pre vyhµadávanie èlánkov v databáze, úpravu údajov o u¾ívateµovi a zmenu prihlasovacieho hesla. Pridaním nových prípadov pou¾itia nevstupujú do systému ¾iadni noví aktéri. 
+Tretia iterácia priná¹a do systému funkcionalitu spätú s vyhµadávaním èlánkov v databáze podµa rôznych kritérií. Taktie¾ je tu zavedená mo¾nos» úpravy profilu. Firemné procesy zachytávajúce pridávanú funkcionalitu sú zobrazené na obrázkoch \ref{fig:vyh}, \ref{fig:prof} a \ref{fig:hes}. Z uvedených diagramov identifikujeme diagramy pou¾itia pre vyhµadávanie èlánkov v databáze, úpravu údajov o u¾ívateµovi a zmenu prihlasovacieho hesla. Pridaním nových prípadov pou¾itia nevstupujú do systému ¾iadni noví aktéri. 
 
-\begin{figure}[ht]
- \centering
-\includegraphics[width=220px]{pic/Vyhladavanie.png} 
-\includegraphics[width=150px]{pic/upravaprof.png}
- \includegraphics[width=300px]{pic/zmenahes.png}
-  \caption{Procesy vyhµadávania a úpravy profilu.}
- \label{fig:vau}
-\end{figure}
 
 \subsection*{Prípady pou¾itia}
 
 \begin{description}
- \item[Vyhµadávanie] ? U¾ívateµ mô¾e vyhµadáva» pomocou re»azca overovaného voèi  menu a priezvisku autora, názvu organizácie alebo názvu èlánku. Ïal¹ou mo¾nos»ou je vyhµadávanie podµa kµúèových slov alebo èísla èasopisu. Odpoveïou na vyhµadávané otázky je zoznam najvhodnej¹ích nálezov èlánkov. 
- \item[Úprava profilu] ? Ponúka registrovanému u¾ívateµovi mo¾nos» meni» svoje osobné údaje, ako meno, priezvisko, príslu¹nos» k organizácii, emailovú adresu vyu¾ívanú na zasielanie informaèných emailov.  
- \item[Zmena hesla] ? Registrovaný u¾ívateµ je oprávnený meni» svoje prihlasovacie heslo. Pri zmene hesla je najskôr vy¾iadané staré heslo, ktoré je overené, a a¾ následne je povolená zmena.  
+ \item[Vyhµadávanie] -- U¾ívateµ mô¾e vyhµadáva» pomocou re»azca overovaného voèi  menu a priezvisku autora, názvu organizácie alebo názvu èlánku. Ïal¹ou mo¾nos»ou je vyhµadávanie podµa kµúèových slov alebo èísla èasopisu. Odpoveïou na vyhµadávané otázky je zoznam najvhodnej¹ích nálezov èlánkov. 
+ \item[Úprava profilu] -- Ponúka registrovanému u¾ívateµovi mo¾nos» meni» svoje osobné údaje, ako meno, priezvisko, príslu¹nos» k organizácii, emailovú adresu vyu¾ívanú na zasielanie informaèných emailov.  
+ \item[Zmena hesla] -- Registrovaný u¾ívateµ je oprávnený meni» svoje prihlasovacie heslo. Pri zmene hesla je najskôr vy¾iadané staré heslo, ktoré je overené, a a¾ následne je povolená zmena.  
  \end{description}
 
-\begin{figure}[ht]
- \centering
- \includegraphics[width=400px]{pic/UC3.png}
-  \caption{Diagram prípadov pou¾itia tretej iterácie.}
- \label{fig:uc3}
-\end{figure}
 
 \subsection*{Statická ¹truktúra}
 Zavedením novej funkcionality do modelu v tretej iterácii nepriná¹a ¾iadnu novú triedu, ale roz¹irujú sa u¾ existujúce triedy. Funkcionalita vyhµadávania je zabezpeèená cez metódy pridané do tried \textit{Mana¾ér èasopisu}, \textit{Mana¾ér èísla} a \textit{Mana¾ér u¾ívateµov}. Menenie osobných údajov u¾ívateµa je, podobne ako vyhµadávanie, zabezpeèené vlo¾ením zodpovedajúcich metód do triedy \textit{Mana¾ér u¾ívateµov}.
 
-\begin{figure}[ht]
- \centering
- \includegraphics[width=\linewidth]{pic/CD3.png}
-  \caption{Diagram tried tretej iterácie.}
- \label{fig:CD3}
-\end{figure}
 
-\subsection{©tvrtá iterácia}
 
-Posledná iterácia dokonèuje budovaný produkt pridaním správy systému. Administrátor vyu¾íva túto správu na upravovanie vzhµadu a obsahu virtuálneho èasopisu. Správna aplikácia mu ponúka mo¾nos» vklada» nové webové stránky do rozhrania, ktoré sú hierarchicky usporadúvané a zaradené do menu. Administrátor má takto mo¾nos» bez zasahovania do kódu rozhrania prida» potrebné informácie na web. Firemné procesy popisujúce prácu administrátora sú zachytené na obrázku \ref{fig:sc}.
+\subsection{Správa systému}
 
-\begin{figure}[ht]
- \centering
- \includegraphics[width=320px]{pic/spravacas.png}
-\includegraphics[width=180px]{pic/upravaclan.png}
-  \caption{Firemné procesy pre správu èasopisu.}
- \label{fig:sc}
-\end{figure}
+Posledná iterácia dokonèuje budovaný produkt pridaním správy systému. Administrátor vyu¾íva túto správu na upravovanie vzhµadu a obsahu virtuálneho èasopisu. Správna aplikácia mu ponúka mo¾nos» vklada» nové webové stránky do rozhrania, ktoré sú hierarchicky usporadúvané a zaradené do menu. Administrátor má takto mo¾nos» bez zasahovania do kódu rozhrania prida» potrebné informácie na web. Firemné procesy popisujúce prácu administrátora sú zachytené na obrázkoch \ref{fig:sc} a \ref{fig:upc}.
+
 
 Z uvedených diagramov vyèítame prípady pou¾itia zachytávajúce mo¾nos» upravovania údajov o èlánku a v prípade núdze aj jeho vymazanie. Ïal¹ím kandidátom na prípad pou¾itia sú èinnosti spojené s vytváraním nových stránok rozhrania a ich upravovaním obsahu u¾ existujúcich stránok. Poslednou identifikovateµnou funkcionalitou je upravovanie celkového vzhµadu rozhrania. Podµa dodanej ponuky je mo¾né meni» logo virtuálneho èasopisu, nadpis a tému.
 
 \subsection*{Prípady pou¾itia}
-
-\begin{description}
- \item[Úprava údajov o èlánkoch] ? Administrátor upravuje údaje o èlánkoch. Je oprávnený meni» názvy, anotácie, autorov a odkaz na umiestnenie súboru s plným textom.
- \item[Vymazanie èlánku] ? Administrátorovi je umo¾nené z technických príèin ma» mo¾nos» vymaza» èlánok. Táto akcia je spojená s notifikáciou redakènej rady a autora èlánku o vykonanom odstránení.
-\item[Vytvorenie stránky] ? Správca systému mô¾e roz¹irova» grafické rozhranie aplikácie pridaním nových webových stránok a ich naplnením obsahom. Stránky sú generované automaticky a dopåòa sa do nich len samotný text pomocou jednoduchého rozhrania. 
-\item[Upravenie stránky] ? Administrátor je oprávnený meni» obsah skupiny stránok, na ktorej nie sú zobrazované výpisy z databázy.
-\item[Úprava rozhrania] ? Rozhranie mô¾e by» správcom upravené pomocou dodávaných tém. Je tie¾ umo¾nené meni» logo a názov virtuálneho èasopisu.
- \end{description}
 
 \begin{figure}[ht]
  \centering
@@ -298,6 +196,16 @@ Z uvedených diagramov vyèítame prípady pou¾itia zachytávajúce mo¾nos» upravovani
   \caption{Diagram prípadov pou¾itia po druhej iterácii.}
  \label{fig:uc4}
 \end{figure}
+
+
+\begin{description}
+ \item[Úprava údajov o èlánkoch] -- Administrátor upravuje údaje o èlánkoch. Je oprávnený meni» názvy, anotácie, autorov a odkaz na umiestnenie súboru s plným textom.
+ \item[Vymazanie èlánku] -- Administrátorovi je umo¾nené z technických príèin ma» mo¾nos» vymaza» èlánok. Táto akcia je spojená s notifikáciou redakènej rady a autora èlánku o vykonanom odstránení.
+\item[Vytvorenie stránky] -- Správca systému mô¾e roz¹irova» grafické rozhranie aplikácie pridaním nových webových stránok a ich naplnením obsahom. Stránky sú generované automaticky a dopåòa sa do nich len samotný text pomocou jednoduchého rozhrania. 
+\item[Upravenie stránky] -- Administrátor je oprávnený meni» obsah skupiny stránok, na ktorej nie sú zobrazované výpisy z databázy.
+\item[Úprava rozhrania] -- Rozhranie mô¾e by» správcom upravené pomocou dodávaných tém. Je tie¾ umo¾nené meni» logo a názov virtuálneho èasopisu.
+ \end{description}
+
 
 \subsection*{Statická ¹truktúra}
 Závereèný diagram tried (\ref{fig:CD4}) zachytáva komplexný pohµad na vypracovaný systém. V poslednej iterácii do neho pribudli triedy \textit{AdresárStránok} a \textit{WebStránka}, zabezpeèujúce prácu so správou rozhrania. Dr¾ia informácie o vzhµade aplikácie a zachytávajú hierarchiu usporiadania webových stránok. Zabezpeèujú aj generovanie nových stránok a prácu s upravovateµnými stránkami.
