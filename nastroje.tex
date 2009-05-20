@@ -1,7 +1,7 @@
 \section{Business Process Modeling Notation}
 \label{sec:bpmn}
 
-V roku 2004 vydal Business Process Management Initiative (BPMI) ¹tandard BPMN 1.0 \cite{BPMN10}. Cieµom tohto ¹tandardu je poskytnú» µahko pochopiteµnú notáciu pre v¹etkých u¾ívateµov podieµajúcich sa na tvorení, implementácii, spravovaní a monitorovaní firemných procesov. Súèas»ou BPMN je aj interný model, ktorý umo¾òuje prevod na spustiteµný BPEL4WS kód. Vypåòa sa tým medzera medzi firemným procesným návrhom a implementáciou. 
+V roku 2004 vydal Business Process Management Initiative (BPMI) ¹tandard BPMN 1.0 \cite{BPMNINT}. Cieµom tohto ¹tandardu je poskytnú» µahko pochopiteµnú notáciu pre v¹etkých u¾ívateµov podieµajúcich sa na tvorení, implementácii, spravovaní a monitorovaní firemných procesov. Súèas»ou BPMN je aj interný model, ktorý umo¾òuje prevod na spustiteµný BPEL4WS kód. Vypåòa sa tým medzera medzi firemným procesným návrhom a implementáciou. 
 
 BPMN definuje Business Process Diagram (BPD), ktorý graficky znázoròuje postupnosti firemných procesov. Objekty zachytené v grafe reprezentujú aktivity a orientované hrany naznaèujú poradie ich vykonania. 
 
@@ -63,7 +63,7 @@ Tokové objekty sa spájajú a vytvárajú základnú kostru firemného procesu. Spojova
 
 
 \subsection*{Sekvenèný tok}
-Sekvenèný tok (Sequence Flow) reprezentuje nepreru¹ovaná èiara s vyplnenou ¹ípkou. Vyznaèuje poradie, v akom sú aktivity v procese vykonávané. Tok správ mô¾e by» podmienený. Graficky sa podmienená správa oznaèí umiestnením diamantu na zaèiatku èiary a podmienka je zaznamenaná v názve toku. Pri pou¾ívaní podmienených správ je dôle¾ité, aby bola splnená aspoò jedna podmienka na to, aby proces mohol pokraèova». Pre zaistenie pokraèovania toku sa mô¾e pou¾i» implicitný tok, ktorý sa znaèí pre¹krtnutím na zaèiatku èiary. Uplatòuje sa v prípadoch, ak sa v¹etky ostatné podmienené správy vyhodnotia záporne. 
+Sekvenèný tok (Sequence Flow) reprezentuje nepreru¹ovaná èiara s vyplnenou ¹ípkou. Vyznaèuje poradie, v akom sú aktivity v procese vykonávané. Tok správ mô¾e by» podmienený. Graficky sa podmienená správa oznaèí umiestnením diamantu na zaèiatku èiary a podmienka je zaznamenaná v názve toku. Pri pou¾ívaní podmienených správ je dôle¾ité, aby bola splnená aspoò jedna podmienka na to, aby proces mohol pokraèova». Pre zaistenie pokraèovania toku sa mô¾e pou¾i» implicitný tok, ktorý sa znaèí pre¹krtnutím na zaèiatku èiary. Uplatòuje sa v prípadoch, ak sa v¹etky ostatné podmienené správy vyhodnotia záporne.\cite{BPMNINT} 
 
 \subsection*{Tok správ}
 Tok správ (Message Flow) reprezentuje preru¹ovaná èiara s prázdnou ¹ípkou. Pou¾íva sa na znázornenie interakcie medzi dvomi separátnymi úèastníkmi procesu, ktorí sú schopní prijíma» a odosiela» správy. Ka¾dej vymedzenej entite podieµajúcej sa na interakcii je pridelený pool, prièom tok správ mô¾e smerova» len medzi poolmi. 
