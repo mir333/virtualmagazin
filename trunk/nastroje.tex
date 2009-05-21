@@ -6,7 +6,7 @@ V roku 2004 vydal Business Process Management Initiative (BPMI) ¹tandard BPMN 1.
 BPMN definuje Business Process Diagram (BPD), ktorý graficky znázoròuje postupnosti firemných procesov. Objekty zachytené v grafe reprezentujú aktivity a orientované hrany naznaèujú poradie ich vykonania. 
 
 \subsection{Rozdelenie objektov v BPMN}
-BPD diagramy sú tvorené z jednoduchých elementov, ktoré umo¾òujú µahké tvorenie modelov, ktoré sú intuitívne pochopiteµné väè¹ine podnikových analytikov. Tvary elementov boli navrhnuté s ohµadom na u¾ pou¾ívané nástroje v procesnom modelovaní. Napríklad aktivity sa znázoròujú pomocou ¹tvoruholníka a rozhodnutia sú znaèené diamantom. Pri vývoji BPMN bol kladený dôraz na to, aby bolo mo¾né pomocou neho zachyti» aj komplexné firemné procesy. Pre lep¹ie zvládnutie týchto protichodných po¾iadaviek bolo navrhnuté malé mno¾stvo kategórií, ktoré napomáhajú µah¹ej orientácii v základných typoch. V rámci ka¾dej zo základných kategórií je mo¾né modifikova» definované elementy prostredníctvom roz¹irujúcich informácií. Roz¹írenia v¹ak nesmú narú¹a» základné charakteristiky elementov, èím by zni¾ovali ich zrozumiteµnos». 
+BPD diagramy sú tvorené z jednoduchých elementov, ktoré umo¾òujú µahké tvorenie modelov, ktoré sú intuitívne pochopiteµné väè¹ine podnikových analytikov. Tvary elementov boli navrhnuté s ohµadom na u¾ pou¾ívané nástroje v procesnom modelovaní. Napríklad aktivity sa znázoròujú pomocou ¹tvoruholníka a rozhodnutia sú znaèené diamantom. Pri vývoji BPMN bol kladený dôraz na to, aby bolo mo¾né pomocou neho zachyti» aj komplexné firemné procesy. Pre lep¹ie zvládnutie týchto protichodných po¾iadaviek bolo navrhnuté malé mno¾stvo kategórií, ktoré napomáhajú µah¹ej orientácii v základných typoch. V~rámci ka¾dej zo základných kategórií je mo¾né modifikova» definované elementy prostredníctvom roz¹irujúcich informácií. Roz¹írenia v¹ak nesmú narú¹a» základné charakteristiky elementov, èím by zni¾ovali ich zrozumiteµnos». 
 \subsection*{Základné kategórie elementov sú:}
 \begin{itemize}
  \item Tokové objekty (Flow Objects) 
@@ -111,7 +111,7 @@ Artefakty (Artifacts) neovplyvòujú základnú ¹truktúru procesu budovanú z aktivít
 \end{figure}
 
 \subsection*{Dátový objekt}
-Dátový objekt (Data Object) slú¾i na zobrazenie toku dát v procese. Pomocou neho je mo¾né modelova», aké dáta sú po¾adované, a aké dáta systém produkuje. Dátový objekt je k aktivitám pripájaný pomocou asociácie. Graficky je reprezentovaný obdå¾nikom s ohnutým rohom.
+Dátový objekt (Data Object) slú¾i na zobrazenie toku dát v procese. Pomocou neho je mo¾né modelova», aké dáta sú po¾adované, a aké dáta systém produkuje. Dátový objekt je k~aktivitám pripájaný pomocou asociácie. Graficky je reprezentovaný obdå¾nikom s ohnutým rohom.
 
 \subsection*{ Skupina}
 Skupina (Group) je znázoròovaná preru¹ovaným obdå¾nikom a pou¾íva sa na dokumentaèné a analytické úèely. Firemný analytik ju mô¾e vyu¾i» na sprehµadnenie diagramov vytvorením skupín zluèujúcich súvisiace procesy. Vytvorené skupiny nijako neovplyvòujú tok procesu.
@@ -123,7 +123,7 @@ Anotácia (Annotation) slú¾i èitateµovi diagramu na zachytenie dodatoènej textove
 Pomocou BPMN sme schopní modelova» procesy na rôznych úrovniach. Od detailného popisu jednotlivých èiastoèných procesov ku globálnej orchestrácii firemných procesov, ktoré sa javia ako èierna skrinka. BPMN tým oslovuje rôznorodé publikum, ktorému podáva ¹iroké spektrum informácií na rozlièných úrovniach detailu. Podµa miery záberu moderovaných procesov sa BPD delia na dve základné skupiny:
 \begin{description}
  \item[Kooperatívne medzifiremné procesy] -- Kooperatívny typ diagramu zachytáva medzifiremné procesy (Business to Business -- B2B) \cite{B2B}. Jeho hlavným cieµom je znázornenie vz»ahov medzi dvomi a viacerými procesmi. Dôraz je kladený na modelovanie vzájomnej komunikácie. Obrázok \ref{fig:polex} je príkladom kooperatívneho medzifiremného procesu. 
- \item[Interné firemné procesy] -- Interné procesy firmy sú zachytené v hierarchii diagramov. Najvy¹¹ia úroveò zachytáva hlavný firemný proces, ktorý je prostredníctvom podprocesov podrobne popísaný. Najni¾¹ia úroveò podrobne modeluje v¹etky èinnosti, ktoré prebiehajú v procese. Príkladom procesu vysokej úrovne je obrázok \ref{fig:hproc}. Diagram sa skladá z podprocesov, ktoré reprezentujú ni¾¹ie úrovne. Rozkreslením niektorého z podprocesov mo¾no získa» podrobný diagram jeho fungovania. Takýto diagram je znázornený na obrázku \ref{fig:lproc}. 
+ \item[Interné firemné procesy] -- Interné procesy firmy sú zachytené v hierarchii diagramov. Najvy¹¹ia úroveò zachytáva hlavný firemný proces, ktorý je prostredníctvom podprocesov podrobne popísaný. Najni¾¹ia úroveò podrobne modeluje v¹etky èinnosti, ktoré prebiehajú v procese. Príkladom procesu vysokej úrovne je obrázok \ref{fig:hproc}. Diagram sa skladá z podprocesov, ktoré reprezentujú ni¾¹ie úrovne. Rozkreslením niektorého z~podprocesov mo¾no získa» podrobný diagram jeho fungovania. Takýto diagram je znázornený na obrázku \ref{fig:lproc}. 
 \end{description}
 
 \begin{figure}[ht]

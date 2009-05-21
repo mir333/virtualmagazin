@@ -59,7 +59,7 @@ K agilným metódam vývoja patria viaceré metodiky. V¹etky majú spoloèný základ v 
 \end{itemize}
 
 \subsection*{Osoby a interakcia majú prednos» pred procesmi a nástrojmi}
-Tento bod vyjadruje zameranie metódy na èloveka a jeho schopnosti a skúsenosti. Uprednostòovaný je malý efektívny tím, ktorého èlenovia medzi sebou intenzívne komunikujú pri rie¹ení problémov. Preferované je rie¹enie problémov pomocou komunikácie tvárou v tvár, ktorá je rýchlej¹ia a efektívnej¹ia ako iné formy komunikácie. Je preto dobré, aby bol celý tím fyzicky situovaný na jednom mieste. Umo¾òuje to lep¹iu spoluprácu na projekte a tým aj rýchlej¹ie produkovanie kódu. Programovanie èasto prebieha v skupinkách, ktorých èlenovia sa striedajú pri kódovaní daného úseku programu. 
+Tento bod vyjadruje zameranie metódy na èloveka a jeho schopnosti a skúsenosti. Uprednostòovaný je malý efektívny tím, ktorého èlenovia medzi sebou intenzívne komunikujú pri rie¹ení problémov. Preferované je rie¹enie problémov pomocou komunikácie tvárou v~tvár, ktorá je rýchlej¹ia a efektívnej¹ia ako iné formy komunikácie. Je preto dobré, aby bol celý tím fyzicky situovaný na jednom mieste. Umo¾òuje to lep¹iu spoluprácu na projekte a tým aj rýchlej¹ie produkovanie kódu. Programovanie èasto prebieha v skupinkách, ktorých èlenovia sa striedajú pri kódovaní daného úseku programu. 
 
 Mana¾éri a vývojári sú v tíme na rovnataktie¾kej úrovni. Pri rozhodnutiach, ktoré sa týkajú technických rie¹ení, majú hlavné slovo vývojári. Mana¾éri majú za úlohu odstraòova» problémy netechnického rázu, ktoré by mohli projekt ohrozi». Obidve skupiny navzájom intenzívne komunikujú v záujme dosiahnutia èo najlep¹ích výsledkov.
 
@@ -94,7 +94,7 @@ Pri dosahovaní potrebného prepojenia firemných potrieb a IT sa mo¾no odrazi» od 
 Analyzovaním procesov mo¾no dospie» k tomu, ¾e po¾adovaná funkcionalita u¾ existuje a mô¾e by» znovu pou¾itá, prípadne sú doprogramované len malé èasti na prepojenie u¾ existujúcich modulov. V prípade, ¾e sa nedá znovu pou¾i» ¾iadna èas» systému, je potrebné vyvíja» od zaèiatku.
 
 \subsection{BDD model èinností}
-Vzniká snaha na uzavretie priepasti medzi firemnými potrebami a IT rie¹eniami. Toto prepojenie v¹ak musí zosta» pru¾né a prístupné pre vytváranie IT rie¹ení. Tieto trendy viedli k zavedeniu servisne orientovanej architektúry (Service-Oriented Architecture SOA) \cite{SOA}. 
+Vzniká snaha na uzavretie priepasti medzi firemnými potrebami a IT rie¹eniami. Toto prepojenie v¹ak musí zosta» pru¾né a prístupné pre vytváranie IT rie¹ení. Tieto trendy viedli k~zavedeniu servisne orientovanej architektúry (Service-Oriented Architecture SOA) \cite{SOA}. 
 
 SOA poskytuje rámec (framework) -- spolu s princípmi a smernicami -- na vytváranie znovu pou¾iteµných, zluèiteµných a nastaviteµných platformovo nezávislých slu¾ieb (services). Vyu¾itie SOA vy¾aduje BDD prístup, ktorý spracúva firemné ciele a po¾iadavky zhora nadol, do návrhov, vývoja a testovania. Získava sa tým prostredie, v ktorom sa aplikácie tvoria zo znovu pou¾iteµných slu¾ieb alebo z nových slu¾ieb, ktoré sú vyvíjané podµa aktuálnych firemných potrieb. Tým sa zabezpeèuje potrebná flexibilita v IT.
 
@@ -109,7 +109,7 @@ Nasledujúci obrázok \ref{fig:BDDmod} znázoròuje vysokoúrovòový náhµad na typickú
 
 Prvým korkom vo vývoji nového IT rie¹enia je navrhnutie firemného procesu. Odporúèa sa zaèa» modelovaním kµúèových firemných procesov. Výsledkom modelovania je odovzdanie firemných po¾iadaviek na systém IT rie¹iteµskému tímu. Navrhnutým firemným procesom musí by» zo strany firemných návrhárov urèená dôle¾itos», ktorá je vypoèítaná pomocou rôznych metrík, ako napríklad ROI a KPI.
 
-Po ukonèení modelovania firemných procesov nastupuje fáza zbierania po¾iadaviek na systém. Modely vzniknuté v predchádzajúcej fáze sú hlavným vstupom. Identifikujú sa v nich prípady pou¾itia (use case), od ktorých sa odvíja návrh slu¾ieb. Stále sa pritom berie ohµad na firemné procesy, ktoré zachytávajú vzájomné prepojenie jednotlivých prípadov pou¾itia. Po tom, ako je slu¾ba implementovaná, pokraèuje sa ïal¹ou fázou, a to nasadením. Slu¾ba je nasadená na aplikaèný server, kde je verejne prístupná, a je mo¾né ju vyhµada».
+Po ukonèení modelovania firemných procesov nastupuje fáza zbierania po¾iadaviek na systém. Modely vzniknuté v predchádzajúcej fáze sú hlavným vstupom. Identifikujú sa v~nich prípady pou¾itia (use case), od ktorých sa odvíja návrh slu¾ieb. Stále sa pritom berie ohµad na firemné procesy, ktoré zachytávajú vzájomné prepojenie jednotlivých prípadov pou¾itia. Po tom, ako je slu¾ba implementovaná, pokraèuje sa ïal¹ou fázou, a to nasadením. Slu¾ba je nasadená na aplikaèný server, kde je verejne prístupná, a je mo¾né ju vyhµada».
 
 Po uvedení slu¾by do prevádzky následuje fáza monitorovania. Zbierajú sa v nej informácie o behu slu¾by v skutoènom èase, spracovávaných dátach a hláseniach. Sledovanie je doplnené o ¹irokú paletu meraní podµa vopred definovaných metrík a výkonnostných parametrov. Fáza monitorovania je podstatná pre urèenie funkènosti a správnosti vytvorenej slu¾by. Správne vytvorená slu¾ba musí spåòa» v¹etky po¾adované parametre.
 
@@ -212,16 +212,7 @@ Ako prvá sa prevedie podrobná analýza implementovaného zdrojového kódu. Je tu sn
 
 \subsection{Definované roly}
 
-Do úspe¹ného zvládnutia projektu je potrebné zapoji» µudí s rôznymi schopnos»ami. BDD definuje roly, ktoré napomáhajú úspe¹né prevedenie IT projektu poháòaného firemnými cieµmi, víziami a potrebami. Obrázok \ref{fig:roles} znázoròuje ¹es» najdôle¾itej¹ích rol, ktoré sú nevyhnutné na vykonanie BDD vývojového cyklu \cite{BDD}.
-
-\begin{figure}
- \centering
- \includegraphics[width=220px]{pic/roles.png}
- \caption{Hlavné roly vyu¾ívané v BDD.}
- \label{fig:roles}
-\end{figure}
-
-Popis jednotlivých kµúèových rol:
+Do úspe¹ného zvládnutia projektu je potrebné zapoji» µudí s rôznymi schopnos»ami. BDD definuje roly, ktoré napomáhajú úspe¹né prevedenie IT projektu poháòaného firemnými cieµmi, víziami a potrebami. Obrázok \ref{fig:roles} znázoròuje ¹es» najdôle¾itej¹ích rol, ktoré sú nevyhnutné na vykonanie BDD vývojového cyklu \cite{BDD}. Popis jednotlivých kµúèových rol:
 \begin{description}
 \item[Obchodný analytik] -- je rola vysokej úrovne, ktorá sa zaoberá obchodnými analýzami a BPM. Vykonáva identifikáciu prípadov pou¾itia a vytvára ¹pecifikácie pre ka¾dý prípad pou¾itia. Analytik sa v tejto role mô¾e podieµa» v neskor¹ích fázach projektu aj na ¹pecializovanej¹ích úlohách.
 \item[Architekt] -- je rola vysokej úrovne zodpovedná za architektúru a návrh systému. Táto rola zahrnuje ¹pecializované vedµaj¹ie roly, ako napríklad aplikaèný architekt, SOA architekt, vedúci návrhár a ïal¹í. Tieto roly sú zodpovedné za rôznu architektonickú èinnos», ktorá súvisí s návrhom projektu.
@@ -230,6 +221,13 @@ Popis jednotlivých kµúèových rol:
 \item[Mana¾ér nasadenia] -- je zodpovedný za nasadenie aplikácií do infra¹truktúry v rôznych prostrediach. Taktie¾ je zodpovedný za èinnos» spojenú s nasadzovaním aplikácií do cieµového prostredia. Napríklad vyvíjanie in¹talaèných skriptov, správne nakonfigurovanie aplikácie atï. 
 \item[Správca systému] -- je zodpovedný za fungovanie aplikácie a jej správu poèas jej priebehu a vyu¾ívania. Táto rola taktie¾ mô¾e by» zodpovedná za zbieranie dát poèas chodu aplikácie, ich analyzovanie a porovnanie výsledkov s po¾iadavkami na systém.
 \end{description}
+
+\begin{figure}[ht]
+ \centering
+ \includegraphics[width=220px]{pic/roles.png}
+ \caption{Hlavné roly vyu¾ívané v BDD.}
+ \label{fig:roles}
+\end{figure}
 %\section{Unified Process}
 %\label{sec:up}
 %\section{Model Driven Architecture}

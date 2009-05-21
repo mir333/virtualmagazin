@@ -7,8 +7,6 @@ Prvou fázou ¾ivotného cyklu MPDD je modelovanie firemných procesov vykonávaných 
 \subsection{©pecifikácia po¾iadaviek}
 Úèelom systému je zabezpeèenie vedeckého èasopisu. Webová aplikácia musí ma» prvky redakèného systému, ktoré umo¾nia administrátorovi upravova», pridáva» a odobera» jej obsah. Aplikácia bude zabezpeèova» zbieranie a sprostredkovávanie vedeckých èlánkov. Na webovom rozhraní budú zobrazované základné informácie o ka¾dom èlánku, obsahujúce meno a priezvisko autora, in¹titúciu zastre¹ujúcu prispievateµa, názov vkladaného èlánku, kµúèové slová vyskytujúce sa v príspevku. Nesmie chýba» ani krátka anotácia a odkaz na plný text v PDF formáte prístupný len pre registrovaných u¾ívateµov.
 
-%Ku ka¾dému èlánku bude pripojená diskusia, kde budú môc» u¾ívatelia vyjadri» svoj názor na èlánok a budú ma» mo¾nos» reagova» na komentáre iných u¾ívateµov. Diskusia bude rozvrstvená podµa logickej nadväznosti komentárov.
-
 Aplikácia bude obsahova» rad notifikácií. Pri zalo¾ení nového úètu bude administrátorovi po overení zaplatenia èlenského poplatku zaslaná informácia so ¾iados»ou o jeho potvrdenie. Po ka¾dom vlo¾ení nového èlánku registrovaným u¾ívateµom budú vybraní a oboznámení s týmto èlánkom recenzenti, ktorých úlohou bude èlánok recenzova». Registrovaní u¾ívatelia si mô¾u povoli» oznámenie o nových zverejnených èlánkoch cez e-mail. Po dovà¹ení limitu na zostavenie jedného èísla èasopisu bude o tom informovaná redakèná rada a administrátor. 
 
 Informácie ulo¾ené v databáze bude mo¾né prehµadáva». Vyhµadávanie bude uskutoèniteµné podµa základných informácií, okrem anotácie. Taktie¾ sa nebude vyhµadáva» v samotnom texte èlánkov. Rozhranie vyhµadávania bude èo najjednoduch¹ie. Systém poskytne u¾ívateµovi na výber tri kategórie, podµa ktorých sa bude vyhµadáva». Prvou mo¾nos»ou je vyhµadávanie podµa mena, priezviska, in¹titúcie a názvu. Druhý prípad vyhµadávania je podµa kµúèových slov. Poslednou mo¾nos»ou je vyhµadávanie èlánkov na základe príslu¹nosti k roèníka.
@@ -39,7 +37,7 @@ Zo ¹pecifikácie uvedenej v predchádzajúcej sekcii bol identifikovaný hlavný proc
 
 \begin{figure}[ht]
  \centering
- \includegraphics[width=350px]{pic/main.png}
+ \includegraphics[width=380px]{pic/main.png}
   \caption{Diagram hlavného firemného procesu.}
  \label{fig:mainproc}
 \end{figure}
@@ -144,7 +142,7 @@ Pre úèely notifikácie je vytvorená trieda \textit{Akcia} aj s mana¾érom, udr¾ujú
 
 Po dokonèení prácí na prvej iterácii a posunutie ich výsledkov do fázy vývoja zaèína pre návrhára práca na ïal¹ej iterácii. Druhá iterácia ma za cieµ roz¹íri» doteraz vytvorený systém o èas» pre recenzovanie èlánkov a umo¾ni» redakènej rade zostavi» èíslo èasopisu. Zoberú sa preto firemné procesy popisujúce tieto èinnosti (obr. \ref{fig:recacas}, \ref{fig:zoscas}).
 
-Z diagramov popisujúcich procesy mô¾eme identifikova» dvoch aktérov. S recenziami je spojený textit{recenzent}  hodnotiaci èlánok a vytvárajúci recenziu. Druhým aktérom je \textit{redakèná rada} majúca na starosti zostavovanie èísla èasopisu, keï je dosiahnutý limit potrebný na jeho naplnenie. \textit{Redakèná rada} má právo na vylúèenie èlánku. 
+Z diagramov popisujúcich procesy mô¾eme identifikova» dvoch aktérov. S recenziami je spojený textit{recenzent}  hodnotiaci èlánok a vytvárajúci recenziu. Druhým aktérom je \textit{redakèná rada} majúca na starosti zostavovanie èísla èasopisu, keï je dosiahnutý limit potrebný na jeho naplnenie. \textit{Redakèná rada} má právo na vylúèenie èlánku. Obrázok \ref{fig:uc2} zachytáva diagram prípadov pou¾itia druhej iterácie. 
 
 
 \subsection*{Prípady pou¾itia}
@@ -158,11 +156,11 @@ Z diagramov popisujúcich procesy mô¾eme identifikova» dvoch aktérov. S recenziam
 
 Druhá iterácia vná¹a do systému recenzie a usporiadanie èlánkov do èísiel. Funkcionalita recenzovanie zasiahla aj do u¾ existujúcich tried a pridala do nich premenné a funkcie udr¾ujúce previazanie èlánku s recenziou. Trieda \textit{Recenzia} si uchováva dátum zadania a autora jej vykonania. Recenzie sú vkladané do systému pomocou funkcionality poskytovanej mana¾érom recenzie.
 
-Usporiadanie príspevkov do èísiel zabezpeèuje trieda \textit{Cislo}. Udr¾uje si informáciu o poradí vydania a odkazuje na v¹etky èlánky zaradené do daného vydania. Vytváranie a vkladanie èlánkov do nových èísiel má na starosti trieda \textit{ManazerCasopisu}. Taktie¾ má na starosti aj generovanie webových stránok pre novovytvorené èíslo a generovanie zoznamov pre tlaè. So zaraïovaním príspevkov do èísiel súvisí aj metóda vyluèujúca èlánok,  pridaná do mana¾éra èlánkov.
+Usporiadanie príspevkov do èísiel zabezpeèuje trieda \textit{Cislo}. Udr¾uje si informáciu o poradí vydania a odkazuje na v¹etky èlánky zaradené do daného vydania. Vytváranie a vkladanie èlánkov do nových èísiel má na starosti trieda \textit{ManazerCasopisu}. Taktie¾ má na starosti aj generovanie webových stránok pre novovytvorené èíslo a generovanie zoznamov pre tlaè. So zaraïovaním príspevkov do èísiel súvisí aj metóda vyluèujúca èlánok,  pridaná do mana¾éra èlánkov. Diagram tried druhej iterácie je zachytený na obrázku \ref{fig:CD2}.
 
 \subsection{Vyhµadávanie a úprava profilu}
 
-Tretia iterácia priná¹a do systému funkcionalitu spätú s vyhµadávaním èlánkov v databáze podµa rôznych kritérií. Taktie¾ je tu zavedená mo¾nos» úpravy profilu. Firemné procesy zachytávajúce pridávanú funkcionalitu sú zobrazené na obrázkoch \ref{fig:vyh}, \ref{fig:prof} a \ref{fig:hes}. Z uvedených diagramov identifikujeme diagramy pou¾itia pre vyhµadávanie èlánkov v databáze, úpravu údajov o u¾ívateµovi a zmenu prihlasovacieho hesla. Pridaním nových prípadov pou¾itia nevstupujú do systému ¾iadni noví aktéri. 
+Tretia iterácia priná¹a do systému funkcionalitu spätú s vyhµadávaním èlánkov v databáze podµa rôznych kritérií. Taktie¾ je tu zavedená mo¾nos» úpravy profilu. Firemné procesy zachytávajúce pridávanú funkcionalitu sú zobrazené na obrázkoch \ref{fig:vyh}, \ref{fig:prof} a \ref{fig:hes}. Z uvedených procesov identifikujeme prípady pou¾itia pre vyhµadávanie èlánkov v databáze, úpravu údajov o u¾ívateµovi a zmenu prihlasovacieho hesla. Diagram znázoròujúci túto iteráciu je na obrázku \ref{fig:CD3}. Pridaním nových prípadov pou¾itia nevstupujú do systému ¾iadni noví aktéri. 
 
 
 \subsection*{Prípady pou¾itia}
@@ -175,7 +173,7 @@ Tretia iterácia priná¹a do systému funkcionalitu spätú s vyhµadávaním èlánkov v 
 
 
 \subsection*{Statická ¹truktúra}
-Zavedenie novej funkcionality do modelu v tretej iterácii nepriná¹a ¾iadnu novú triedu, ale roz¹irujú sa u¾ existujúce triedy. Funkcionalita vyhµadávania je zabezpeèená cez metódy pridané do tried \textit{Manazer Casopisu}, \textit{ManazerCisla} a \textit{ManazerUzivatelov}. Zmena osobných údajov u¾ívateµa je, podobne ako vyhµadávanie, zabezpeèená vlo¾ením zodpovedajúcich metód do triedy \textit{ManazerUzivatelov}.
+Zavedenie novej funkcionality do modelu v tretej iterácii nepriná¹a ¾iadnu novú triedu, ale roz¹irujú sa u¾ existujúce triedy. Funkcionalita vyhµadávania je zabezpeèená cez metódy pridané do tried \textit{Manazer Casopisu}, \textit{ManazerCisla} a \textit{ManazerUzivatelov}. Zmena osobných údajov u¾ívateµa je, podobne ako vyhµadávanie, zabezpeèená vlo¾ením zodpovedajúcich metód do triedy \textit{ManazerUzivatelov} (obr. \ref{fig:CD3}).
 
 
 
@@ -184,7 +182,7 @@ Zavedenie novej funkcionality do modelu v tretej iterácii nepriná¹a ¾iadnu novú 
 Posledná iterácia dokonèuje budovaný produkt pridaním správy systému. Administrátor vyu¾íva túto správu na upravovanie vzhµadu a obsahu virtuálneho èasopisu. Správna aplikácia mu ponúka mo¾nos» vklada» nové webové stránky do rozhrania, ktoré sú hierarchicky usporadúvané a zaradené do menu. Administrátor má takto mo¾nos» bez zasahovania do kódu rozhrania prida» potrebné informácie na web. Firemné procesy popisujúce prácu administrátora sú zachytené na obrázkoch \ref{fig:sc} a \ref{fig:upc}.
 
 
-Z uvedených diagramov vyèítame prípady pou¾itia zachytávajúce mo¾nos» upravovania údajov o èlánku a v prípade núdze aj jeho vymazanie. Ïaµ¹ím kandidátom pre prípad pou¾itia sú èinnosti spojené s vytváraním nových stránok rozhrania a upravovaním obsahu u¾ existujúcich stránok. Poslednou identifikovateµnou funkcionalitou je upravovanie celkového vzhµadu rozhrania. Administrátor mô¾e meni» logo a nadpis virtuálneho èasopisu. Celkový vzhµad aplikácie je nastaviteµný pomocou dodávaných ¹ablón. Koneèný vzhµad diagramu tried je zachytený na obrázku \ref{fig:uc4}.
+Z uvedených diagramov vyèítame prípady pou¾itia zachytávajúce mo¾nos» upravovania údajov o èlánku a v prípade núdze aj jeho vymazanie. Ïaµ¹ím kandidátom pre prípad pou¾itia sú èinnosti spojené s vytváraním nových stránok rozhrania a upravovaním obsahu u¾ existujúcich stránok. Poslednou identifikovateµnou funkcionalitou je upravovanie celkového vzhµadu rozhrania. Administrátor mô¾e meni» logo a nadpis virtuálneho èasopisu. Celkový vzhµad aplikácie je nastaviteµný pomocou dodávaných ¹ablón. Koneèný vzhµad diagramu tried je ukázaný na obrázku \ref{fig:uc4}.
 
 \subsection*{Prípady pou¾itia}
 \begin{description}
@@ -203,7 +201,7 @@ Z uvedených diagramov vyèítame prípady pou¾itia zachytávajúce mo¾nos» upravovani
 \end{figure}
 
 \subsection*{Statická ¹truktúra}
-Závereèný diagram tried (\ref{fig:CD4}) zachytáva komplexný pohµad na vypracovaný systém. V poslednej iterácii do neho pribudli triedy \textit{AdresarStranok} a \textit{WebStránka}, zabezpeèujúce prácu so správou rozhrania. Dr¾ia informácie o vzhµade aplikácie a zachytávajú hierarchiu usporiadania webových stránok. Zabezpeèujú aj generovanie nových stránok a prácu s upravovateµnými stránkami.
+Závereèný diagram tried (\ref{fig:CD4}) zachytáva komplexný pohµad na vypracovaný systém. V poslednej iterácii do neho pribudli triedy \textit{AdresarStranok} a \textit{WebStranka}, zabezpeèujúce prácu so správou rozhrania. Dr¾ia informácie o vzhµade aplikácie a zachytávajú hierarchiu usporiadania webových stránok. Zabezpeèujú aj generovanie nových stránok a prácu s upravovateµnými stránkami.
 
 \begin{figure}[ht]
  \centering
