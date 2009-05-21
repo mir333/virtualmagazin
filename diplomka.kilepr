@@ -26,10 +26,10 @@ order=0
 
 [item:dip.tex]
 archive=true
-column=0
+column=66
 encoding=ISO 8859-2
 highlight=LaTeX
-line=62
+line=153
 open=true
 order=4
 
@@ -44,28 +44,28 @@ order=-1
 
 [item:metoda.tex]
 archive=true
-column=0
+column=603
 encoding=ISO 8859-2
 highlight=LaTeX
-line=122
-open=false
-order=1
+line=11
+open=true
+order=6
 
 [item:metodiky.tex]
 archive=true
-column=570
+column=206
 encoding=ISO 8859-2
 highlight=LaTeX
-line=89
-open=false
-order=3
+line=130
+open=true
+order=8
 
 [item:nastroje.tex]
 archive=true
-column=95
+column=0
 encoding=ISO 8859-2
 highlight=LaTeX
-line=3
+line=161
 open=true
 order=5
 
@@ -242,12 +242,12 @@ order=3
 
 [item:uvod.tex]
 archive=true
-column=0
+column=419
 encoding=ISO 8859-2
 highlight=LaTeX
-line=9
-open=false
-order=6
+line=18
+open=true
+order=7
 
 [item:zaver.tex]
 archive=true
